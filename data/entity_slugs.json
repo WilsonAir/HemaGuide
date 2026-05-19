@@ -1,0 +1,87 @@
+{
+  "Acute Myeloid Leukemia (AML)": "aml",
+  "Acute Promyelocytic Leukemia (APL)": "aml",
+
+  "Myelodysplastic Syndromes (MDS)": "mds",
+
+  "Polycythemia Vera (PV)": "pv",
+  "Essential Thrombocythemia (ET)": "et",
+  "Primary Myelofibrosis (PMF)": "pmf",
+  "Chronic Myeloid Leukemia (CML)": "cml",
+  "Chronic Neutrophilic Leukemia (CNL)": "cnl",
+  "Chronic Eosinophilic Leukemia (CEL)": "cel",
+
+  "Chronic Myelomonocytic Leukemia (CMML)": "cmml",
+  "Juvenile Myelomonocytic Leukemia (JMML)": "jmml",
+  "MDS/MPN with ring sideroblasts and thrombocytosis (MDS/MPN-RS-T)": "mds_mpn_rs_t",
+
+  "Myeloid/lymphoid neoplasms with eosinophilia (PDGFRA/B, FGFR1, JAK2 rearrangements)": "mln_eo",
+  "Myeloid Sarcoma": "myeloid_sarcoma",
+  "Blastic Plasmacytoid Dendritic Cell Neoplasm (BPDCN)": "bpdcn",
+
+  "B-cell Acute Lymphoblastic Leukemia (B-ALL)": "all",
+  "T-cell Acute Lymphoblastic Leukemia (T-ALL)": "all",
+  "Early T-cell Precursor ALL (ETP-ALL)": "all",
+  "Mixed Phenotype Acute Leukemia (MPAL)": "mpal",
+
+  "Chronic Lymphocytic Leukemia (CLL) / Small Lymphocytic Lymphoma (SLL)": "cll",
+  "B-cell Prolymphocytic Leukemia (B-PLL)": "b_pll",
+  "Hairy Cell Leukemia (HCL)": "hcl",
+
+  "Diffuse Large B-cell Lymphoma (DLBCL)": "dlbcl",
+  "High-grade B-cell lymphoma (Double-Hit/Triple-Hit)": "dlbcl",
+  "Primary Mediastinal B-cell Lymphoma (PMBL)": "dlbcl",
+  "Burkitt Lymphoma": "burkitt",
+  "Primary CNS Lymphoma (PCNSL)": "pcnsl",
+  "Lymphomatoid Granulomatosis (LYG)": "lyg",
+
+  "Follicular Lymphoma (FL)": "fl",
+  "Mantle Cell Lymphoma (MCL)": "mcl",
+  "Marginal Zone Lymphomas (MALT, Splenic, Nodal)": "malt",
+
+  "Mature T-cell & NK-cell Lymphomas": "tnk_lymphoma",
+  "Peripheral T-cell Lymphoma (PTCL, NOS)": "ptcl",
+  "Angioimmunoblastic T-cell Lymphoma (AITL)": "aitl",
+  "Anaplastic Large Cell Lymphoma (ALCL, ALK+/-)": "alcl",
+  "Hepatosplenic T-cell Lymphoma": "hepatosplenic_tcl",
+  "Extranodal NK/T-cell Lymphoma, nasal type": "enktl",
+  "Mycosis Fungoides / Sézary Syndrome": "mf_ss",
+  "T-cell Large Granular Lymphocytic Leukemia (T-LGL)": "t_lgl",
+  "T-cell Prolymphocytic Leukemia (T-PLL)": "t_pll",
+
+  "Hodgkin Lymphoma (HL)": "chl",
+  "Classical Hodgkin Lymphoma": "chl",
+  "Nodular Lymphocyte-Predominant Hodgkin Lymphoma (NLPHL)": "nlphl",
+
+  "Multiple Myeloma (MM)": "myeloma",
+  "Smoldering Multiple Myeloma (SMM)": "myeloma",
+  "Monoclonal Gammopathy of Undetermined Significance (MGUS)": "myeloma",
+  "Monoclonal Gammopathy of Renal Significance (MGRS)": "myeloma",
+  "Waldenström Macroglobulinemia": "waldenstrom",
+  "Primary AL Amyloidosis": "amyloidosis",
+  "ATTR Amyloidosis": "amyloidosis",
+  "Heavy Chain Diseases": "heavy_chain_diseases",
+
+  "Clonal Hematopoiesis of Indeterminate Potential (CHIP)": "chip",
+  "Clonal Cytopenia of Undetermined Significance (CCUS)": "ccus",
+  "Monoclonal B-cell Lymphocytosis (MBL)": "mbl",
+
+  "Histiocytic Neoplasms (Langerhans Cell Histiocytosis, Erdheim-Chester Disease, Rosai-Dorfman)": "histiocytic",
+  "Castleman Disease (Unicentric, Idiopathic Multicentric, HHV-8-associated)": "castleman",
+
+  "Post-Transplant Lymphoproliferative Disorder (PTLD)": "ptld",
+  "Hemophagocytic Lymphohistiocytosis (HLH, malignant forms)": "hlh",
+  "Systemic Mastocytosis": "mastocytosis",
+
+  "Immune Thrombocytopenia (ITP)": "itp",
+  "Autoimmune Hemolytic Anemia (AIHA)": "aiha",
+
+  "Thalassemia": "thalassemia",
+  "Sickle Cell Disease (SCD)": "scd",
+  "Hereditary Spherocytosis": "spherocytosis",
+
+  "Hemophilia": "hemophilia",
+
+  "Common Variable Immunodeficiency (CVID)": "cvid",
+  "IgG4-Related Disease (IgG4-RD)": "igg4rd"
+}

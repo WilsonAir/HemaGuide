@@ -1,0 +1,72 @@
+# Molecular Extraction Prompts for Multiple Myeloma (MM)
+# Entity-specific molecular prompts for myeloma tumor board documents.
+# Base section prompts are in extraction_base.yaml (shared across entities).
+
+molecular_system_prompt: |
+  Sie sind ein spezialisierter KI-Assistent für die Extraktion molekularer und zytogenetischer Daten aus Myelom-Tumorboard-Dokumenten.
+  Extrahieren Sie die Daten exakt wie angegeben. Falls eine Information nicht vorhanden ist, nutzen Sie "nicht vorhanden".
+
+molecular_user_prompt: |
+  KONTEXT: Die klinischen Sektionen (Alter, Diagnose, Anamnese, Fragestellung, Beschluss) wurden bereits extrahiert.
+  Ihre Aufgabe: Extrahieren Sie die molekularen Daten aus dem folgenden Anhang.
+
+  ANALYSEDATEN:
+  {analysis_data}
+
+  AUFGABE:
+  Extrahieren Sie die folgenden drei Kategorien von Informationen:
+
+  1. MOL_INFO (NGS-Varianten):
+     Suchen Sie nach molekularen Variantendaten (NGS-Befunde, Genmutationen, Transkript-IDs, CDS-Notationen wie c.XXX, Aminosäure-Notationen wie p.XXX).
+     JSON-Format pro Variante:
+     {{
+       "gene": "GENNAME",
+       "transcript": "NM_XXXXXX.X",
+       "cds_change": "c.XXX",
+       "aa_change": "p.XXX",
+       "vaf": 0.XX,
+       "cosmic_id": "COSMXXX",
+       "classification": "Oncogenic"
+     }}
+
+     Felder:
+     - gene: Hugo-Gensymbol (z.B. NRAS, KRAS, TP53)
+     - transcript: RefSeq-Transkript-ID (z.B. NM_002524.4)
+     - cds_change: CDS-Notation (z.B. c.182A>G)
+     - aa_change: Aminosäure-Notation (z.B. p.Q61R)
+     - vaf: Allelfrequenz als Dezimalzahl (4,2% = 0.042), null falls unbekannt
+     - cosmic_id: COSMIC-ID falls vorhanden (z.B. COSM584), sonst null
+     - classification: Klassifizierung der Variante (Oncogenic, Likely Oncogenic, VUS, Likely Benign, Benign), null falls nicht angegeben
+
+  2. MOL_FISH (FISH/Zytogenetik-Befunde):
+     Suchen Sie nach Interphase-FISH-Analysen, Zytogenetik-Befunden (Deletionen, Zugewinne, Translokationen, Rearrangements).
+     JSON-Format pro Befund:
+     {{
+       "finding_type": "deletion|gain|translocation|rearrangement|other",
+       "aberration": "13q14",
+       "percentage": 96,
+       "copies": null,
+       "partner": null,
+       "date": "05/17"
+     }}
+     - finding_type: Art des Befundes (deletion für Deletionen, gain für Zugewinne, translocation für Translokationen wie t(4;14), rearrangement für Rearrangements)
+     - aberration: Chromosomale Region (z.B. "13q14", "17p13", "1q21")
+     - percentage: Prozentsatz der betroffenen Zellen (z.B. 96 für 96%)
+     - copies: Anzahl der Kopien bei Zugewinnen (z.B. 3 für "drei Kopien"), sonst null
+     - partner: Bei Translokationen die Partner-Region (z.B. für t(11;14) wäre partner "11;14"), sonst null
+     - date: Datum der Analyse falls vorhanden (z.B. "05/17"), sonst null
+
+  3. MOL_RECOM (Therapiekonsequenz/Empfehlung des molekularen Tumorboards):
+     Suchen Sie nach Therapieempfehlungen, Therapiekonsequenzen oder Empfehlungen des molekularen Tumorboards.
+     Dies können 1-2 Sätze sein, die die klinische Konsequenz der molekularen Befunde beschreiben.
+     Beispiele für Schlüsselwörter: "Therapiekonsequenz", "Empfehlung", "könnte beantragt werden", "wird empfohlen", "Alternative"
+     Geben Sie den Text als String zurück, nicht als Array.
+
+  Antworten Sie im folgenden JSON-Format:
+  {{
+    "mol_info": [...] oder "nicht vorhanden",
+    "mol_fish": [...] oder "nicht vorhanden",
+    "mol_recom": "text" oder "nicht vorhanden"
+  }}
+
+  Antworten Sie NUR mit dem JSON-Objekt:

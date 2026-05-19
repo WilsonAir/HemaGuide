@@ -1,0 +1,85 @@
+Acute Myeloid Leukemia (AML)
+Acute Promyelocytic Leukemia (APL)
+
+Myelodysplastic Syndromes (MDS)
+
+Polycythemia Vera (PV)
+Essential Thrombocythemia (ET)
+Primary Myelofibrosis (PMF)
+Chronic Myeloid Leukemia (CML)
+Chronic Neutrophilic Leukemia (CNL)
+Chronic Eosinophilic Leukemia (CEL)
+
+Chronic Myelomonocytic Leukemia (CMML)
+Juvenile Myelomonocytic Leukemia (JMML)
+MDS/MPN with ring sideroblasts and thrombocytosis (MDS/MPN-RS-T)
+
+Myeloid/lymphoid neoplasms with eosinophilia (PDGFRA/B, FGFR1, JAK2 rearrangements)
+Myeloid Sarcoma
+Blastic Plasmacytoid Dendritic Cell Neoplasm (BPDCN)
+
+B-cell Acute Lymphoblastic Leukemia (B-ALL)
+T-cell Acute Lymphoblastic Leukemia (T-ALL)
+Early T-cell Precursor ALL (ETP-ALL)
+Mixed Phenotype Acute Leukemia (MPAL)
+
+Chronic Lymphocytic Leukemia (CLL) / Small Lymphocytic Lymphoma (SLL)
+B-cell Prolymphocytic Leukemia (B-PLL)
+Hairy Cell Leukemia (HCL)
+
+Diffuse Large B-cell Lymphoma (DLBCL)
+High-grade B-cell lymphoma (Double-Hit/Triple-Hit)
+Primary Mediastinal B-cell Lymphoma (PMBL)
+Burkitt Lymphoma
+Primary CNS Lymphoma (PCNSL)
+Lymphomatoid Granulomatosis (LYG)
+
+Follicular Lymphoma (FL)
+Mantle Cell Lymphoma (MCL)
+Marginal Zone Lymphomas (MALT, Splenic, Nodal)
+
+Mature T-cell & NK-cell Lymphomas
+Peripheral T-cell Lymphoma (PTCL, NOS)
+Angioimmunoblastic T-cell Lymphoma (AITL)
+Anaplastic Large Cell Lymphoma (ALCL, ALK+/-)
+Hepatosplenic T-cell Lymphoma
+Extranodal NK/T-cell Lymphoma, nasal type
+Mycosis Fungoides / Sézary Syndrome
+T-cell Large Granular Lymphocytic Leukemia (T-LGL)
+T-cell Prolymphocytic Leukemia (T-PLL)
+
+Hodgkin Lymphoma (HL)
+Classical Hodgkin Lymphoma
+Nodular Lymphocyte-Predominant Hodgkin Lymphoma (NLPHL)
+
+Multiple Myeloma (MM)
+Smoldering Multiple Myeloma (SMM)
+Monoclonal Gammopathy of Undetermined Significance (MGUS)
+Monoclonal Gammopathy of Renal Significance (MGRS)
+Waldenström Macroglobulinemia
+Primary AL Amyloidosis
+ATTR Amyloidosis
+Heavy Chain Diseases
+
+Clonal Hematopoiesis of Indeterminate Potential (CHIP)
+Clonal Cytopenia of Undetermined Significance (CCUS)
+Monoclonal B-cell Lymphocytosis (MBL)
+
+Histiocytic Neoplasms (Langerhans Cell Histiocytosis, Erdheim-Chester Disease, Rosai-Dorfman)
+Castleman Disease (Unicentric, Idiopathic Multicentric, HHV-8-associated)
+
+Post-Transplant Lymphoproliferative Disorder (PTLD)
+Hemophagocytic Lymphohistiocytosis (HLH, malignant forms)
+Systemic Mastocytosis
+
+Immune Thrombocytopenia (ITP)
+Autoimmune Hemolytic Anemia (AIHA)
+
+Thalassemia
+Sickle Cell Disease (SCD)
+Hereditary Spherocytosis
+
+Hemophilia
+
+Common Variable Immunodeficiency (CVID)
+IgG4-Related Disease (IgG4-RD)

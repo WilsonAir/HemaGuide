@@ -1,0 +1,87 @@
+# Base Extraction Prompts (Shared Across All Entities)
+# This file contains prompts for extracting the 8 base sections from tumor board documents.
+# Prior treatments are derived in a separate post-extraction call (see prior_treatments.yaml).
+# Entity-specific molecular prompts are in separate molecular_{entity}.yaml files.
+
+# Schema - defines the 8 base sections to extract from documents
+sections:
+  - age
+  - ECOG
+  - main_diagnosis
+  - secondary_diagnoses
+  - predictive_factors
+  - history
+  - question
+  - decision
+
+# System prompt for base section extraction (entity-agnostic)
+system_prompt: |
+  <role>
+  Sie sind ein hochspezialisierter KI-Assistent für die Extraktion medizinischer Daten aus Tumorboard-Dokumenten.
+  Ihre Hauptaufgabe ist es, medizinische Dokumente präzise zu analysieren und die angeforderten Informationen exakt und unverändert auszugeben.
+  </role>
+  Halten Sie sich strikt an diese Regeln:
+  <rules>
+  Exaktheit: Extrahieren Sie alle Daten buchstabengetreu aus der Quelle. Nichts interpretieren, ändern, zusammenfassen oder kommentieren.
+  Vollständigkeit: Füllen Sie jedes angeforderte Datenfeld aus. Falls eine Information fehlt, nutzen Sie explizit "nicht vorhanden".
+  Medizinisch: Fokussieren Sie sich auf medizinische Daten. Lassen Sie personenbezogene Daten wie Namen weg.
+  Sprachlich: Geben Sie die Antwort immer in deutscher Sprache zurück.
+  Geben Sie die Antwort immer als valides JSON-Objekt zurück.
+  </rules>
+
+# Section prompts - individual instructions for each section
+section_prompts:
+  age: "Extrahieren Sie das Alter des Patienten. Falls nicht vorhanden, extrahieren Sie das Geburtsdatum des Patienten und das Konferenzdatum, berechnen Sie das Alter des Patienten und geben Sie nur das Alter als Zahlenwert zurück"
+  ECOG: "Extrahieren Sie den ECOG-Performance-Status (funktioneller Status) des Patienten. Geben Sie nur die Zahl (0, 1, 2, 3 oder 4) zurück. Falls kein ECOG-Status oder funktioneller Status im Dokument angegeben ist, nutzen Sie 'nicht vorhanden'."
+  main_diagnosis: "Extrahieren Sie die Hauptdiagnose inklusive aller aufgeführter Details. Geben Sie sie in der gleichen Struktur wie im Dokument aus."
+  secondary_diagnoses: "Extrahieren Sie die Nebendiagnosen inklusive aller aufgeführter Details. Geben Sie sie in der gleichen Struktur wie im Dokument aus."
+  predictive_factors: "Extrahieren Sie die Prognosefaktoren inklusive aller aufgeführter Details. Geben Sie sie in der gleichen Struktur wie im Dokument aus."
+  history: "Extrahieren Sie Therapie und Verlauf inklusive aller aufgeführter medizinischen Details. Geben Sie sie in der gleichen Struktur wie im Dokument aus."
+  question: "Extrahieren Sie ausschließlich die Fragestellung an die Konferenz. Geben Sie sie in der gleichen Struktur wie im Dokument aus."
+  decision: "Extrahieren Sie den Konferenzbeschluss inklusive aller aufgeführter Details. Geben Sie sie in der gleichen Struktur wie im Dokument aus."
+
+# Template configuration for building the combined prompt
+template:
+  # Header text that introduces the extraction task
+  header: 'Bitte extrahieren Sie die folgenden Informationen aus dem Tumorboard-Dokument:'
+
+  # Footer instructions that specify output format requirements
+  footer_instructions:
+    - 'Geben Sie die Antwort als JSON-Objekt mit den Schlüsseln zurück: {section_keys}'
+    - 'Geben Sie alle Werte ausschließlich als String zurück.'
+    - 'Wenn eine Information nicht vorhanden ist, nutzen Sie "nicht vorhanden" als Wert.'
+
+# JSON Schema for OpenAI structured outputs
+# Defines the expected structure of extracted data
+json_schema:
+  name: medical_sections
+  strict: true
+  schema:
+    type: object
+    properties:
+      age:
+        type: string
+      ECOG:
+        type: string
+      main_diagnosis:
+        type: string
+      secondary_diagnoses:
+        type: string
+      predictive_factors:
+        type: string
+      history:
+        type: string
+      question:
+        type: string
+      decision:
+        type: string
+    required:
+      - age
+      - ECOG
+      - main_diagnosis
+      - secondary_diagnoses
+      - predictive_factors
+      - history
+      - question
+      - decision
+    additionalProperties: false

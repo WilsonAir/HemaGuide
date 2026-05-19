@@ -1,0 +1,70 @@
+# Molecular Extraction Prompts for B-cell Acute Lymphoblastic Leukemia (B-ALL)
+# Entity-specific molecular prompts for ALL tumor board documents.
+# Base section prompts are in extraction_base.yaml (shared across entities).
+
+molecular_system_prompt: |
+  Sie sind ein spezialisierter KI-Assistent für die Extraktion molekularer und zytogenetischer Daten aus ALL-Tumorboard-Dokumenten.
+  Extrahieren Sie die Daten exakt wie angegeben. Falls eine Information nicht vorhanden ist, nutzen Sie "nicht vorhanden".
+
+molecular_user_prompt: |
+  KONTEXT: Die klinischen Sektionen (Alter, Diagnose, Anamnese, Fragestellung, Beschluss) wurden bereits extrahiert.
+  Ihre Aufgabe: Extrahieren Sie die molekularen Daten aus dem folgenden Anhang.
+
+  ANALYSEDATEN:
+  {analysis_data}
+
+  AUFGABE:
+  Extrahieren Sie die folgenden drei Kategorien von Informationen:
+
+  1. MOL_INFO (NGS-Varianten):
+     Suchen Sie nach molekularen Variantendaten (NGS-Befunde, Genmutationen, Transkript-IDs, CDS-Notationen wie c.XXX, Aminosäure-Notationen wie p.XXX).
+     JSON-Format pro Variante:
+     {{
+       "gene": "GENNAME",
+       "transcript": "NM_XXXXXX.X",
+       "cds_change": "c.XXX",
+       "aa_change": "p.XXX",
+       "vaf": 0.XX,
+       "cosmic_id": "COSMXXX",
+       "classification": "Oncogenic"
+     }}
+
+     Felder:
+     - gene: Hugo-Gensymbol für ALL-relevante Gene (z.B. IKZF1, PAX5, CDKN2A, CDKN2B, TP53, NOTCH1, FBXW7, CREBBP, NT5C2, PHF6, SETD2, JAK2, CRLF2, EBF1, BTG1)
+     - transcript: RefSeq-Transkript-ID (z.B. NM_006060.6)
+     - cds_change: CDS-Notation (z.B. c.476T>A)
+     - aa_change: Aminosäure-Notation (z.B. p.V159D)
+     - vaf: Allelfrequenz als Dezimalzahl (45% = 0.45), null falls unbekannt
+     - cosmic_id: COSMIC-ID falls vorhanden (z.B. COSM584), sonst null
+     - classification: Klassifizierung der Variante (Oncogenic, Likely Oncogenic, VUS, Likely Benign, Benign), null falls nicht angegeben
+
+  2. MOL_FISH (FISH/Zytogenetik-Befunde):
+     Suchen Sie nach Interphase-FISH-Analysen, Zytogenetik-Befunden (Deletionen, Zugewinne, Translokationen, Rearrangements).
+     JSON-Format pro Befund:
+     {{
+       "finding_type": "deletion|gain|translocation|rearrangement|other",
+       "aberration": "Chromosomale Aberration mit Fusionsgen (z.B. t(9;22)/BCR::ABL1, t(12;21)/ETV6::RUNX1, t(4;11)/KMT2A::AFF1, t(1;19)/TCF3::PBX1, iAMP21, Hyperdiploidie, Hypodiploidie, del(9p)/CDKN2A)",
+       "percentage": 96,
+       "copies": null,
+       "partner": null,
+       "date": "01/24"
+     }}
+     - finding_type: Art des Befundes (deletion, gain, translocation, rearrangement, other)
+     - aberration: Chromosomale Region/Aberration
+     - percentage: Prozentsatz der betroffenen Zellen (z.B. 96 für 96%)
+     - copies: Anzahl der Kopien bei Zugewinnen, sonst null
+     - partner: Bei Translokationen das Fusionsgen (z.B. BCR::ABL1, ETV6::RUNX1, KMT2A::AFF1, TCF3::PBX1), sonst null
+     - date: Datum der Analyse falls vorhanden, sonst null
+
+  3. MOL_RECOM (Therapiekonsequenz/Empfehlung des molekularen Tumorboards):
+     Suchen Sie nach Therapieempfehlungen, Therapiekonsequenzen oder Empfehlungen des molekularen Tumorboards.
+     Geben Sie den Text als String zurück, nicht als Array.
+
+  Antworten Sie im folgenden JSON-Format:
+  {{
+    "mol_info": [...] oder "nicht vorhanden",
+    "mol_fish": [...] oder "nicht vorhanden",
+    "mol_recom": "text" oder "nicht vorhanden"
+  }}
+
+  Antworten Sie NUR mit dem JSON-Objekt:

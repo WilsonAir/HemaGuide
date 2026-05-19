@@ -1,0 +1,152 @@
+{
+  "amyloidosis": {
+    "name": "AL Amyloidosis",
+    "onkopedia_slug": "amyloidose-leichtketten-al-amyloidose",
+    "local_stand": "2025-07"
+  },
+  "all": {
+    "name": "Acute Lymphoblastic Leukemia (ALL)",
+    "onkopedia_slug": "akute-lymphatische-leukaemie-all",
+    "local_stand": "2026-01"
+  },
+  "aml": {
+    "name": "Acute Myeloid Leukemia (AML)",
+    "onkopedia_slug": "akute-myeloische-leukaemie-aml",
+    "local_stand": "2025-09"
+  },
+  "bpdcn": {
+    "name": "BPDCN",
+    "onkopedia_slug": "blastische-plasmazytoide-dendritische-zellneoplasie-bpdcn",
+    "local_stand": "2022-01"
+  },
+  "castleman": {
+    "name": "Castleman Disease",
+    "onkopedia_slug": "morbus-castleman",
+    "local_stand": "2022-06"
+  },
+  "cel": {
+    "name": "Chronic Eosinophilic Leukemia (CEL)",
+    "onkopedia_slug": "eosinophilie-primaere-klonale-eosinophile-und-differentialdiagnosen",
+    "local_stand": "2023-10"
+  },
+  "cll": {
+    "name": "CLL",
+    "onkopedia_slug": "chronische-lymphatische-leukaemie-cll",
+    "local_stand": "2025-09"
+  },
+  "cml": {
+    "name": "CML",
+    "onkopedia_slug": "chronische-myeloische-leukaemie-cml",
+    "local_stand": "2025-11"
+  },
+  "cmml": {
+    "name": "CMML",
+    "onkopedia_slug": "chronische-myelomonozytaere-leukaemie-cmml",
+    "local_stand": "2023-03"
+  },
+  "dlbcl": {
+    "name": "Diffuse Large B-Cell Lymphoma (DLBCL)",
+    "onkopedia_slug": "diffuses-grosszelliges-b-zell-lymphom",
+    "local_stand": "2025-12"
+  },
+  "et": {
+    "name": "Essential Thrombocythemia (ET)",
+    "onkopedia_slug": "essentielle-oder-primaere-thrombozythaemie-et",
+    "local_stand": "2023-12"
+  },
+  "fl": {
+    "name": "Follicular Lymphoma (FL)",
+    "onkopedia_slug": "follikulaeres-lymphom",
+    "local_stand": "2025-07"
+  },
+  "hcl": {
+    "name": "Hairy Cell Leukemia (HCL)",
+    "onkopedia_slug": "haarzell-leukaemie-hzl",
+    "local_stand": "2022-10"
+  },
+  "chl": {
+    "name": "Hodgkin Lymphoma (HL)",
+    "onkopedia_slug": "hodgkin-lymphom",
+    "local_stand": "2023-12"
+  },
+  "hlh": {
+    "name": "HLH",
+    "onkopedia_slug": "haemophagozytische-lymphohistiozytose-hlh",
+    "local_stand": "2024-08"
+  },
+  "itp": {
+    "name": "Immune Thrombocytopenia (ITP)",
+    "onkopedia_slug": "immunthrombozytopenie-itp",
+    "local_stand": "2024-08"
+  },
+  "malt": {
+    "name": "MALT Lymphoma",
+    "onkopedia_slug": "extranodales-marginalzonen-lymphom-malt-lymphom",
+    "local_stand": "2023-10"
+  },
+  "mcl": {
+    "name": "Mantle Cell Lymphoma (MCL)",
+    "onkopedia_slug": "mantelzell-lymphom",
+    "local_stand": "2023-06"
+  },
+  "mds": {
+    "name": "MDS",
+    "onkopedia_slug": "myelodysplastische-neoplasien-myelodysplastische-syndrome-mds",
+    "local_stand": "2024-02"
+  },
+  "mgus": {
+    "name": "MGUS",
+    "onkopedia_slug": "monoklonale-gammopathie-unklarer-signifikanz-mgus",
+    "local_stand": "2023-12"
+  },
+  "tnk_lymphoma": {
+    "name": "Mature T/NK-Cell Lymphomas",
+    "onkopedia_slug": "periphere-t-zell-lymphome",
+    "local_stand": "2025-10"
+  },
+  "waldenstrom": {
+    "name": "Waldenstrom Macroglobulinemia",
+    "onkopedia_slug": "morbus-waldenstroem-lymphoplasmozytisches-lymphom",
+    "local_stand": "2024-11"
+  },
+  "myeloma": {
+    "name": "Multiple Myeloma",
+    "onkopedia_slug": "multiples-myelom",
+    "local_stand": "2024-10"
+  },
+  "pmf": {
+    "name": "Primary Myelofibrosis (PMF)",
+    "onkopedia_slug": "myelofibrose",
+    "local_stand": "2025-09"
+  },
+  "scd": {
+    "name": "Sickle Cell Disease (SCD)",
+    "onkopedia_slug": "sichelzellkrankheiten",
+    "local_stand": "2024-10"
+  },
+  "spherocytosis": {
+    "name": "Hereditary Spherocytosis",
+    "onkopedia_slug": "sphaerozytose-hereditaer-kugelzellenanaemie",
+    "local_stand": "2024-10"
+  },
+  "thalassemia": {
+    "name": "Beta-Thalassemia",
+    "onkopedia_slug": "beta-thalassaemie",
+    "local_stand": "2025-07"
+  },
+  "t_pll": {
+    "name": "T-PLL",
+    "onkopedia_slug": "t-zell-prolymphozytenleukaemie",
+    "local_stand": "2026-03"
+  },
+  "pv": {
+    "name": "Polycythemia Vera (PV)",
+    "onkopedia_slug": "polycythaemia-vera-pv",
+    "local_stand": "2026-03"
+  },
+  "pcnsl": {
+    "name": "Primary CNS Lymphoma (PCNSL)",
+    "onkopedia_slug": "primaeres-lymphom-des-zentralnervensystems-pznsl",
+    "local_stand": "2026-03"
+  }
+}

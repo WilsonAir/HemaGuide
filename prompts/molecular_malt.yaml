@@ -1,0 +1,72 @@
+# Molecular Extraction Prompts for MALT Lymphoma (Marginal Zone Lymphomas)
+# Entity-specific molecular prompts for MALT lymphoma tumor board documents.
+# Base section prompts are in extraction_base.yaml (shared across entities).
+
+molecular_system_prompt: |
+  Sie sind ein spezialisierter KI-Assistent für die Extraktion molekularer und zytogenetischer Daten aus MALT-Lymphom-Tumorboard-Dokumenten.
+  Extrahieren Sie die Daten exakt wie angegeben. Falls eine Information nicht vorhanden ist, nutzen Sie "nicht vorhanden".
+
+molecular_user_prompt: |
+  KONTEXT: Die klinischen Sektionen (Alter, Diagnose, Anamnese, Fragestellung, Beschluss) wurden bereits extrahiert.
+  Ihre Aufgabe: Extrahieren Sie die molekularen Daten aus dem folgenden Anhang.
+
+  ANALYSEDATEN:
+  {analysis_data}
+
+  AUFGABE:
+  Extrahieren Sie die folgenden drei Kategorien von Informationen:
+
+  1. MOL_INFO (NGS-Varianten):
+     Suchen Sie nach molekularen Variantendaten (NGS-Befunde, Genmutationen, Transkript-IDs, CDS-Notationen wie c.XXX, Aminosäure-Notationen wie p.XXX).
+     JSON-Format pro Variante:
+     {{
+       "gene": "GENNAME",
+       "transcript": "NM_XXXXXX.X",
+       "cds_change": "c.XXX",
+       "aa_change": "p.XXX",
+       "vaf": 0.XX,
+       "cosmic_id": "COSMXXX",
+       "classification": "Oncogenic"
+     }}
+
+     Felder:
+     - gene: Hugo-Gensymbol für MALT-relevante Gene (z.B. BIRC3/API2, MALT1, BCL10, TNFAIP3/A20, MYD88, NOTCH1, NOTCH2, KLF2, TNFRSF14, TBL1XR1, KMT2D, CREBBP)
+     - transcript: RefSeq-Transkript-ID (z.B. NM_001165.5)
+     - cds_change: CDS-Notation (z.B. c.794T>C)
+     - aa_change: Aminosäure-Notation (z.B. p.L265P)
+     - vaf: Allelfrequenz als Dezimalzahl (45% = 0.45), null falls unbekannt
+     - cosmic_id: COSMIC-ID falls vorhanden (z.B. COSM584), sonst null
+     - classification: Klassifizierung der Variante (Oncogenic, Likely Oncogenic, VUS, Likely Benign, Benign), null falls nicht angegeben
+
+  2. MOL_FISH (FISH/Zytogenetik-Befunde):
+     Suchen Sie nach Interphase-FISH-Analysen, Zytogenetik-Befunden (Deletionen, Zugewinne, Translokationen, Rearrangements).
+     JSON-Format pro Befund:
+     {{
+       "finding_type": "deletion|gain|translocation|rearrangement|trisomy|other",
+       "aberration": "Chromosomale Aberration (z.B. t(11;18)/BIRC3::MALT1/API2::MALT1, Trisomie 3, t(1;14)/BCL10::IGH, t(14;18)/MALT1::IGH, t(3;14)/FOXP1::IGH, del(6q))",
+       "percentage": 96,
+       "copies": null,
+       "partner": null,
+       "date": "01/24"
+     }}
+     - finding_type: Art des Befundes (deletion, gain, translocation, rearrangement, trisomy, other)
+     - aberration: Chromosomale Region/Aberration; t(11;18)/API2::MALT1 ist mit HP-Eradikationsresistenz assoziiert (~24% gastrischer MALT)
+     - percentage: Prozentsatz der betroffenen Zellen (z.B. 96 für 96%)
+     - copies: Anzahl der Kopien bei Zugewinnen/Trisomien (z.B. 3 für Trisomie), sonst null
+     - partner: Bei Translokationen die Partner-Region (z.B. für t(11;18) wäre partner "11;18" oder "BIRC3::MALT1"), sonst null
+     - date: Datum der Analyse falls vorhanden, sonst null
+
+  3. MOL_RECOM (Therapiekonsequenz/Empfehlung des molekularen Tumorboards):
+     Suchen Sie nach Therapieempfehlungen, Therapiekonsequenzen oder Empfehlungen des molekularen Tumorboards.
+     Dies können 1-2 Sätze sein, die die klinische Konsequenz der molekularen Befunde beschreiben.
+     Beispiele für Schlüsselwörter: "Therapiekonsequenz", "Empfehlung", "könnte beantragt werden", "wird empfohlen", "Alternative"
+     Geben Sie den Text als String zurück, nicht als Array.
+
+  Antworten Sie im folgenden JSON-Format:
+  {{
+    "mol_info": [...] oder "nicht vorhanden",
+    "mol_fish": [...] oder "nicht vorhanden",
+    "mol_recom": "text" oder "nicht vorhanden"
+  }}
+
+  Antworten Sie NUR mit dem JSON-Objekt:

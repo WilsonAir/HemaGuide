@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="hemaguide" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer circle ring with glow -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#hemaguide)" stroke-width="5" filter="url(#glow)"/>
+
+  <!-- Inner organic cell membrane with upper-right protrusion -->
+  <path d="M 50 21
+           C 56 21, 62 22, 66 25
+           C 71 28, 76 25, 78 30
+           C 80 35, 75 40, 72 44
+           C 68 50, 70 58, 68 64
+           C 66 70, 60 76, 52 77
+           C 44 78, 36 76, 30 71
+           C 24 66, 21 58, 21 50
+           C 21 42, 23 34, 28 28
+           C 33 22, 42 21, 50 21 Z"
+        fill="none" stroke="url(#hemaguide)" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Molecular network lines -->
+  <g stroke="url(#hemaguide)" stroke-width="2.5" stroke-linecap="round">
+    <line x1="50" y1="48" x2="50" y2="30"/>
+    <line x1="50" y1="48" x2="50" y2="68"/>
+    <line x1="50" y1="48" x2="64" y2="38"/>
+    <line x1="50" y1="48" x2="36" y2="60"/>
+  </g>
+
+  <!-- Molecular nodes -->
+  <g fill="url(#hemaguide)">
+    <circle cx="50" cy="48" r="4.5"/>
+    <circle cx="50" cy="30" r="3.5"/>
+    <circle cx="50" cy="68" r="3.5"/>
+    <circle cx="64" cy="38" r="3.5"/>
+    <circle cx="36" cy="60" r="3.5"/>
+  </g>
+</svg>

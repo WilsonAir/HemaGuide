@@ -1,0 +1,68 @@
+# Enrichment Prompts for Tumor Board Cases
+# These prompts enrich basic extracted data with additional structured information.
+#
+# Call order (with dependencies):
+#   1. question_long (input: main_diagnosis, history, question)
+#   2. tumorboard_type (input: question_long output)
+#   3. decision_long (input: main_diagnosis, history, question, decision)
+
+# Prompt 1: Generate expanded question from case data
+# Input: {main_diagnosis}, {history}, {question}
+# Output: Plain text (expanded question)
+question_long: |
+  Basierend auf den folgenden bereits extrahierten Informationen eines Tumorboard-Falls:
+
+  HAUPTDIAGNOSE:
+  {main_diagnosis}
+
+  THERAPIEVERLAUF:
+  {history}
+
+  FRAGESTELLUNG:
+  {question} (Kurznotiz)
+
+  Formulieren Sie eine fokussierte Fragestellung an die Konferenz.
+
+  Antworten Sie NUR mit der Fragestellung, ohne Einleitung oder Erklärung.
+
+# Prompt 2: Classify tumor board type based on question
+# Input: {question_long}
+# Output: Plain text (category name only)
+tumorboard_type: |
+  Basierend auf der folgenden ausführlichen Fragestellung, klassifizieren Sie den Fall.
+
+  FRAGESTELLUNG:
+  {question_long}
+
+  Kategorien:
+  - Erstdiagnose: Erstmalige Diagnosestellung
+  - Zweitmeinung: Zweitmeinung zu bestehender Diagnose/Therapie
+  - Rezidiv: Rückfall nach vorheriger Behandlung
+  - Indikationsstellung CAR-T-Zellgabe: Bewertung/Indikation für CAR-T-Zelltherapie
+  - Ende der leitliniengerechten Therapie: Keine Standardtherapieoptionen mehr
+  - Molekulares Tumorboard: Molekulare Diagnostik oder molekularbasierte Therapieentscheidungen
+
+  Antworten Sie NUR mit dem Namen der Kategorie, nichts anderes.
+
+# Prompt 3: Generate expanded decision from case data
+# Input: {main_diagnosis}, {history}, {question}, {decision}
+# Output: Plain text (expanded decision)
+decision_long: |
+  Basierend auf den folgenden bereits extrahierten Informationen eines Tumorboard-Falls:
+
+  HAUPTDIAGNOSE:
+  {main_diagnosis}
+
+  THERAPIEVERLAUF:
+  {history}
+
+  FRAGESTELLUNG:
+  {question} (Kurznotiz)
+
+  KONFERENZBESCHLUSS:
+  {decision}
+
+  Formulieren Sie einen Beschluss basierend auf Therapieverlauf, Fragestellung und Konferenzbeschluss.
+
+  Antworten Sie NUR mit dem Beschluss, ohne Einleitung oder Erklärung.
+

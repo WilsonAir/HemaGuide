@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+
+# Virtual Environment
+venv/
+.venv/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Frontend build artifacts
+frontend/node_modules/

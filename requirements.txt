@@ -1,0 +1,37 @@
+# Core dependencies for medical document processing pipeline
+# Updated to latest versions as of September 2025
+
+# Document processing
+python-docx==1.2.0  # For reading .docx files
+lxml==5.3.0  # XML processing (python-docx dependency)
+
+# HTTP client for external APIs (gnomAD, CIViC, OncoKB, UniProt, Crossref)
+requests>=2.31.0
+
+# AI/LLM integration
+openai==1.107.1  # OpenAI SDK v1.0+ for GPT models
+ollama>=0.4.4  # Ollama SDK for local LLM inference
+
+# Vector database and embeddings
+chromadb==1.0.20  # Vector database for RAG pipeline
+numpy>=1.24.0,<2.0.0  # For efficient embedding cache operations
+
+# Environment and configuration
+python-dotenv==1.1.1  # For managing environment variables
+PyYAML>=6.0.1  # For YAML configuration file parsing
+
+# PubMed API access
+biopython>=1.83  # For NCBI Entrez PubMed search
+
+# Testing
+pytest>=7.0.0  # Test framework
+pytest-mock>=3.10.0  # Mocking utilities for pytest
+
+# Visualization
+matplotlib>=3.7.0  # For precision@K evaluation plots
+
+# Backend API (FastAPI)
+fastapi>=0.115.0  # Web framework for REST API
+uvicorn>=0.32.0  # ASGI server for FastAPI
+python-multipart>=0.0.12  # For file upload handling
+websockets>=12.0  # For WebSocket support in FastAPI backend
