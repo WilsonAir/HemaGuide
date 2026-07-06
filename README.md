@@ -121,4 +121,4 @@ This software is provided as proof-of-concept for **research purposes only** and
 - All patient documents must be de-identified before processing online
 - Generated clinical decisions require validation by qualified medical professionals
 - Not approved for production clinical decision-making
-- Users are responsible for ensuring compliance with local regulations and institutional policies
+- Users are responsible for ensuring compliance with local regulations and institutional policies# HemaGuide
