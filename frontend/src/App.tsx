@@ -15,8 +15,8 @@ import type { Config, ProcessingStatus, AgentResult, StatusUpdate, CaseResult } 
 export default function App() {
   // State
   const [config, setConfig] = useState<Config>({
-    llmMode: 'ollama-local',
-    decisionModel: 'gpt-oss:120b',
+    llmMode: 'openai',
+    decisionModel: 'qwen-plus',
   });
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
   const [status, setStatus] = useState<ProcessingStatus>('idle');

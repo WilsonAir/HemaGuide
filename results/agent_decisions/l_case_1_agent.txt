@@ -1,0 +1,8 @@
+MODE: ⚠ ADVANCED→PLAIN [all irrelevant: cases=0, PubMed=3, Crossref=3]
+────────────────────────────────────────────────────────────
+
+DECISION:
+Induktionstherapie mit Daunorubicin 60 mg/m² d1–3 und Cytarabin 100 mg/m² d1–7 („7+3“) initiieren.
+
+REASON:
+Patientin mit neu diagnostizierter biallelär CEBPA-mutierter AML (ELN favorable), ECOG 1, ohne Komorbiditäten. Keine Vortherapie außer Hydroxyurea (zytoreduktiv). Gemäß ELN 2022 ist intensive Induktionstherapie Standard. '7+3' (Daunorubicin + Cytarabin) ist evidenzbasiert und optimal für dieses günstige Risikoprofil.

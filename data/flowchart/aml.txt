@@ -1,0 +1,199 @@
+# =============================================================================
+# AML Flowchart (akute myeloische Leukämie)
+# Entity: aml
+# Source: Onkopedia AML (https://www.onkopedia.com/de/onkopedia/guidelines/akute-myeloische-leukaemie-aml)
+# Stand: 2025-09
+# Language: de
+# =============================================================================
+
+# =============================================================================
+# 1. ERSTDIAGNOSE – DRINGLICHKEIT & VORAB-ENTSHEIDUNG
+# =============================================================================
+
+[AML-GATE-1] Erstdiagnose – Dringlichkeit der Therapieeinleitung
+  IF Verdacht APL (morphologisch, t(15;17) oder PML::RARA):
+    -> SOFORT ATRA beginnen, weiter zu [APL-1]
+  ELSE IF Leukozyten >20.000/µl OR Leukostasesyndrom OR Tumorlyse OR entgleiste Gerinnung:
+    -> Prephase: Hydroxyurea 4-5 g/d (bei >50-100 Gpt/l), ggf. Cytarabin
+    -> Anthracyclin erst bei Leukozyten <30 Gpt/l
+    -> DANN weiter zu [AML-INTENSIV]
+  ELSE IF abwartendes Vorgehen + später lebensbedrohliche Symptome:
+    -> intensive Therapie auf Basis vorliegender Befunde SOFORT beginnen
+  ELSE:
+    -> warten auf vollständige genetische Diagnostik, dann weiter zu [AML-INTENSIV]
+
+[AML-INTENSIV] Fit für intensive kurativ intendierte Therapie?
+  Kriterien: ECOG/Status fit, kurative Intention, keine schweren Komorbiditäten
+  IF biologisches Alter >75 OR ECOG ≥3 OR schwere Komorbiditäten (Herzinsuffizienz EF<30%, Nieren-/Leberinsuffizienz, etc.):
+    -> [AML-NON-INTENSIV]
+  IF biologisches Alter ≤65 AND fit:
+    -> [INT-YOUNG] volle intensive Therapie
+  IF biologisches Alter 66-75 AND fit (keine schweren Komorbiditäten):
+    -> [INT-ELDERLY-FIT] intensive Therapie mit reduzierter Cytarabin-Dosis in Konsolidierung
+  ELSE:
+    -> [AML-NON-INTENSIV]
+
+[INT-YOUNG] Volle intensive Erstlinientherapie (≤65, fit)
+  -> Induktion: Subgruppen-Routing [INT-1a] bis [INT-1e]
+  -> Konsolidierung: HiDAC (3 g/m² q12h) oder allo-SZT nach Risiko
+
+[INT-ELDERLY-FIT] Ältere fitte Patienten (66-75, fit)
+  -> Induktion: gleiche Subgruppen-Routing wie [INT-YOUNG]
+  -> Konsolidierung: reduzierte Cytarabin-Dosis (IDAC statt HDAC), allo-SZT wenn geeignet
+
+[AML-NON-INTENSIV] Nicht-intensivfähige / ältere / palliative Patienten
+  -> bevorzugt klinische Studie
+  -> Standard: Azacitidin oder Decitabin + Venetoclax (HMA+Ven)
+  -> Alternativ bei Unverträglichkeit: HMA-Monotherapie oder niedrigdosiertes Cytarabin (LDAC)
+  -> IDH1-mutiert: Ivosidenib + Azacitidin GLEICHWERTIG zu HMA+Ven (beide Optionen first-line)
+  -> Supportive Care (Best Supportive Care) als Basis
+
+# =============================================================================
+# 2. INTENSIVE ERSTLINIENTHERAPIE (fit, APL ausgeschlossen)
+# =============================================================================
+
+[INT-1a] Favorables Risiko: CBF-AML OR (NPM1+ bei FLT3wt) OR (CEBPA bZIP in-frame)
+         Voraussetzung: CD33+, fit für intensive Therapie
+  -> Induktion: 7+3 (Cytarabin d1-7, Daunorubicin 60 mg/m² d1-3) + GO 3 mg/m² d1,4,7
+  -> WICHTIG: GO bei >70 Jahren NICHT empfohlen
+  -> Konsolidierung [INT-1a-KONS]: HiDAC (z.B. 3 g/m² q12h d1,3,5), 3 Zyklen; allo-SZT in CR1 nur bei MRD-Positivität/Refraktärität
+
+[INT-1b] FLT3-ITD, fit <60 Jahre
+  -> Induktion: 7+3 + Quizartinib (Tag 8-21)
+  -> Konsolidierung: IDAC/HiDAC + Quizartinib, allo-SZT bei Hochrisiko
+  -> ohne Transplantationsoption: [FLT3-MAINT] Quizartinib oder oral Azacitidin (CC-486) Maintenance
+
+[INT-1b2] FLT3-TKD
+  -> Induktion: 7+3 + Midostaurin (Tag 8-21) [Midostaurin ist Standard für FLT3-TKD]
+  -> Konsolidierung: IDAC/HiDAC + Midostaurin, Erhaltung 12 Zyklen
+
+[INT-1b3] FLT3-ITD, ≥60 Jahre
+  -> Induktion: 7+3 + Midostaurin (Tag 8-21)
+  -> Konsolidierung: IDAC/HiDAC + Midostaurin, Erhaltung 12 Zyklen
+  -> ohne Transplantationsoption: [FLT3-MAINT] Midostaurin oder CC-486 Maintenance
+
+[INT-1c] AML-MR / tAML / AML-pCT (myelodysplasie-assoziiert oder therapieassoziiert), FLT3wt
+  -> Induktion: CPX-351 (Vyxeos®) anstelle 7+3
+  -> Konsolidierung: 2 Zyklen CPX-351 oder HiDAC, dann allo-SZT planen, wenn fit
+  -> nicht transplantierfähig: HMA+Ven als Erhaltung/Bridge
+
+[INT-1d] Intermediäres Risiko, FLT3wt, CD33+
+  -> Induktion: 7+3, GO optional (Individuelle Entscheidung)
+  -> Konsolidierung: HiDAC oder allo-SZT bei Hochrisikofaktoren
+
+[INT-1e] Keine Zuordnung zu Subgruppen / genetische Diagnostik noch ausstehend
+  -> Induktion: 7+3 (Cytarabin 100-200 mg/m² d1-7, Anthracyclin d1-3)
+  -> nach genetischem Ergebnis ggf. Subgruppen-Routing
+
+# =============================================================================
+# 3. KONSOLIDIERUNG INTENSIVER THERAPIE
+# =============================================================================
+
+[INT-1a-KONS] Konsolidierung nach 7+3+GO (favorables Risiko)
+  -> HiDAC 3 Zyklen (z.B. 3 g/m² q12h d1,3,5) bei jüngeren Patienten
+  -> IDAC bei älteren fit-fitten Patienten (66-75)
+  -> allo-SZT in CR1 NICHT routinemäßig, nur bei MRD-positiv oder Refraktärität
+
+[INT-2] Konsolidierung intermediär/unfavorables Risiko
+  -> MRD-positiv oder Hochrisiko (FLT3-ITD, adverse Genetics): allo-SZT bevorzugt
+  -> MRD-negativ intermediate ohne Donor: Chemokonsolidierung (IDAC/HiDAC) + [NPM1-MAINT] oral Azacitidin (CC-486), wenn NPM1+
+  -> keine Transplantationsoption: 2-3 Zyklen IDAC + CC-486 Maintenance
+  -> FLT3-ITD: [FLT3-MAINT] TKI-Erhaltung nach Chemokonsolidierung; nach allo-SZT: [FLT3-SCT-MAINT]
+
+[FLT3-MAINT] FLT3-ITD ohne Transplantationsoption nach Chemokonsolidierung
+  -> Quizartinib-Maintenance bis Progress (bevorzugt)
+  -> Alternativ: oral Azacitidin (CC-486)
+  -> bei Intoleranz: Midostaurin
+
+[FLT3-SCT-MAINT] FLT3-ITD nach allo-SZT
+  -> Sorafenib 2 Jahre, Start zwischen Tag +60 und +100 nach Transplantation (bevorzugt)
+  -> bei Sorafenib-Kontraindikation oder -Intoleranz: Quizartinib (besonders bei MRD-positiv)
+  -> Midostaurin-Maintenance nach allo-SZT hat keinen Überlebensvorteil
+
+[NPM1-MAINT] NPM1+ AML ohne Transplantationsoption nach Chemokonsolidierung
+  -> oral Azacitidin (CC-486) Maintenance bis Progress
+  -> Alternative: enges NPM1-MRD-Monitoring und allo-SZT bei molekularem Rezidiv
+
+# =============================================================================
+# 4. APL (Akute Promyelozytenleukämie) – EINGEBETTET IN AML
+# =============================================================================
+
+[APL-1] APL Erstdiagnose – SOFORT ATRA
+  -> ATRA sofort beginnen; zusätzlich ATO (wenn verfügbar)
+  -> Sanz-Risiko-Stratifizierung:
+       WBC ≤10.000/µl AND Plt >40.000/µl  -> [APL-1a] niedriges Risiko
+       WBC ≤10.000/µl AND Plt ≤40.000/µl  -> [APL-1b] intermediäres Risiko
+       WBC >10.000/µl                     -> [APL-2] hohes Risiko
+
+[APL-1a] APL niedriges Risiko
+  -> ATRA + ATO (bis molekulare CR), keine Anthracyclin
+  -> enges Monitoring, keine Leukapherese
+
+[APL-1b] APL intermediäres Risiko
+  -> ATRA + ATO, ggf. kurze Anthracyclin-Add-on
+  -> Steroidprophylaxe (Prednison 0,5 mg/kg/d) gegen Differenzierungssyndrom (DS)
+  -> Differenzierungssyndrom: ATRA/ATO pause + Dexamethason 10 mg i.v. q12h
+
+[APL-2] APL hohes Risiko (WBC >10.000/µl)
+  -> Induktion: Idarubicin + ATRA; ATO ab Tag 5
+  -> Hydroxyurea für schnelle Zytoreduktion (WBC >50.000/µl: HU 4 g/d)
+  -> Leukapherese KONTRAINDIZIERT
+  -> Dexamethason 10 mg i.v. q12h als DS-Prophylaxe/Therapie
+  -> aggressives Blutungsmanagement (Plt >30-50 Gpt/l, Fibrinogen >150 mg/dl)
+
+[APL-3] Passage-/persistierende Hyperleukozytose unter ATRA/ATO
+  IF WBC >50.000/µl OHNE DS-Symptome:
+    -> Hydroxyurea 2 g 2x täglich (4 g/d), ATRA/ATO weiter
+  IF WBC >20.000/µl persistent:
+    -> Hydroxyurea, enges Monitoring
+  IF DS-Symptome manifest:
+    -> ATRA/ATO kurz pausieren + Dexamethason 10 mg i.v. q12h, dann ATRA/ATO wieder aufnehmen
+  IF keine ausreichende WBC-Senkung nach 48-72 h oder klinische Leukostase:
+    -> kurzfristig Idarubicin (z.B. Tag 1+3) hinzufügen
+
+# =============================================================================
+# 5. REZIDIVTHERAPIE
+# =============================================================================
+
+[REL-1] Rezidivdiagnose – Zieltherapie
+  -> Bevorzugt: klinische Studie
+  -> Fit + kurativ: allo-SZT (zweite SZT oder erste SZT im Rezidiv)
+  -> SZT innerhalb 4-6 Wochen möglich: watch&wait oder niedrigdosierte Chemo, dann SZT
+  -> SZT >6 Wochen: Re-Induktion mit HiDAC/Ida-FLAG, dann SZT
+
+[REL-2] FLT3-mutiertes R/R AML
+  -> Gilteritinib (bevorzugt, auch vor SZT)
+  -> nach Gilteritinib: intensive Salvage oder SZT
+
+[REL-3] FLT3-wildtyp, HMA-naiv, nicht SZT-geeignet
+  -> HMA + Venetoclax
+
+[REL-4] R/R nach allogener SZT
+  -> DLI + HMA (Azacitidin/Venetoclax) bei chemosensibler Erkrankung (ähnliche Effektivität wie zweite allo-SZT)
+  -> intensive Salvage (FLAG-IDA ± Venetoclax) bei hoher Blastlast und Fitness, dann DLI oder zweite allo-SZT
+  -> zweite allo-SZT bei CR und geeignetem Spender
+
+[REL-5] IDH1/2 mutiertes R/R AML
+  -> IDH1: Ivosidenib
+  -> IDH2: Enasidenib
+
+[REL-6] KMT2A-Umlagerung (KMT2Ar)
+  -> klinische Studie mit Menin-Inhibitor (z.B. Revumenib)
+
+# =============================================================================
+# 6. SUPPORTIVE MASSNAHMEN
+# =============================================================================
+
+[SUPP-1] Hyperleukozytose / Leukostase
+  -> Hydroxyurea 4-5 g/d, Cytarabin wenn nötig
+  -> keine systemische Ganzblutabnahme (Leukapherese nur bei symptomatischer Hyperviskosität nicht-APL)
+  -> Anthracyclin erst nach Lk <30 Gpt/l
+
+[SUPP-2] Differenzierungssyndrom (APL)
+  -> Dexamethason 10 mg i.v. q12h, ATRA/ATO kurz pausieren, Supportive Care
+
+[SUPP-3] Tumorlyseprophylaxe
+  -> aggressive Hydrierung, Allopurinol, ggf. Rasburicase
+
+[SUPP-4] Infektionsprophylaxe
+  -> Antimykotika, Antivirale, Pneumocystis-Prophylaxe nach Protokoll

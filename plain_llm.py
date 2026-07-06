@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 
 logger = logging.getLogger('plain_llm')
 import src
+from src.llm import LLM_MODE_CHOICES, OPENAI_DEFAULT_DECISION_MODEL, VLLM_DEFAULT_MODEL, resolve_api_key
 
 load_dotenv()
 
@@ -39,7 +40,7 @@ PLAIN_BASELINE_PROMPTS = Path('./prompts/decision_plain_baseline.yaml')
 # Mode configurations (keys match process_query_input.py for consistency)
 MODE_CONFIGS = {
     'openai': {
-        'default_decision_model': 'gpt-5-nano-2025-08-07',
+        'default_decision_model': OPENAI_DEFAULT_DECISION_MODEL,
         'api_key_env': 'OPENAI_API_KEY',
         'parallel': True,
     },
@@ -52,6 +53,11 @@ MODE_CONFIGS = {
         'default_decision_model': 'gpt-oss:120b',
         'api_key_env': 'OLLAMA_API_KEY',
         'parallel': True,
+    },
+    'vllm': {
+        'default_decision_model': VLLM_DEFAULT_MODEL,
+        'api_key_env': None,
+        'parallel': False,
     },
 }
 
@@ -176,7 +182,7 @@ Examples:
         """
     )
 
-    parser.add_argument('--llm-mode', choices=['openai', 'ollama-local', 'ollama-cloud'],
+    parser.add_argument('--llm-mode', choices=list(LLM_MODE_CHOICES),
                        default='ollama-local',
                        help='LLM backend mode (default: ollama-local)')
     parser.add_argument('--decision-model',
@@ -193,14 +199,11 @@ Examples:
     # Resolve decision model
     decision_model = args.decision_model or mode_config['default_decision_model']
 
-    # Resolve API key from environment
-    if mode_config['api_key_env']:
-        api_key = os.getenv(mode_config['api_key_env'])
-        if not api_key:
-            logger.error(f"API key not found. Set {mode_config['api_key_env']} environment variable.")
-            sys.exit(1)
-    else:
-        api_key = 'ollama'
+    try:
+        api_key = resolve_api_key(args.llm_mode, mode_config)
+    except ValueError as exc:
+        logger.error(str(exc))
+        sys.exit(1)
 
     # Log configuration
     logger.info("=" * 60)

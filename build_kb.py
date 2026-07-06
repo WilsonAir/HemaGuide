@@ -20,6 +20,12 @@ from dotenv import load_dotenv
 
 logger = logging.getLogger('build_kb')
 import src
+from src.llm import (
+    LLM_MODE_CHOICES,
+    OPENAI_DEFAULT_EXTRACTION_MODEL,
+    VLLM_DEFAULT_MODEL,
+    resolve_api_key,
+)
 from src.utils import TREE_BRANCH, TREE_LAST
 
 load_dotenv()
@@ -36,7 +42,7 @@ KB_STORAGE_DIR = Path('./kb_storage')
 # Mode configurations
 MODE_CONFIGS = {
     'openai': {
-        'default_extraction_model': 'gpt-5-nano-2025-08-07',
+        'default_extraction_model': OPENAI_DEFAULT_EXTRACTION_MODEL,
         'api_key_env': 'OPENAI_API_KEY',
     },
     'ollama-local': {
@@ -46,6 +52,10 @@ MODE_CONFIGS = {
     'ollama-cloud': {
         'default_extraction_model': 'gpt-oss:120b',
         'api_key_env': 'OLLAMA_API_KEY',
+    },
+    'vllm': {
+        'default_extraction_model': VLLM_DEFAULT_MODEL,
+        'api_key_env': None,
     },
 }
 
@@ -177,7 +187,7 @@ Examples:
         """
     )
 
-    parser.add_argument('--llm-mode', choices=['openai', 'ollama-local', 'ollama-cloud'],
+    parser.add_argument('--llm-mode', choices=list(LLM_MODE_CHOICES),
                        default='ollama-local',
                        help='LLM backend mode (default: ollama-local)')
     parser.add_argument('--extraction-model',
@@ -201,14 +211,11 @@ Examples:
     # Resolve extraction model
     extraction_model = args.extraction_model or mode_config['default_extraction_model']
 
-    # Resolve API key
-    if mode_config['api_key_env']:
-        api_key = os.getenv(mode_config['api_key_env'])
-        if not api_key:
-            logger.error(f"API key not found. Set {mode_config['api_key_env']} environment variable.")
-            sys.exit(1)
-    else:
-        api_key = 'ollama'
+    try:
+        api_key = resolve_api_key(args.llm_mode, mode_config)
+    except ValueError as exc:
+        logger.error(str(exc))
+        sys.exit(1)
 
     # Find docx files first (for count in header)
     docx_files = src.find_files(KB_TUMORBOARDS_DIR, "*.docx")

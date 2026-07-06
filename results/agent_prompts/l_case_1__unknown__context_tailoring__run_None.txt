@@ -1,0 +1,79 @@
+=== PROMPT ===
+Sie sind ein medizinischer Informationsspezialist.
+
+KLINISCHE FRAGESTELLUNG:
+Welche Induktionstherapie sollte bei dieser Patientin mit neu diagnostizierter, biallelischer CEBPA-mutierter AML (favorable Risk nach ELN 2022) und gutem klinischem Status initiiert werden?
+
+BISHERIGE THERAPIEN: keine Therapien
+
+=== ÄHNLICHE FÄLLE (0) ===
+
+
+=== PUBMED-ARTIKEL (3) ===
+
+Artikel 1 (PMID:38343151):
+- Titel: Long-term follow-up of VIALE-A: Venetoclax and azacitidine in chemotherapy-ineligible untreated acute myeloid leukemia.
+- Abstract: Venetoclax-azacitidine is approved for treatment of patients with newly diagnosed acute myeloid leukemia (AML) ineligible for intensive chemotherapy based on the interim overall survival (OS) analysis of the VIALE-A study (NCT02993523). Here, long-term follow-up is presented to address survival benefit and long-term outcomes with venetoclax-azacitidine. Patients with newly diagnosed AML who were ineligible for intensive chemotherapy were randomized 2:1 to receive venetoclax-azacitidine or placebo-azacitidine. OS was the primary endpoint; complete remission with/without blood count recovery (CR/CRi) was a key secondary endpoint. This final analysis was conducted when 100% of the predefined 360 OS events occurred. In VIALE-A, 431 patients were enrolled to venetoclax-azacitidine (n = 286) or 
+
+Artikel 2 (PMID:35443108):
+- Titel: Ivosidenib and Azacitidine in <i>IDH1</i>-Mutated Acute Myeloid Leukemia.
+- Abstract: The combination of ivosidenib - an inhibitor of mutant isocitrate dehydrogenase 1 (IDH1) - and azacitidine showed encouraging clinical activity in a phase 1b trial involving patients with newly diagnosed <i>IDH1</i>-mutated acute myeloid leukemia. In this phase 3 trial, we randomly assigned patients with newly diagnosed <i>IDH1</i>-mutated acute myeloid leukemia who were ineligible for intensive induction chemotherapy to receive oral ivosidenib (500 mg once daily) and subcutaneous or intravenous azacitidine (75 mg per square meter of body-surface area for 7 days in 28-day cycles) or to receive matched placebo and azacitidine. The primary end point was event-free survival, defined as the time from randomization until treatment failure (i.e., the patient did not have complete remission by we
+
+Artikel 3 (PMID:37116523):
+- Titel: Quizartinib plus chemotherapy in newly diagnosed patients with FLT3-internal-tandem-duplication-positive acute myeloid leukaemia (QuANTUM-First): a randomised, double-blind, placebo-controlled, phase 3 trial.
+- Abstract: Patients with acute myeloid leukaemia (AML) positive for internal tandem duplication (ITD) mutations of FLT3 have poor outcomes. Quizartinib, an oral, highly potent, selective, type 2 FLT3 inhibitor, plus chemotherapy showed antitumour activity with an acceptable safety profile in patients with FLT3-ITD-positive newly diagnosed AML. The aim of the study was to compare the effect of quizartinib versus placebo on overall survival in patients with FLT3-ITD-positive newly diagnosed AML aged 18-75 years. We conducted a randomised, double-blind, placebo-controlled, phase 3 trial comparing quizartinib and placebo in combination with chemotherapy in induction and consolidation, followed by quizartinib or placebo single-agent continuation, in patients with FLT3-ITD-positive newly diagnosed AML at 1
+
+
+=== CROSSREF-KONFERENZBEITRÄGE (3) ===
+
+Artikel 1 (DOI:10.1182/blood-2023-182123, ASH):
+- Titel: A Novel CD64 CAR-T Therapy for the Treatment of Monocytic Acute Myeloid Leukemia
+- Abstract: Introduction: Acute Myeloid Leukemia (AML) is a difficult to treat, life threatening malignancy with overall survival remaining extremely poor, approximately 15% at 5 years. Recent advances in therapeutic approaches for AML have significantly improved outcomes, most notably venetoclax and azacitidine which induces a remission in approximately 70% of patients. Despite this, the majority of patients ultimately relapse and succumb to their disease. We and others have previously shown that more monocytic (M5 by FAB classification) AML cells demonstrate increased resistance to venetoclax therapy and that relapse after venetoclax and azacitidine treatment shows a monocytic phenotype in approximately 30% of patients (Pei, et. al. Cancer Discovery, 2020). These patients experience decreased overal
+
+Artikel 2 (DOI:10.1182/blood.2024024010, ASH):
+- Titel: How I use maintenance therapy in acute myeloid leukemia
+- Abstract: Outcomes for acute myeloid leukemia (AML) have improved significantly in the past decade with the approval of novel therapeutics targeting diverse vulnerabilities of leukemic cells, expanded access to stem cell transplantation, and improved safety of transplantation. Although attainment of initial remission is now an expected outcome in most patients with AML receiving intensive or nonintensive induction regimens, maintaining long-term remission and decreasing the risk of relapse remain critical challenges. Maintenance approaches using assorted agents have yielded variable success and only recently have been integrated to the standard of care. We present 4 commonly encountered clinical scenarios that highlight challenges facing physicians as they care for patients with AML in remission and
+
+Artikel 3 (DOI:10.1182/blood-2025-6982, ASH):
+- Titel: Chidamide-based epigenetic therapy for relapsed/refractory Acute Myeloid Leukemia
+- Abstract: Introduction: Effective treatment options for relapsed or refractory acute myeloid leukemia (R/R AML) remain limited. Methods: We conducted a multicenter, prospective phase II study (registration number: ChiCTR2300073732) to evaluate the efficacy and safety of the following combination regimens in patients with R/R AML: chidamide combined with a hypomethylating agent (decitabine or azacitidine) combined with daunorubicin and cytarabine, or combined with the HA regimen, or combined with venetoclax. We used patients previously treated with the DA regimen as a historical control group to compare the efficacy and safety of each regimen. Results: A total of 13 Asian Chinese subjects were enrolled in this study, including 9 males (69.2%) and 4 females (30.8%). The age range was 19 to 85 years ol
+
+
+AUFGABE: Bewerten Sie die Quellen und erstellen Sie DREI separate Synthesen.
+
+Antworten Sie als JSON:
+{
+  "tailored_cases": [
+    {"index": 1, "relevance": "hoch/mittel/niedrig", "key_insight": "max 150 Zeichen"}
+  ],
+  "tailored_pubmed": [
+    {"index": 1, "pmid": "...", "relevance": "hoch/mittel/niedrig", "key_finding": "max 150 Zeichen"}
+  ],
+  "tailored_crossref": [
+    {"index": 1, "doi": "...", "conference": "ASH/ASCO/EHA", "relevance": "hoch/mittel/niedrig", "key_finding": "max 150 Zeichen"}
+  ],
+  "case_synthesis": "Was zeigen die ähnlichen Fälle für den nächsten Therapieschritt? Konsens und stärkste Evidenz. (max 300 Zeichen, leer wenn keine Fälle)",
+  "pubmed_synthesis": "Was zeigt die aktuelle Literatur für den nächsten Therapieschritt? Konkrete Therapieoptionen mit Evidenz. (max 300 Zeichen, leer wenn keine Artikel)",
+  "crossref_synthesis": "Was zeigen die Konferenzbeiträge (ASH/ASCO/EHA) für den nächsten Therapieschritt? (max 200 Zeichen, leer wenn keine Beiträge)"
+}
+
+
+=== RESPONSE ===
+{
+  "tailored_cases": [
+    {"index": 1, "relevance": "niedrig", "key_insight": "Keine ähnlichen Fälle verfügbar – keine Fallbasis für Therapieentscheidung."}
+  ],
+  "tailored_pubmed": [
+    {"index": 1, "pmid": "38343151", "relevance": "niedrig", "key_finding": "Venetoclax-Azacitidin für chemo-ineligible Patienten; nicht indiziert bei fiten Patienten mit favorable-risk AML."},
+    {"index": 2, "pmid": "35443108", "relevance": "niedrig", "key_finding": "Ivosidenib-Azacitidin nur für IDH1-mutierte AML; irrelevante Mutation für CEBPA-biallelär."},
+    {"index": 3, "pmid": "37116523", "relevance": "niedrig", "key_finding": "Quizartinib-Chemotherapie spezifisch für FLT3-ITD-positive AML; keine Relevanz für CEBPA-mutiert."}
+  ],
+  "tailored_crossref": [
+    {"index": 1, "doi": "10.1182/blood-2023-182123", "conference": "ASH", "relevance": "niedrig", "key_finding": "CD64 CAR-T für monozytäre AML (M5); keine Anwendung bei CEBPA-mutierter AML."},
+    {"index": 2, "doi": "10.1182/blood.2024024010", "conference": "ASH", "relevance": "niedrig", "key_finding": "Fokus auf Erhaltungstherapie nach Remission; nicht relevant für Induktion."},
+    {"index": 3, "doi": "10.1182/blood-2025-6982", "conference": "ASH", "relevance": "niedrig", "key_finding": "Chidamide-Kombinationen in R/R AML; keine Daten zur Ersttherapie oder CEBPA-Mutation."}
+  ],
+  "case_synthesis": "",
+  "pubmed_synthesis": "Für neu diagnostizierte, biallelär CEBPA-mutierte AML mit gutem klinischem Status ist standardmäßige intensive Induktionstherapie („7+3“: Daunorubicin + Cytarabin) die evidenzbasierte Standardtherapie gemäß ELN 2022; zielgerichtete oder niedrigintensive Regime fehlen in dieser Risikogruppe.",
+  "crossref_synthesis": "Keine Konferenzbeiträge liefern therapeutische Empfehlungen für Induktion bei biallelär CEBPA-mutierter AML; alle Beiträge betreffen andere Subtypen oder Settinge (R/R, Erhaltung, chemo-ineligible)."
+}

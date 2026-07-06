@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 import requests
+from dotenv import load_dotenv
 from fastapi import FastAPI, File, UploadFile, WebSocket, WebSocketDisconnect, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -25,6 +26,16 @@ logger = logging.getLogger(__name__)
 
 # Paths relative to project root
 PROJECT_ROOT = Path(__file__).parent.parent
+load_dotenv(PROJECT_ROOT / ".env")
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.llm import (
+    DEFAULT_LLM_MODE,
+    LLM_MODE_CHOICES,
+    get_default_decision_model,
+    get_default_extraction_model,
+)
+
 QUERY_INPUT_DIR = PROJECT_ROOT / 'query_input'
 EXTRACTED_DIR = PROJECT_ROOT / 'extracted_data' / 'query_input'
 RESULTS_DIR = PROJECT_ROOT / 'results' / 'agent_decisions'
@@ -94,8 +105,8 @@ jobs_lock = asyncio.Lock()
 # --- Pydantic Models ---
 
 class ProcessRequest(BaseModel):
-    llm_mode: str = "ollama-local"
-    decision_model: str = "gpt-oss:120b"
+    llm_mode: str = DEFAULT_LLM_MODE
+    decision_model: str = get_default_decision_model()
     files: List[str]
 
 
@@ -270,6 +281,10 @@ async def process_documents(job_id: str):
         extraction_cmd = [
             str(VENV_PYTHON), "-u", "process_query_input.py",
             "--llm-mode", config["llm_mode"],
+            "--extraction-model", config.get(
+                "extraction_model",
+                get_default_extraction_model(config["llm_mode"]),
+            ),
         ]
 
         logger.info(f"Running extraction: {' '.join(extraction_cmd)}")
@@ -510,6 +525,9 @@ async def list_files():
 @app.post("/api/process", response_model=JobResponse)
 async def start_processing(request: ProcessRequest):
     """Start processing uploaded files."""
+    if request.llm_mode not in LLM_MODE_CHOICES:
+        raise HTTPException(400, f"Invalid llm_mode: {request.llm_mode}")
+
     if not request.files:
         raise HTTPException(400, "No files specified")
 
@@ -535,6 +553,7 @@ async def start_processing(request: ProcessRequest):
         "config": {
             "llm_mode": request.llm_mode,
             "decision_model": request.decision_model,
+            "extraction_model": get_default_extraction_model(request.llm_mode),
         },
         "created_at": datetime.now().isoformat(),
         "result": None,

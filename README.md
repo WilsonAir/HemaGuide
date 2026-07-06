@@ -4,6 +4,23 @@ Clinical decision support in hematological malignancies using a case-grounded AI
 
 > **Research Use Only** – This software is intended for research purposes only. Generated decisions require validation by qualified medical professionals and must not be used for clinical care without proper oversight.
 
+## Fork / Modifications
+
+This repository is a **modified fork** of the upstream project:
+
+- **Upstream (original):** [https://github.com/Friedrich-Lab/HemaGuide](https://github.com/Friedrich-Lab/HemaGuide)
+- **This fork:** [https://github.com/WilsonAir/HemaGuide](https://github.com/WilsonAir/HemaGuide)
+
+Local changes relative to upstream include (non-exhaustive):
+
+- OpenAI / DashScope-compatible LLM defaults (`src/llm.py`, `backend/main.py`, frontend config)
+- Backend deployment helpers (`scripts/start-backend.sh`, `/hema_guide` proxy notes)
+- System architecture notes ([`system.md`](system.md))
+- Draft AML flowchart under `data/flowchart/` (flowcharts are not shipped upstream)
+- Supplementary docx generation and trial scripts under `scripts/`
+
+For the full pipeline, routing logic, and knowledge-base design, see [`system.md`](system.md).
+
 ## System Requirements
 
 Developed and tested on Mac Studio M3 Ultra, 96GB RAM. We used Python 3.12.
@@ -17,9 +34,9 @@ Install Python 3.12+ from [python.org](https://www.python.org/downloads/) or via
 The fastest path is the bundled launcher:
 
 1. Install [Ollama](https://ollama.com/download)
-2. Clone the repository:
+2. Clone this fork (or the [upstream repository](https://github.com/Friedrich-Lab/HemaGuide)):
 ```bash
-git clone https://github.com/Friedrich-Lab/HemaGuide
+git clone https://github.com/WilsonAir/HemaGuide
 ```
 3. Double-click **`HemaGuide.command`**
 
@@ -121,4 +138,4 @@ This software is provided as proof-of-concept for **research purposes only** and
 - All patient documents must be de-identified before processing online
 - Generated clinical decisions require validation by qualified medical professionals
 - Not approved for production clinical decision-making
-- Users are responsible for ensuring compliance with local regulations and institutional policies# HemaGuide
+- Users are responsible for ensuring compliance with local regulations and institutional policies

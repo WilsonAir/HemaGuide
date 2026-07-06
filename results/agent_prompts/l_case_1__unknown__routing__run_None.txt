@@ -1,0 +1,10 @@
+=== PROMPT ===
+[AUTO-ROUTE: no flowchart for 'aml']
+
+=== RESPONSE ===
+{
+  "tool": "decide_advanced",
+  "args": {
+    "reasoning": "Unbekannte Entität — kein Leitlinienpfad verfügbar, Weiterleitung an evidenzbasierte Synthese"
+  }
+}

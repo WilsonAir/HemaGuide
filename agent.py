@@ -21,7 +21,14 @@ from dotenv import load_dotenv
 import src
 from src.tools import TOOLS, execute_tool, load_flowchart
 from src.utils import save_prompt, load_prompts, wrap_log_message, format_prior_treatments, TREE_BRANCH, TREE_LAST, TREE_CONT
-from src.llm import create_client, is_ollama_client
+from src.llm import (
+    LLM_MODE_CHOICES,
+    OPENAI_DEFAULT_DECISION_MODEL,
+    VLLM_DEFAULT_MODEL,
+    create_client,
+    is_ollama_client,
+    resolve_api_key,
+)
 
 load_dotenv()
 
@@ -61,7 +68,7 @@ KB_STORAGE_DIR = Path('./kb_storage')
 # Mode configurations (matching plain_llm.py for consistency)
 MODE_CONFIGS = {
     'openai': {
-        'default_decision_model': 'gpt-5-nano-2025-08-07',
+        'default_decision_model': OPENAI_DEFAULT_DECISION_MODEL,
         'api_key_env': 'OPENAI_API_KEY',
     },
     'ollama-local': {
@@ -71,6 +78,10 @@ MODE_CONFIGS = {
     'ollama-cloud': {
         'default_decision_model': 'gpt-oss:120b',
         'api_key_env': 'OLLAMA_API_KEY',
+    },
+    'vllm': {
+        'default_decision_model': VLLM_DEFAULT_MODEL,
+        'api_key_env': None,
     },
 }
 
@@ -347,7 +358,7 @@ Examples:
         """
     )
 
-    parser.add_argument('--llm-mode', choices=['openai', 'ollama-local', 'ollama-cloud'],
+    parser.add_argument('--llm-mode', choices=list(LLM_MODE_CHOICES),
                        default='ollama-local',
                        help='LLM backend mode (default: ollama-local)')
     parser.add_argument('--decision-model',
@@ -363,14 +374,11 @@ Examples:
     mode_config = MODE_CONFIGS[args.llm_mode]
     decision_model = args.decision_model or mode_config['default_decision_model']
 
-    # Auto-select API key using mode config
-    if mode_config['api_key_env']:
-        api_key = os.getenv(mode_config['api_key_env'])
-        if not api_key:
-            logger.error(f"API key not found. Set {mode_config['api_key_env']} environment variable.")
-            sys.exit(1)
-    else:
-        api_key = 'ollama'
+    try:
+        api_key = resolve_api_key(args.llm_mode, mode_config)
+    except ValueError as exc:
+        logger.error(str(exc))
+        sys.exit(1)
 
     src.setup_logging(level='INFO')
 

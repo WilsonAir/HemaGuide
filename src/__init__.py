@@ -72,10 +72,15 @@ from .tools import (
 
 # LLM Client Factory
 from .llm import (
+    LLM_MODE_CHOICES,
+    VLLM_BASE_URL,
+    VLLM_DEFAULT_MODEL,
     create_client,
     is_ollama_mode,
     is_ollama_client,
     is_ollama_cloud,
+    is_openai_compatible,
+    resolve_api_key,
     OLLAMA_LOCAL_URL,
     OLLAMA_CLOUD_URL
 )

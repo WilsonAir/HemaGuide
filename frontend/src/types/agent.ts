@@ -57,7 +57,7 @@ export interface AgentResult {
   };
 }
 
-export type LLMMode = 'ollama-local';
+export type LLMMode = 'openai' | 'ollama-local' | 'vllm';
 
 export interface Config {
   llmMode: LLMMode;
