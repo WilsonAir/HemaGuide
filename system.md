@@ -310,7 +310,7 @@ python agent.py --llm-mode openai
 ## 9. Web 服务与部署
 
 - **直连**：`uvicorn` / `scripts/start-backend.sh` → `0.0.0.0:8001`，静态资源 + `/api/*` + `/ws`  
-- **网关**：可通过 `medical_paper_catalog` 的 `/hema_guide` 反向代理（HTML base href 与 JS 路径重写）
+- **网关**：`medical_paper_catalog/deploy/gateway/` nginx `:18780` → `:8001`（路径 `/hema_guide/`）；转发机 `172.19.64.72` 经 `:18780` 访问
 
 主要 API：
 
