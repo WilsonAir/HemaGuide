@@ -1,0 +1,85 @@
+# =============================================================================
+# DLBCL Flowchart (diffuses großzelliges B-Zell-Lymphom)
+# Entity: dlbcl
+# Source: Onkopedia DLBCL
+# Stand: 2025-12
+# Language: de
+# =============================================================================
+
+# =============================================================================
+# 1. ERSTDIAGNOSE & STAGING
+# =============================================================================
+
+[DLBCL-GATE-1] Erstdiagnose – Staging und Risiko
+  Voraussetzungen: histologisch gesichertes DLBCL (NOS / GCB / ABC / PMBCL / primär testikulär)
+  -> Staging: Ann Arbor / Lugano, IPI / aaIPI, PET-CT wenn verfügbar
+  -> CD20-Status und Doppel-/Triple-Hit (MYC/BCL2/BCL6) prüfen
+  IF primär testikuläres DLBCL:
+    -> [DLBCL-TESTIS]
+  IF PMBCL (primär mediastinal):
+    -> [DLBCL-PMBCL]
+  IF Double-Hit / High-grade B-cell lymphoma:
+    -> [DLBCL-HGBL] (intensiv / Studien bevorzugt)
+  ELSE:
+    -> [DLBCL-1L]
+
+# =============================================================================
+# 2. ERSTLINIENTHERAPIE
+# =============================================================================
+
+[DLBCL-1L] Erstlinie nach Stadium und IPI
+  IF Stadium I/II, keine Bulky, IPI niedrig, günstig:
+    -> 3-4× R-CHOP ± Involved-Site-Radiotherapie (ISRT) ODER 6× R-CHOP
+  IF IPI 0–1, fit:
+    -> 6× R-CHOP (± 2 zusätzliche Rituximab-Gaben je nach Protokoll)
+  IF IPI 2–5, fit:
+    -> bevorzugt 6× Pola-R-CHP (Polatuzumab + R-CHP) als Alternative zu R-CHOP
+    -> Alternativ: 6–8× R-CHOP
+  IF frail / altersbedingt nicht CHOP-fähig:
+    -> dosisreduziertes R-mini-CHOP oder R-Bendamustin; Supportive Care
+  IF ZNS-Risiko hoch (IELSG / CNS-IPI):
+    -> ZNS-Prophylaxe erwägen (HD-MTX / intrathekal nach lokalem SOP)
+
+[DLBCL-TESTIS] Primär testikuläres DLBCL
+  -> Orchiektomie des betroffenen Hodens (diagnostisch/therapeutisch)
+  -> 6× R-CHOP
+  -> ZNS-Prophylaxe: 2× HD-MTX (oder äquivalent nach SOP)
+  -> adjuvante Bestrahlung des kontralateralen Hodens
+  -> ggf. bilaterale Orchiektomie bei beidseitigem Befall / lokalem SOP
+
+[DLBCL-PMBCL] Primär mediastinales B-Zell-Lymphom
+  -> intensive Immunchemotherapie (z.B. DA-EPOCH-R oder R-CHOP-basiert nach SOP)
+  -> PET-gesteuerte Konsolidierung; Bestrahlung bei Restbefund nach lokalem Algorithmus
+
+[DLBCL-HGBL] High-grade / Double-Hit
+  -> intensive Protokolle / klinische Studie bevorzugt
+  -> R-CHOP allein oft unzureichend; ZNS-Prophylaxe prüfen
+
+# =============================================================================
+# 3. REZIDIV / REFRAKTÄR
+# =============================================================================
+
+[DLBCL-REL-1] Frühes Rezidiv / primär refraktär (≤12 Monate), transplantfähig
+  -> Salvage (R-GDP / R-ICE / R-DHAP o.ä.) → bei Ansprechen: Hochdosis + ASCT
+  -> bei frühem Versagen / hohem Risiko: CAR-T als bevorzugte Option prüfen
+  -> Alternativ: Bispezifische Antikörper (Glofitamab, Epcoritamab) wenn CAR-T nicht verfügbar
+
+[DLBCL-REL-2] Spätes Rezidiv (>12 Monate), transplantfähig
+  -> Salvage → Hochdosis + ASCT priorisiert
+  -> CAR-T / BiTE bei Versagen der Salvage
+
+[DLBCL-REL-3] Nicht transplantfähig / mehrfach vorbehandelt
+  -> Pola-BR, Tafa-Len, BiTE (Glofitamab/Epcoritamab), CAR-T wenn zugänglich
+  -> GemOx ± Rituximab als Option bei nicht-Hochdosis-fähigen Pat.
+  -> klinische Studie / molekulares Tumorboard bei Target-Mutationen (z.B. CD79B)
+  IF EBV+ / spezielle molekular definierte Subgruppen:
+    -> zielgerichtete / studienbasierte Regime (z.B. Venetoclax-haltig wie ViPOR) nach molekularem Board
+
+# =============================================================================
+# 4. SUPPORTIVE MASSNAHMEN
+# =============================================================================
+
+[DLBCL-SUPP] Supportiv
+  -> G-CSF-Prophylaxe bei CHOP/Pola-R-CHP nach Risiko
+  -> Infektions-/PJP-Prophylaxe nach Protokoll
+  -> Tumonlyse-Prophylaxe bei hoher Last

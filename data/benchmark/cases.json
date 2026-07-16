@@ -1,0 +1,452 @@
+[
+  {
+    "case_id": "l_case_1",
+    "age": 51,
+    "ecog": 1,
+    "primary_diagnosis": "Acute myeloid leukemia, ID 01/2026\nClassification according to WHO 2022: AML with CEBPA-Mutation\nClassification according to ICC: AML with in-frame bZIP CEBPA-Mutation\nAt initial diagnosis:\nPeripheral blood: Hb 9,4 g/dl, Plt 42/nl, WBC 62/nl, 88% blasts\nBone marrow aspiration and biopsy from 01.01.2026:\nCytology: Detection of 72% myeloid blasts\nFACS: CD45 low' SSC low, CD34+' CD117+' HLA-DR+' CD38+, CD33+' CD13+, CD7-, CD56+/-,\nCD64+\nLAIP in the blast gate: 91 %\nLAIP of CD45+ cells: 82 %\nKaryotype (BM/PB): 46, XX [20] normal female karyotype\nFISH (BM): Exclusion MECOM-, KMT2A- and CBFB-Rearrangement; no Detection of t(8;21),\nt(9;22), t(15;17); no deletions 5q, 7q, 17p\nMolecular genetics (BM): NPM1 neg., CEBPA pos. (biallelic: in-frame bZIP-Mutation +\nN-terminal Frameshift-Mutation), FLT3-ITD neg., FLT3-TKD neg., IDH1/2 neg., BCR::ABL1\nneg., DDX41 neg., TP53 WT, MLL-PTD neg.\nRisk score (after ELN): Favorable risk",
+    "question": "Treatment initiation?",
+    "tumor_board_decision": "Treatment initiation with Daunorubicin/Cytarabin (7+3 regimen). With Detection of a\nIn-Frame-Mutation in the bZIP-domain of CEBPA, additional administration of GO. In\ncase of response no indication for consolidating allogeneic stem cell transplantation.",
+    "entity_slug": "aml",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "l_case_10",
+    "age": 59,
+    "ecog": 1,
+    "primary_diagnosis": "Acute lymphoblastic leukemia, BCR::ABL1-positive (common-B-ALL), ID 07/2022\nAt initial diagnosis:\nPB: Hb 9,8 g/dl, Plt 95/nl, WBC 42,5/nl, 40% blasts\nCytology (BM): blast percentage 65%\nHistology (BM): Blast infiltration of approx. 80%, marrow fibrosis WHO-Grade 1\nCytogenetics (BM): 46,XY,t(9;22)(q34;q11.2)[5]/46,idem,-7[12]/46,XY[3], Detection the\nPhiladelphia-translocation, subclone with monosomy 7\nFlow cytometry (BM): 72% blasts; LAIP with ED: CD45 low, SSC low, CD34+, CD19+, CD20-,\nCD22+, TdT+, CD10+, CD38+, CD33-/+\nMolecular genetics (BM): BCR::ABL1 positive (p190, e1a2); FLT3, NPM1, IDH1/2 WT\nMRD Marker (PB): Molecular MRD markers established: IGH VH-JH clonal V4-34 J4, IGK\nVk-Kde clonal\nCytology (CSF): Cell count 2/nl, no detection of atypical cells",
+    "question": "Pathogenic variant? Targeted Therapy?",
+    "tumor_board_decision": "Pathogenic variant. Study option with KRAS-G12D- / MEK-Inhibitor (Trametinib)\nrecommended.",
+    "entity_slug": "all",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "l_case_11",
+    "age": 71,
+    "ecog": 0,
+    "primary_diagnosis": "Suspected MDS, ID 01/2026\nInitial manifestation with anemia\nIPSS-M low, IPSS-R low\nBone marrow histologically and cytomorphologically mildly hypocellular with Dysplasia\nof the\nerythropoiesis, granulopoiesis and megakaryopoiesis as well as prominent\nerythropoiesis.\nNo blast excess, blast percentage 4%\nNone ring sideroblasts detectable.\nImmunocytologically no definite evidence of a myeloid neoplasm.\nMolecular genetic unremarkable findings\nCytogenetically normal male karyotype (46,XY)",
+    "question": "Recommended management?",
+    "tumor_board_decision": "The suspicion of MDS can neither be confirmed nor excluded. Regular follow-up and\nfurther workup the anemia. With symptomatic anemia or Hb <10g/dl Therapy with ESA.",
+    "entity_slug": "mds",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "l_case_12",
+    "age": 62,
+    "ecog": 1,
+    "primary_diagnosis": "CML ID 01/2026\nELTS-Score 2,935\nLeft shift, leukocytosis 210/nl, neutrophilia, basophilia, 13% blasts.\nFISH: BCR-ABL pending",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Switch Dasatinib on Asciminib; alternatively Ponatinib, Recommendation for resistance\ntesting. Allo-SCT to be planned.",
+    "entity_slug": "cml",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_13",
+    "age": 60,
+    "ecog": 0,
+    "primary_diagnosis": "Acute myeloid leukemia ID 01/26\nBM 01.01.2026: 80% blasts,\nFACS 01.01.2026: CD33+, CD34+, CD13+, HLA DR+, CD117+, no Detection lymphoid markers\nGenetics: NPM1 WT, FLT3 TKD neg., remaining results pending\nFISH: no evidence of a MECOM, KMT2A or CBFB Rearrangement\nELN: final assessment pending",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Start 7+3+GO. Referral Allo-SCT to be planned.",
+    "entity_slug": "aml",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "l_case_14",
+    "age": 62,
+    "ecog": 1,
+    "primary_diagnosis": "c-ALL, BCR-ABL positive ID 01/2025\nPB 01/25: CD19+, CD10+, CD34+, TdT+, CD79a+, CD22+\nFISH: BCR-ABL-Rearrangement t(9;22),",
+    "question": "Treatment proposal? Allo-SCT is declined by the patient.",
+    "tumor_board_decision": "Allo-SCT currently not feasible. TKI (Ponatinib) to continue. If applicable, addition\nof Blinatumomab.",
+    "entity_slug": "all",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_15",
+    "age": 31,
+    "ecog": 1,
+    "primary_diagnosis": "TLBL ID 01/25\nCT H/T/A: extensive mediastinal mass\nHistology: T-cell precursor neoplasm in the sense of of a TLBL\nFACS: CD4/CD8; CD7+",
+    "question": "Recommended management?",
+    "tumor_board_decision": "indication for allogeneic stem cell transplant conference. Bridging therapy with\nNelarabin +/- Cyclo.",
+    "entity_slug": "all",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_2",
+    "age": 48,
+    "ecog": 2,
+    "primary_diagnosis": "Acute promyelocytic leukemia, AML M3 ID 01/26\nSanz risk classification: High risk\nInitial blood count: L 5,00/nl, Hb 5,0 g/dl, Plt 5/nl\nFISH: Detection of a translocation t(15;17)\nMolecular genetics: PML::RARA pos.\nFACS: CD45 low' SSC intermediate to high, CD34-' CD117+/- (low)' HLA-DR-' CD38+ (low),\nCD33+' CD13+, CD64+ (99% in the blast gate, 85% the CD45+ cells)\nBone marrow aspiration:\nCytology: 70% promyelocytes, compatible with AML M3\nFACS: CD45 low, SSC intermediate-high, CD34-, CD117+, HLA-DR-, CD38+, CD33+, CD13+,\nCD64+ (95% in the blast gate, 95% the CD45+ cells)\nMolecular genetics: PML::RARA pos.\nKaryotype: 46, XX, t(15;17)(q24;q21) [7]\nFISH: Detection of a translocation t(15;17)",
+    "question": "Treatment initiation",
+    "tumor_board_decision": "Continuation of therapy with ATO/ATRA with high-risk APL under addition of HU 2g 2x\ndaily. No leukapheresis.",
+    "entity_slug": "aml",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "l_case_3",
+    "age": 58,
+    "ecog": 0,
+    "primary_diagnosis": "Acute myeloid leukemia, ID 01/2026\nICC 2022: AML with MDS-associated gene mutations (SF3B1)\nWHO 2022: AML, therapy-related (t-AML)\nL 1,6/nl, Hb 8,2 g/dl, Plt 68/nl, blasts 2%, LDH 195 U/l\nBM histology: hypercellular, signs of dysplasia\nBM cytology: 35% myeloblasts, trilineage dysplasia\nFACS: 15% blasts, LAIP: CD45 low' SSC low, CD34+' CD117+' HLA-DR+' CD38+/-, CD33+'\nCD13-, CD56+/-\nMolecular genetics: NPM1 WT, FLT3-ITD/TKD neg., IDH1 neg., IDH2 neg., TP53 WT\nFISH: unremarkable\nNGS: SF3B1 Mutation positive (38,7%)\nKaryotype: 46,XY,del(7)(q31q36)[6]/46,XY,del(20)(q11.2)[2]/46,XY[12]\nRisk profile: adverse",
+    "question": "Treatment initiation?",
+    "tumor_board_decision": "Induction with Vyxeos, prospectively allogeneic stem cell transplantation",
+    "entity_slug": "aml",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "l_case_4",
+    "age": 60,
+    "ecog": 2,
+    "primary_diagnosis": "Acute lymphoblastic leukemia, common B-ALL type, ID 03/2024\nAt initial diagnosis:\nPeripheral blood: Hb 8,2 g/dl, Plt 12/nl, Leukocytes 2,8/nl, 15% blasts\nBone marrow:\nCytology: 72% blasts\nHistology: 90% blasts of a B-ALL. CD79a+, CD10+,\nCD34+, TdT+, CD20(+) Ki-67 85%. Bcl6- CD23- CyclinD1- CD5- MPOFACS: CD45 low, SSC low,\nCD34+, CD19+, CD10++\nFACS: ED-LAIP (55 %): CD45 low, SSC low, CD34+, CD19+, CD10+, CD22+\nMolecular genetics: BCR-ABL1 not detectable\nHistology (reference pathology): 65 % infiltration B-lymphoblastic leukemia; MF-1",
+    "question": "Treatment recommendation?",
+    "tumor_board_decision": "Relapse therapy with Inotuzumab ozogamicin; parallel intrathecal triple therapy for\ntreatment of the ZNS-Manifestation, after of a Cycle Inotuzumab systemic CNS-active\ntherapy (HD-MTX i.v. depending on general condition and blood count with or without\nHD-Cytarabin); subsequently Continuation of therapy with Inotuzumab. CD19-CAR /\nAllo-SCT to be considered.",
+    "entity_slug": "all",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_5",
+    "age": 72,
+    "ecog": 1,
+    "primary_diagnosis": "Common B-ALL, ID 11/2021\nAt initial diagnosis:\nPeripheral blood: Hb 7,2 g/dl, Plt 28/nl, WBC 3,5/nl, 12% blasts\nBone marrow:\nCytology: 88% blasts\nFlow cytometry:\nCD45 low, SSC low, CD34+, CD19+, CD20+/-, CD22+, CD10+, TdT+, CD33-, CD38+\nFISH: unremarkable findings, no ALL-typical translocations\nHistology: Interstitial and nodular infiltration, MF-0/1\nMolecular genetics: BCR::ABL1 negative",
+    "question": "Treatment indication?",
+    "tumor_board_decision": "With rising MRD positivity initially Treatment initiation with Blinatumomab. CAR-T /\nAllo-SCT to be considered.",
+    "entity_slug": "all",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_6",
+    "age": 53,
+    "ecog": 1,
+    "primary_diagnosis": "AML after lineage switch from pre-existing B-ALL (ID 03/2022), with\nKMT2A-Rearrangement\nCytology: 28% monocytic blasts\nFACS: 26% blasts in the Gate: CD45 intermediate, SSC intermediate, CD34-, CD117-,\nHLA-DR+ (high), CD38+, CD33+, CD13+/-, CD64+, CD14-\nMolecular genetics: NPM1 neg., FLT3-ITD/TKD neg., KRAS G12D pos., CEBPA neg.\nPrevious diagnosis: Pro-B-ALL, Initial diagnosis 12/2022\nCytology: 58% blasts.\nHistology: Diffuse blast infiltration (85%), CD34+, PAX5+, TdT+.\nFISH: KMT2A Rearrangement in 42% the analyzed interphase nuclei.\nFACS: blast gate: CD34+, CD79a+, CD19+, CD22+, TdT+, MPO-, CD3-, CD7-, CD20-\nBCR::ABL1 negative",
+    "question": "Further Therapy?",
+    "tumor_board_decision": "Enrollment in Menin-Inhibitor-study.",
+    "entity_slug": "aml",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_7",
+    "age": 70,
+    "ecog": 2,
+    "primary_diagnosis": "Acute myeloid leukemia with myelodysplasia-related changes (MRC), ID 03.2023\nPeripheral blood: anemia, thrombocytopenia, Leukocytes 11200 /µl, approx. 78 % blasts\nBMA: AML (M2 after FAB)\nCytogenetics: Complex karyotype: 45, XY, del(5)(q13q33), -7, add(12)(p13),\nder(17)t(5;17)(q13;p13) [8]/46, XY [2]\nMolecular genetics: FLT3-ITD neg., FLT3-TKD neg., NPM1 WT, IDH1 WT, IDH2 WT, CEBPA WT,\nTP53 mutated (VAF 45%), RUNX1 mutated, ASXL1 mutated\nELN classification: adverse risk profile",
+    "question": "Relapse therapy?",
+    "tumor_board_decision": "Salvage therapy with FLAG-IDA VEN (as per cardiology consult if applicable, VEN+HAM)\nand upon achieving a new remission 2. allogeneic stem cell transplantation.",
+    "entity_slug": "aml",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "l_case_8",
+    "age": 64,
+    "ecog": 1,
+    "primary_diagnosis": "Acute lymphoblastic leukemia of the B-cell lineage (common B-ALL)\nblood count before start of treatment: L 0,41/nl, Hb 9,1g/dl, T 33/nl, LDH 198U/l\nBM cytology: 79% blasts\nFACS: CD45-, SSC low, CD34 low, CD19+, CD20+, CD22+, Tdt+, CD10+, CD38+; 89% the CD45+\ncells\nMolecular genetics: BCR-ABL negative, IDH1 positive\nCytogenetics: 46,XY[1] normal male karyotype (findings with limited interpretive\nvalue)\nFISH: biallelic Deletion 9p21 (nullisomy), gain of chromosomal regions 9q22 and 9q34\nas well as in the subclone on tumor cells with gain of chromosomal region 5q32q33",
+    "question": "Pathogenic variant? Targeted Therapy?",
+    "tumor_board_decision": "Targeted Therapy with Ivosidenib (+Azacitidin).",
+    "entity_slug": "all",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "l_case_9",
+    "age": 63,
+    "ecog": 1,
+    "primary_diagnosis": "Acute myeloid leukemia, ID 09/2024\nClassification according to WHO 2022: AML post cytotoxic therapy (AML-pCT)\nClassification according to ICC 2022: AML with recurrent genetic aberrations\n(inv(16)(p13.1q22)/CBFB::MYH11)\nInitial risk score (after ELN 2022): favorable\nAt initial diagnosis:\no Peripheral blood: Hb 10,3 g/dl, Plt 89/nl, WBC 5,8/nl\no Bone marrow cytology: 52% blasts\no FACS (BM): LAIP with ED: CD34+/-, CD117+, HLA-DR+, MPO+, CD33+, CD13+; negative for\nCD19, CD3, CD7, TdT\no Cytogenetics: 46,XY,inv(16)(p13.1q22)[17]/46,XY[3]\no FISH: Detection CBFB-Rearrangement; Exclusion KMT2A-Rearrangement, t(8;21), t(9;22),\nt(15;17); no deletions 5q, 7q, 17p\no Molecular genetics (BM): CBFB::MYH11 Typ A transcripts positive; FLT3 neg., NPM1\nneg., IDH1/2 neg., KIT Exon 17 D816V pos., CEBPA WT, DDX41 neg.",
+    "question": "Pathogenic variant? Targeted Therapy?",
+    "tumor_board_decision": "Pathogenic variant. Enrollment in KIT-Inhibitor study.",
+    "entity_slug": "aml",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "ly_case_01",
+    "age": 62,
+    "ecog": 1,
+    "primary_diagnosis": "Primary testicular DLBCL ID 01/26",
+    "question": "Treatment initiation?",
+    "tumor_board_decision": "Orchiectomy of the right testis. 6 cycles of R-CHOP and 2 cycles of HD-MTX with\nadjuvant radiation therapy of the left testis / if applicable bilateral orchiectomy.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "ly_case_02",
+    "age": 63,
+    "ecog": 1,
+    "primary_diagnosis": "Diffuse large B-cell lymphoma (DLBCL)(NOS)",
+    "question": "Treatment initiation?",
+    "tumor_board_decision": "Treatment initiation with 6x Pola-R-CHP with an IPI of 4.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "ly_case_03",
+    "age": 48,
+    "ecog": 0,
+    "primary_diagnosis": "Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue (MALT\nlymphoma), Stage I AE, ID 06/2025\n- Nodal involvement: none;\n-Extralymphatic involvement: stomach (H. pylori positive)\n- B symptoms: none\n- Risk factors: extranodal involvement, elevated LDH",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Initially H. pylori eradication. EGD follow-up in 3 months. Depending on response\n(macroscopic, histologic, and clinical) evaluation Radiation therapy versus W&W.",
+    "entity_slug": "malt",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "ly_case_04",
+    "age": 28,
+    "ecog": 0,
+    "primary_diagnosis": "Aggressive B-cell lymphoma, (Primary mediastinal B-cell lymphoma (PMBCL) (ID 05/2022)\nstage IVBS\naaIPI high: Stage, PS, LDH",
+    "question": "Further treatment?",
+    "tumor_board_decision": "Nivo / Brentuximab vedotin, with potential subsequent alloSCT. Alternatively,\nGlofitamab +/- GemOx.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "ly_case_05",
+    "age": 56,
+    "ecog": 1,
+    "primary_diagnosis": "Diffuse large B-cell lymphoma(DLBCL) (Activated B-cell type),\nStage II BE, ID 03/2024\n- Nodal involvement: cervical, supraclavicular; Extralymphatic involvement: Mass in\nparanasal sinuses\n- B symptoms: Night sweats, Fever\n- Risk factors: extranodal involvement",
+    "question": "Indication for CAR-T cell therapy in early relapse?",
+    "tumor_board_decision": "Evaluate re-biopsy. If DLBCL confirmed, CAR-T indication 2nd line (Axicel). Bridging\nwith radiation therapy. Molecular tumor board indication.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "ly_case_06",
+    "age": 61,
+    "ecog": 2,
+    "primary_diagnosis": "Diffuse large B-cell lymphoma (DLBCL-NOS, GCB type), ID 12/2021 stage IV A (pulmonary\ninvolvement); IPI high (LDH 500, age, stage, performance status, extranodal sites),\ntransformed from a\nSplenic marginal zone lymphoma, ID 12/2021 stage IVAE\nNodal involvement: Spleen; Extralymphatic involvement: Liver\nRisk factors: extranodal involvement",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Recommendation for BiTE (Glofitamab versus Epcoritamab). Re-biopsy (persistent CD20\nexpression?) to be pursued. Molecular tumor board indication.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "ly_case_07",
+    "age": 62,
+    "ecog": 1,
+    "primary_diagnosis": "Diffuse large B-cell lymphoma (DLBCL) arising from follicular lymphoma (Follicular\nlarge B-cell lymphoma (FLBL) per updated WHO classification), ID 12/2020 stage IVA",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Recommendation for Glofitamab.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "ly_case_08",
+    "age": 58,
+    "ecog": 1,
+    "primary_diagnosis": "Follicular lymphoma (C82.1-4), ID 11/2020\nNodal involvement: abdominal, cervical, axillary, mediastinal\nBone marrow infiltration\nRisk factors: Bulk > 10 cm\nFLIPI: 4 (advanced stage, elevated LDH, Anemia Hb <12 g/dl, >4 lymph node regions\ninvolved)",
+    "question": "Pathogenic variant? Targeted therapy?",
+    "tumor_board_decision": "Recommendation for EZH2 inhibitor therapy (Tazemetostat).",
+    "entity_slug": "fl",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "ly_case_09",
+    "age": 70,
+    "ecog": 2,
+    "primary_diagnosis": "Secondary diagnoses / Comorbidities:\nArterial hypertension\nType 2 diabetes mellitus",
+    "question": "Pathogenic variant? Targeted therapy?",
+    "tumor_board_decision": "Pathogenic variant: has been described in studies of Mosunetuzumab + Polatuzumab\ntherapy as effective. Alternatively, enrollment in CD79B-ADC trial.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "ly_case_10",
+    "age": 50,
+    "ecog": 2,
+    "primary_diagnosis": "Diffuse large B-cell (non-Hodgkin) lymphoma, ID 04/2023\nEBV-positive\nStage: IVBE+S\nManifestations: bipulmonary, mediastinal/hilar, pleural, bilateral renal, splenic,\nretroperitoneal, inguinal, osseous, bone marrow\nIPI: 2 (stage, extranodal manifestations)\nCNS-IPI: 3 (stage, extranodal manifestation, renal involvement)",
+    "question": "Pathogenic variant? Targeted therapy?",
+    "tumor_board_decision": "Venetoclax-based therapy (e.g. ViPOR).",
+    "entity_slug": "dlbcl",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "ly_case_11",
+    "age": 55,
+    "ecog": 0,
+    "primary_diagnosis": "Hairy cell leukemia ID 01/2026\nCore needle biopsy left humerus: Extranodal manifestation proximal left humerus\nBRAFV600E positive\nBM biopsy 01.01.2026: no evidence of infiltration\nPB 01.01.2026: Hb: 15 g/dl; L: 4,8 G/l; Thr. 280 G/l; LDH 150 U/l",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Humerus biopsy confirming HCL. No further evidence in bone marrow biopsy. Currently no\nfurther treatment indication. Recommendation for regular follow-up.",
+    "entity_slug": "hcl",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "ly_case_12",
+    "age": 65,
+    "ecog": 1,
+    "primary_diagnosis": "Marginal zone lymphoma ID 06/2025\nStage: Ann-Arbor III",
+    "question": "Recommended management?",
+    "tumor_board_decision": "In case of progression and CD20 loss, recommendation to switch therapy to\nZanubrutinib.",
+    "entity_slug": "malt",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "ly_case_13",
+    "age": 30,
+    "ecog": 1,
+    "primary_diagnosis": "Hodgkin lymphoma ID 01/2026\nPathology: classical Hodgkin lymphoma\nStage: Ann Arbor IIBE\nCT head/thorax/abdomen: Mediastinal mass",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Initial diagnosis of classical Hodgkin lymphoma. For stage IIBE, recommendation for\nBrECADD. In case of PET positivity, radiation therapy to follow.",
+    "entity_slug": "chl",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "ly_case_14",
+    "age": 61,
+    "ecog": 1,
+    "primary_diagnosis": "MALT lymphoma of the stomach ID 01/25\nStage IEA\nBiopsy stomach: ID MZL: H. pylori negative\nCT head/thorax/abdomen: No further manifestation",
+    "question": "Recommended management?",
+    "tumor_board_decision": "W&W. Repeat EGD in 3 months. R-Benda in case of persistence.",
+    "entity_slug": "malt",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "ly_case_15",
+    "age": 40,
+    "ecog": 1,
+    "primary_diagnosis": "DLBCL ID 01/2025\nStage IIB, mediastinal bulk\nIPI: 2",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Early relapse of DLBCL. Recommendation for CAR-T cell therapy. R-DHAP initially to\ncontinue.",
+    "entity_slug": "dlbcl",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_1",
+    "age": 72,
+    "ecog": 2,
+    "primary_diagnosis": "Multiple myeloma, type IgG kappa, ID 06/2025\nISS-Stage: III; R2-ISS: III\nTreatment indication: Anemia, multiple osteolytic lesions, Hypercalcemia, Renal\ninsufficiency",
+    "question": "Treatment initiation",
+    "tumor_board_decision": "Dara VCD",
+    "entity_slug": "myeloma",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "mm_case_10",
+    "age": 64,
+    "ecog": 1,
+    "primary_diagnosis": "Plasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012",
+    "question": "Pathogenic variant? Targeted Therapy?",
+    "tumor_board_decision": "No variant on NGS. t(11;14) in current FISH findings. Therefore, Venetoclax-based\ntherapy recommended.",
+    "entity_slug": "myeloma",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "mm_case_11",
+    "age": 68,
+    "ecog": 1,
+    "primary_diagnosis": "Multiple myeloma, type IgG kappa, ID 01/2026\nStage: R-ISS II\nTreatment indication: Anemia, Osteolytic lesions, Hypercalcemia",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Continuation of bridging therapy with IsaKd. Referral to CAR-T outpatient clinic for\nBCMA-directed CAR-T cell therapy in the further course.",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_12",
+    "age": 60,
+    "ecog": 0,
+    "primary_diagnosis": "Multiple myeloma, type IgG Kappa ID 01/26\nISS-Stage: III. R2-ISS: III\nTreatment indication: Anemia, multiple osteolytic lesions, Hypercalcemia",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Switch to D-VRD, HD Melphalan and ASCT.",
+    "entity_slug": "myeloma",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "mm_case_13",
+    "age": 70,
+    "ecog": 0,
+    "primary_diagnosis": "Suspected Waldenstrom macroglobulinemia with IgM gammopathy 01/26\nMYD88 negative\nWhole-body CT and bone marrow biopsy unremarkable\nNo light chain restriction",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Complete diagnostics. Evaluation of therapy with Rituximab in case of persistent\nhemolysis / R-Bendamustin upon diagnosis of Waldenstrom macroglobulinemia.",
+    "entity_slug": "waldenstrom",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "mm_case_14",
+    "age": 52,
+    "ecog": 1,
+    "primary_diagnosis": "POEMS syndrome ID 01/2025, confirmed by sclerotic bone lesions, Polyneuropathy,\nmonoclonal IgA lambda, elevated VEGF",
+    "question": "Recommended management for isolated local progression BWK 2 with otherwise stable VEGF\nand systemic remission?",
+    "tumor_board_decision": "Recommendation: Given imaging and clinically largely stable findings and a single\nmoderately progressive lesion in BWK2, local therapy via radiation can be administered\nin this area. Further follow-up assessments should be performed via PET/CT.",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_15",
+    "age": 56,
+    "ecog": 1,
+    "primary_diagnosis": "Multiple myeloma, IgG lambda type, ID 06/2025, from solitary plasmacytoma BWK 10\n(01/2024), R-ISS II, standard-risk cytogenetics\nSLiM-CRAB: disseminated Osteolytic lesions",
+    "question": "Treatment initiation for initial diagnosis of MM from solitary plasmacytoma",
+    "tumor_board_decision": "Treatment initiation with Dara-VRd with continuation of anticoagulation. Reduction of\nLenalidomid dosage due to the recent PE in the first cycle. Principally eligible for\nhigh-dose therapy, consolidation and maintenance therapy in the further course.",
+    "entity_slug": "myeloma",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "mm_case_2",
+    "age": 62,
+    "ecog": 0,
+    "primary_diagnosis": "Multiple myeloma, type IgA lambda, ID 01/2025\nTreatment indication: Light chain ratio >100, Osteolytic lesions, Anemia",
+    "question": "Presentation per SOP. Recommended management?",
+    "tumor_board_decision": "We recommend a repeat high-dose chemotherapy and autologous blood stem cell\ntransplantation as a tandem transplantation.",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_3",
+    "age": 74,
+    "ecog": 0,
+    "primary_diagnosis": "Multiple myeloma, type IgA lambda, ID 08/2023\nTreatment indication: Progressive focal lesions",
+    "question": "Recommended management?",
+    "tumor_board_decision": "KCD Therapy",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_4",
+    "age": 71,
+    "ecog": 0,
+    "primary_diagnosis": "Monoclonal gammopathy of undetermined significance type IgG Lambda, ID 09/2024",
+    "question": "Treatment indication?",
+    "tumor_board_decision": "In summary of the findings, there is currently a monoclonal gammopathy of undetermined\nsignificance IgG type Lambda. In monoclonal gammopathy, there is no treatment\nindication",
+    "entity_slug": "myeloma",
+    "routing_hint": "guideline"
+  },
+  {
+    "case_id": "mm_case_5",
+    "age": 55,
+    "ecog": 1,
+    "primary_diagnosis": "Multiple myeloma, type IgG type Lambda, ID 11/17\nStage IIA after Salmon and Durie\nTreatment indication: Osteolytic lesions",
+    "question": "Recommended management?",
+    "tumor_board_decision": "MEK Inhibitor Therapy",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_6",
+    "age": 59,
+    "ecog": 1,
+    "primary_diagnosis": "Multiple myeloma, light chain type Kappa, ID 07/2021\nISS-Stage: III; R2-ISS: III\nTreatment indication: Renal insufficiency, Osteolytic lesions",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Indication for CAR- Therapy. Referral to Cell Therapy Board",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_7",
+    "age": 68,
+    "ecog": 1,
+    "primary_diagnosis": "Multiple myeloma, type IgG Kappa, ID 01/2021\nCRAB criteria: Anemia; Osteolytic lesions\nRevised ISS: Stage II\nStage per Durie-Salmon: II",
+    "question": "Recommended management?",
+    "tumor_board_decision": "Currently, there was rapid progression under Lenalidomid maintenance. Planning CAR-T\ntherapy with Cilta-Cel.",
+    "entity_slug": "myeloma",
+    "routing_hint": "advanced"
+  },
+  {
+    "case_id": "mm_case_8",
+    "age": 68,
+    "ecog": 2,
+    "primary_diagnosis": "Plasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012",
+    "question": "Pathogenic variant? Targeted Therapy?",
+    "tumor_board_decision": "The variant is pathogenic. We recommend MEK inhibitor-based therapy.",
+    "entity_slug": "myeloma",
+    "routing_hint": "molecular"
+  },
+  {
+    "case_id": "mm_case_9",
+    "age": 66,
+    "ecog": 1,
+    "primary_diagnosis": "Plasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012",
+    "question": "Pathogenic variant? Targeted Therapy?",
+    "tumor_board_decision": "The NRAS variant is pathogenic. We recommend MEK inhibitor-based therapy.",
+    "entity_slug": "myeloma",
+    "routing_hint": "molecular"
+  }
+]

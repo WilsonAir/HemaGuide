@@ -1,0 +1,31 @@
+# =============================================================================
+# Waldenström Macroglobulinemia Flowchart
+# Entity: waldenstrom
+# Source: Onkopedia Morbus Waldenström
+# Stand: 2024-11
+# Language: de
+# =============================================================================
+
+[WM-GATE-1] Verdacht / Diagnose
+  -> IgM-Paraprotein + Knochenmark-Infiltration durch LPL; MYD88 L265P, CXCR4
+  IF Diagnose unklar (MYD88−, Bildgebung/KM ausstehend):
+    -> Diagnostik vervollständigen (KM-Biopsie, CT, MYD88/CXCR4)
+    -> bei Hämolyse / autoimmune Phänomene: Rituximab evaluieren
+  IF WM gesichert, asymptomatisch:
+    -> Watch-and-Wait
+  IF therapiepflichtig (Zytopenie, Hyperviskosität, Konstitution, Organbefall, Hämolyse):
+    -> [WM-1L]
+
+[WM-1L] Erstlinie therapiepflichtig
+  IF fit, hohe Last:
+    -> Rituximab + Bendamustin (R-Benda) Standardoption
+  IF MYD88-mutiert, geeignete Indikation:
+    -> BTK-Inhibitor (Zanubrutinib bevorzugt; Ibrutinib alternativ)
+  IF frail / Hämolyse-dominant:
+    -> Rituximab-Monotherapie
+  IF Hyperviskosität:
+    -> Plasmapherese vor Rituximab-Single-Agent (IgM-flare-Risiko)
+
+[WM-REL] Rezidiv
+  -> Wechsel R-Chemo ↔ BTK-Inhibitor; Studie
+  -> MYD88-wt: geringeres Ansprechen auf Ibrutinib beachten; Zanubrutinib ggf. besser

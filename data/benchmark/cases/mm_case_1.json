@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_1",
+  "age": 72,
+  "ecog": 2,
+  "primary_diagnosis": "Multiple myeloma, type IgG kappa, ID 06/2025\nISS-Stage: III; R2-ISS: III\nTreatment indication: Anemia, multiple osteolytic lesions, Hypercalcemia, Renal\ninsufficiency",
+  "question": "Treatment initiation",
+  "tumor_board_decision": "Dara VCD",
+  "entity_slug": "myeloma",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 72\nECOG: 2\nPrimary diagnosis:\nMultiple myeloma, type IgG kappa, ID 06/2025\nISS-Stage: III; R2-ISS: III\nTreatment indication: Anemia, multiple osteolytic lesions, Hypercalcemia, Renal\ninsufficiency\nSecondary diagnoses / Comorbidities:\nDialysis-dependent renal insufficiency (myeloma kidney)\nDrug allergies: none known\nCOPD\nArterial hypertension\nPrognostic factors:\nInitial with MM:\nss2MG 8,5 mg/l, Albumin 22 g/l, LDH 189 U/l, ISS III, R2 ISS III\nCytogenetics: Standard-risk cytogenetics (Note: analysis not performed on sorted\nplasma cells).\nTreatment and course:\nQuestion for the tumor board:\nTreatment initiation\nTumor board decision:\nDara VCD"
+}

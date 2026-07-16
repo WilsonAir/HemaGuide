@@ -34,7 +34,15 @@ from src.llm import (
     LLM_MODE_CHOICES,
     get_default_decision_model,
     get_default_extraction_model,
+    resolve_api_key,
 )
+
+_LLM_MODE_CONFIGS = {
+    'openai': {'api_key_env': 'OPENAI_API_KEY'},
+    'ollama-local': {'api_key_env': None},
+    'ollama-cloud': {'api_key_env': 'OLLAMA_API_KEY'},
+    'vllm': {'api_key_env': None},
+}
 
 QUERY_INPUT_DIR = PROJECT_ROOT / 'query_input'
 EXTRACTED_DIR = PROJECT_ROOT / 'extracted_data' / 'query_input'
@@ -113,6 +121,24 @@ class ProcessRequest(BaseModel):
 class UploadResponse(BaseModel):
     filename: str
     path: str
+
+
+class TextUploadRequest(BaseModel):
+    text: str
+    filename: Optional[str] = None
+
+
+class ParseTextRequest(BaseModel):
+    text: str
+    filename: Optional[str] = None
+    llm_mode: str = DEFAULT_LLM_MODE
+    force_extract: bool = True
+
+
+class ParseTextResponse(BaseModel):
+    filename: str
+    path: str
+    extracted: dict
 
 
 class JobResponse(BaseModel):
@@ -471,14 +497,53 @@ async def health_check():
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
 
+def _sanitize_case_filename(filename: Optional[str], suffix: str = ".txt") -> str:
+    """Normalize a user-provided name into a safe case filename."""
+    raw = (filename or "").strip()
+    if not raw:
+        stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        raw = f"pasted_case_{stamp}"
+    raw = Path(raw).name
+    raw = re.sub(r"[^\w.\-]+", "_", raw, flags=re.UNICODE).strip("._")
+    if not raw:
+        raw = f"pasted_case_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    # Strip known case suffixes so callers can pass either stem or full name
+    lower = raw.lower()
+    for ext in (".docx", ".txt", ".json"):
+        if lower.endswith(ext):
+            raw = raw[: -len(ext)]
+            break
+    raw = f"{raw}{suffix}"
+    if raw.startswith("~"):
+        raise HTTPException(400, "Temporary files are not allowed")
+    return raw
+
+
+def _write_text_case(text: str, filename: Optional[str] = None) -> Path:
+    """Save pasted case text directly as .txt under query_input/."""
+    cleaned = (text or "").strip()
+    if not cleaned:
+        raise HTTPException(400, "Case text is empty")
+
+    safe_name = _sanitize_case_filename(filename, suffix=".txt")
+    QUERY_INPUT_DIR.mkdir(parents=True, exist_ok=True)
+    file_path = QUERY_INPUT_DIR / safe_name
+    if not file_path.resolve().is_relative_to(QUERY_INPUT_DIR.resolve()):
+        raise HTTPException(400, "Invalid filename")
+
+    file_path.write_text(cleaned + "\n", encoding="utf-8")
+    return file_path
+
+
 @app.post("/api/upload", response_model=UploadResponse)
 async def upload_file(file: UploadFile = File(...)):
-    """Upload a .docx file to query_input/"""
+    """Upload a .docx or .txt case file to query_input/"""
     if not file.filename:
         raise HTTPException(400, "No filename provided")
 
-    if not file.filename.endswith('.docx'):
-        raise HTTPException(400, "Only .docx files are allowed")
+    lower = file.filename.lower()
+    if not (lower.endswith('.docx') or lower.endswith('.txt')):
+        raise HTTPException(400, "Only .docx or .txt files are allowed")
 
     if file.filename.startswith('~'):
         raise HTTPException(400, "Temporary files are not allowed")
@@ -494,6 +559,65 @@ async def upload_file(file: UploadFile = File(...)):
 
     logger.info(f"Uploaded file: {file.filename}")
     return UploadResponse(filename=file.filename, path=str(file_path))
+
+
+@app.post("/api/upload-text", response_model=UploadResponse)
+async def upload_text(request: TextUploadRequest):
+    """Save pasted case text as .txt in query_input/ (no docx conversion)."""
+    file_path = _write_text_case(request.text, request.filename)
+    logger.info(f"Uploaded text case: {file_path.name}")
+    return UploadResponse(filename=file_path.name, path=str(file_path))
+
+
+@app.post("/api/parse-text", response_model=ParseTextResponse)
+async def parse_text(request: ParseTextRequest):
+    """
+    Parse pasted case text with the extraction LLM (no docx round-trip).
+
+    Saves the raw text as query_input/{name}.txt and the extraction JSON under
+    extracted_data/query_input/ so Start Agent can continue from cache.
+    """
+    from src.extraction import extract_from_text
+
+    if request.llm_mode not in LLM_MODE_CHOICES:
+        raise HTTPException(400, f"Invalid llm_mode: {request.llm_mode}")
+
+    file_path = _write_text_case(request.text, request.filename)
+    extraction_model = get_default_extraction_model(request.llm_mode)
+    try:
+        api_key = resolve_api_key(request.llm_mode, _LLM_MODE_CONFIGS[request.llm_mode])
+    except ValueError as e:
+        raise HTTPException(400, str(e)) from e
+
+    EXTRACTED_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = EXTRACTED_DIR / f"{file_path.stem}.json"
+
+    try:
+        if cache_path.exists() and not request.force_extract:
+            extracted = json.loads(cache_path.read_text(encoding="utf-8"))
+        else:
+            extracted = await asyncio.to_thread(
+                extract_from_text,
+                request.text,
+                file_path.name,
+                extraction_model,
+                request.llm_mode,
+                api_key,
+            )
+            cache_path.write_text(
+                json.dumps(extracted, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+    except Exception as e:
+        logger.exception("parse-text extraction failed")
+        raise HTTPException(500, f"Extraction failed: {e}") from e
+
+    logger.info(f"Parsed text case: {file_path.name}")
+    return ParseTextResponse(
+        filename=file_path.name,
+        path=str(file_path),
+        extracted=extracted,
+    )
 
 
 @app.delete("/api/upload/{filename}")
@@ -515,10 +639,16 @@ async def delete_file(filename: str):
 
 @app.get("/api/files")
 async def list_files():
-    """List uploaded .docx files."""
+    """List uploaded case files (.docx / .txt)."""
     if not QUERY_INPUT_DIR.exists():
         return {"files": []}
-    files = [f.name for f in QUERY_INPUT_DIR.glob("*.docx") if not f.name.startswith('~')]
+    files = [
+        f.name
+        for f in QUERY_INPUT_DIR.iterdir()
+        if f.is_file()
+        and not f.name.startswith('~')
+        and f.suffix.lower() in {'.docx', '.txt'}
+    ]
     return {"files": sorted(files)}
 
 

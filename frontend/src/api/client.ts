@@ -24,6 +24,42 @@ export async function uploadFile(file: File): Promise<UploadResponse> {
   return response.data;
 }
 
+export async function uploadText(
+  text: string,
+  filename?: string
+): Promise<UploadResponse> {
+  const response = await api.post<UploadResponse>('/upload-text', {
+    text,
+    filename: filename || undefined,
+  });
+  return response.data;
+}
+
+export interface ParseTextResponse {
+  filename: string;
+  path: string;
+  extracted: {
+    document_id?: string;
+    entity_slug?: string;
+    source_file?: string;
+    sections?: Record<string, unknown>;
+    [key: string]: unknown;
+  };
+}
+
+export async function parseText(
+  text: string,
+  options?: { filename?: string; llmMode?: string; forceExtract?: boolean }
+): Promise<ParseTextResponse> {
+  const response = await api.post<ParseTextResponse>('/parse-text', {
+    text,
+    filename: options?.filename || undefined,
+    llm_mode: options?.llmMode || 'openai',
+    force_extract: options?.forceExtract ?? true,
+  });
+  return response.data;
+}
+
 export async function deleteFile(filename: string): Promise<void> {
   await api.delete(`/upload/${encodeURIComponent(filename)}`);
 }

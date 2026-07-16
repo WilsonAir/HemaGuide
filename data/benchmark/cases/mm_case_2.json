@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_2",
+  "age": 62,
+  "ecog": 0,
+  "primary_diagnosis": "Multiple myeloma, type IgA lambda, ID 01/2025\nTreatment indication: Light chain ratio >100, Osteolytic lesions, Anemia",
+  "question": "Presentation per SOP. Recommended management?",
+  "tumor_board_decision": "We recommend a repeat high-dose chemotherapy and autologous blood stem cell\ntransplantation as a tandem transplantation.",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 62\nECOG: 0\nPrimary diagnosis:\nMultiple myeloma, type IgA lambda, ID 01/2025\nTreatment indication: Light chain ratio >100, Osteolytic lesions, Anemia\nSecondary diagnoses / Comorbidities:\nDrug allergies: none\nTobacco use 20 pyrs\nPrognostic factors:\nInitial with MM (12/2024):\nss2MG 7,8 mg/l, Albumin 21 g/l, LDH 142 U/l, ISS III, R2 ISS VI (high)\nCytogenetics: Deletion 17p13 (42% of cells) as well as IgH rearrangement (82%) as\ntranslocation t(4;14) (85%). High-risk cytogenetics.\nMolecular genetics: no mutations in CKN2C, FAF2, TP53 genes\nTreatment and course:\nQuestion for the tumor board:\nPresentation per SOP. Recommended management?\nTumor board decision:\nWe recommend a repeat high-dose chemotherapy and autologous blood stem cell\ntransplantation as a tandem transplantation."
+}

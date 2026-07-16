@@ -1,0 +1,53 @@
+# =============================================================================
+# Multiple Myeloma / MGUS Flowchart
+# Entity: myeloma
+# Source: Onkopedia Multiples Myelom (+ MGUS-Pfad)
+# Stand: 2024-10
+# Language: de
+# =============================================================================
+
+[MM-GATE-1] Diagnose und Therapieindikation
+  IF MGUS (CRAB/SLiM negativ, keine Organschädigung):
+    -> [MGUS] keine antineoplastische Therapie; Beobachtung
+  IF SMM ohne Therapieindikation:
+    -> Beobachtung / Studie; Therapie nur bei Progression zu MM
+  IF symptomatisches MM (CRAB oder SLiM):
+    -> Fitness für Hochdosis + ASCT prüfen → [MM-TE] oder [MM-NTE]
+
+[MGUS] MGUS
+  -> keine Therapieindikation
+  -> Risikostratifizierung und labormäßige Verlaufskontrollen
+  -> bei Unklarheit (WM-Verdacht, Amyloidose): Diagnostik vervollständigen
+
+[MM-TE] Transplant-eligible (typisch ≤70–75 J., fit)
+  Induktion (bevorzugt):
+    -> Anti-CD38 + VRd: Dara-VRd oder Isa-VRd
+    -> Alternativen: Dara-VTd, VRd, Isa-KRd nach Risiko/Zugang
+  IF Niereninsuffizienz / Dialyse / hohe Last:
+    -> Dara-VCD / bortezomib-haltige Schemata mit rascher Wirksamkeit
+  -> Stammzellapherese nach Induktion
+  -> Hochdosis Melphalan + ASCT
+  IF Hochrisiko-Zytogenetik / nach SOP:
+    -> Tandem-ASCT erwägen
+  -> Konsolidierung / Maintenance: Lenalidomid (± Anti-CD38 nach Evidenz/SOP)
+  -> Antikoagulation / Thromboseprophylaxe unter IMiD; Dosisanpassung bei VTE/PE
+
+[MM-NTE] Nicht transplantfähig
+  -> Dara-VRd / Isa-VRd (auch ohne geplante ASCT) ODER Dara-Rd / VRd
+  -> bei Frailty: dosisreduzierte Schemata
+  -> Maintenance nach Ansprechen
+
+[MM-REL] Rezidiv
+  -> Anti-CD38 + Kd/Pd/Rd je nach Vortherapie und Refraktärität
+  -> Carfilzomib-haltig (z.B. KCd/KRd) bei geeigneten Pat.
+  -> bei späten Linien: CAR-T (Cilta-cel/Ide-cel), Bispezifika, Belantamab nach Zugang
+  IF t(11;14):
+    -> Venetoclax-haltige Optionen / Studie erwägen
+  IF RAS/MAPK-Pathway (molekular):
+    -> MEK-Inhibitor / Studie über molekulares Board (ADVANCED/MOLECULAR)
+
+[MM-SUPP] Supportiv / Lokaltherapie
+  -> Knochenprotektion (Denosumab/Bisphosphonat), Infektprophylaxe, VTE-Prophylaxe unter IMiD
+  IF solitäres Plasmozytom / isolierte Knochenläsion / POEMS mit lokaler Progression:
+    -> lokale Radiotherapie der Läsion; systemische MM-Therapie nur bei systemischer Erkrankung
+  -> Verlaufskontrolle PET/CT nach lokalem SOP

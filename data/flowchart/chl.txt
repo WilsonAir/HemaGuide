@@ -1,0 +1,48 @@
+# =============================================================================
+# Classical Hodgkin Lymphoma Flowchart
+# Entity: chl
+# Source: Onkopedia Hodgkin-Lymphom
+# Stand: 2023-12
+# Language: de
+# =============================================================================
+
+[CHL-GATE-1] Erstdiagnose – GHSG-Stadium
+  -> Histologie: cHL vs. NLPHL; Staging Ann Arbor; Risikofaktoren (großer Mediastinaltumor, Extranodal, ESR, ≥3 Regionen)
+  IF NLPHL fortgeschritten:
+    -> BEACOPPeskaliert 4–6 Zyklen ± RT PET-positiver Reste
+  IF frühes Stadium ohne RF (IA/IIA, keine RF):
+    -> [CHL-EARLY-FAV]
+  IF frühes Stadium mit RF (inkl. B-Symptome / Extranodal = IIBE etc.):
+    -> [CHL-EARLY-UNFAV]
+  IF intermediäres Stadium:
+    -> [CHL-INTERMEDIATE]
+  IF fortgeschrittenes Stadium (18–60 J.):
+    -> [CHL-ADVANCED]
+
+[CHL-EARLY-FAV] Frühes günstiges Stadium
+  -> 2× ABVD + Involved-Site-Radiotherapie (ISRT)
+  -> Bleomycin nicht weglassen (außer Kontraindikation)
+
+[CHL-EARLY-UNFAV] Frühes ungünstiges Stadium (RF+), inkl. IIBE
+  -> bei fitten Pat. 18–60 J. mit ungünstigen frühen/intermediären Konstellationen (z.B. Stadium IIBE):
+       BrECADD (4–6 Zyklen) als bevorzugte Option analog fortgeschrittener Therapieintensität
+  -> Alternativ: BEACOPPesc-haltige Sequenzen nach GHSG
+  -> bei PET-Positivität nach Chemotherapie: Involved-Site-Radiotherapie der Reste
+
+[CHL-INTERMEDIATE] Intermediäres Stadium
+  -> 2× BEACOPPesc + 2× ABVD (± RT) ODER stadienadaptiertes modernes Protokoll
+  -> PET-gesteuerte Fortführung
+
+[CHL-ADVANCED] Fortgeschrittenes Stadium (18–60 J.)
+  -> 4–6× BrECADD (HD21) als Standard bei geeigneten Pat.
+  -> Alternativ: BEACOPPeskaliert
+  -> Bestrahlung PET-positiver Reste nach Chemotherapie
+
+[CHL-ELDERLY] >60 Jahre
+  -> ABVD / AVD / brentuximab-basierte Schemata nach Fitness; Vermeidung von BEACOPPesc-Toxizität
+
+[CHL-REL] Rezidiv
+  IF transplantfähig:
+    -> Salvage → Hochdosis + ASCT → Brentuximab-Vedotin-Erhaltung bei hohem Risiko
+  IF nach ASCT / refraktär:
+    -> PD-1-Inhibitoren, Brentuximab, allogene SZT / Studie

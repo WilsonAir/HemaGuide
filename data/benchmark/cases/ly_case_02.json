@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_02",
+  "age": 63,
+  "ecog": 1,
+  "primary_diagnosis": "Diffuse large B-cell lymphoma (DLBCL)(NOS)",
+  "question": "Treatment initiation?",
+  "tumor_board_decision": "Treatment initiation with 6x Pola-R-CHP with an IPI of 4.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 63\nECOG: 1\nPrimary diagnosis:\nDiffuse large B-cell lymphoma (DLBCL)(NOS)\nSecondary diagnoses / Comorbidities:\nAllergies: none\nChronic kidney disease Stage 3a\nTreatment and course:\nQuestion for the tumor board:\nTreatment initiation?\nTumor board decision:\nTreatment initiation with 6x Pola-R-CHP with an IPI of 4."
+}

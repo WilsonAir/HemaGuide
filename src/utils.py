@@ -490,11 +490,11 @@ def validate_query_extractions(
     """
     Validate all query files have been extracted.
 
-    Compares .docx files in query_dir with .json files in cache_dir.
+    Compares query case files (.docx/.txt) in query_dir with .json files in cache_dir.
     Returns validation results without side effects (no logging, no sys.exit).
 
     Args:
-        query_dir: Directory containing query .docx files
+        query_dir: Directory containing query case files
         cache_dir: Directory containing extracted .json files
 
     Returns:
@@ -504,8 +504,7 @@ def validate_query_extractions(
         - extra_stems: Set of cached files without corresponding queries
         - extracted_files: List of paths to extracted .json files
     """
-    # Find query .docx files
-    query_files = find_files(query_dir, "*.docx")
+    query_files = find_files(query_dir, "*.docx") + find_files(query_dir, "*.txt")
     query_files = [f for f in query_files if not f.name.startswith('~')]
     query_stems = {f.stem for f in query_files}
 

@@ -1,0 +1,28 @@
+# =============================================================================
+# Hairy Cell Leukemia Flowchart
+# Entity: hcl
+# Source: Onkopedia Haarzell-Leukämie
+# Stand: 2022-10
+# Language: de
+# =============================================================================
+
+[HCL-GATE-1] Erstdiagnose – Therapieindikation
+  -> Diagnose: Morphologie, Immunphänotyp, BRAF V600E
+  IF asymptomatisch, stabile Zytopenie mild:
+    -> Watch-and-Wait, Kontrolle
+  IF therapiepflichtig (Infekte, symptomatische Zytopenie, Splenomegalie):
+    -> [HCL-1L]
+
+[HCL-1L] Erstlinie
+  -> Purinanalogon: Cladribin (2-CdA) ODER Pentostatin
+  -> Remissionsbeurteilung Knochenmark erst 4–6 Monate nach Cladribin
+  IF unzureichendes Ansprechen nach 4–6 Monaten:
+    -> zweiter Cladribin-Zyklus ODER Wechsel Cladribin ↔ Pentostatin
+  -> Rituximab additiv bei unvollständigem Ansprechen / MRD nach lokalem SOP
+
+[HCL-REL] Rezidiv / refraktär
+  IF Spätrezidiv:
+    -> erneutes Purinanalogon (± Rituximab)
+  IF refraktär / BRAF V600E+:
+    -> Vemurafenib (± Rituximab) bevorzugt
+  -> klinische Studie

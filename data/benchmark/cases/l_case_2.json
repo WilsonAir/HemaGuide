@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_2",
+  "age": 48,
+  "ecog": 2,
+  "primary_diagnosis": "Acute promyelocytic leukemia, AML M3 ID 01/26\nSanz risk classification: High risk\nInitial blood count: L 5,00/nl, Hb 5,0 g/dl, Plt 5/nl\nFISH: Detection of a translocation t(15;17)\nMolecular genetics: PML::RARA pos.\nFACS: CD45 low' SSC intermediate to high, CD34-' CD117+/- (low)' HLA-DR-' CD38+ (low),\nCD33+' CD13+, CD64+ (99% in the blast gate, 85% the CD45+ cells)\nBone marrow aspiration:\nCytology: 70% promyelocytes, compatible with AML M3\nFACS: CD45 low, SSC intermediate-high, CD34-, CD117+, HLA-DR-, CD38+, CD33+, CD13+,\nCD64+ (95% in the blast gate, 95% the CD45+ cells)\nMolecular genetics: PML::RARA pos.\nKaryotype: 46, XX, t(15;17)(q24;q21) [7]\nFISH: Detection of a translocation t(15;17)",
+  "question": "Treatment initiation",
+  "tumor_board_decision": "Continuation of therapy with ATO/ATRA with high-risk APL under addition of HU 2g 2x\ndaily. No leukapheresis.",
+  "entity_slug": "aml",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 48\nECOG: 2\nPrimary diagnosis:\nAcute promyelocytic leukemia, AML M3 ID 01/26\nSanz risk classification: High risk\nInitial blood count: L 5,00/nl, Hb 5,0 g/dl, Plt 5/nl\nFISH: Detection of a translocation t(15;17)\nMolecular genetics: PML::RARA pos.\nFACS: CD45 low' SSC intermediate to high, CD34-' CD117+/- (low)' HLA-DR-' CD38+ (low),\nCD33+' CD13+, CD64+ (99% in the blast gate, 85% the CD45+ cells)\nBone marrow aspiration:\nCytology: 70% promyelocytes, compatible with AML M3\nFACS: CD45 low, SSC intermediate-high, CD34-, CD117+, HLA-DR-, CD38+, CD33+, CD13+,\nCD64+ (95% in the blast gate, 95% the CD45+ cells)\nMolecular genetics: PML::RARA pos.\nKaryotype: 46, XX, t(15;17)(q24;q21) [7]\nFISH: Detection of a translocation t(15;17)\nSecondary diagnoses:\nAllergies: none\nTreatment and course:\nED AML M3 01.01.2026\nTherapy ATO/ATRA and Idarubicin on 01.01.26 started.\nCurrently: Leukocytes 65.000/µl:\nQuestion for the tumor board:\nTreatment initiation\nTumor board decision:\nContinuation of therapy with ATO/ATRA with high-risk APL under addition of HU 2g 2x\ndaily. No leukapheresis."
+}

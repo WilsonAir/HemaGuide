@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_12",
+  "age": 62,
+  "ecog": 1,
+  "primary_diagnosis": "CML ID 01/2026\nELTS-Score 2,935\nLeft shift, leukocytosis 210/nl, neutrophilia, basophilia, 13% blasts.\nFISH: BCR-ABL pending",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Switch Dasatinib on Asciminib; alternatively Ponatinib, Recommendation for resistance\ntesting. Allo-SCT to be planned.",
+  "entity_slug": "cml",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 62\nECOG: 1\nPrimary diagnosis:\nCML ID 01/2026\nELTS-Score 2,935\nLeft shift, leukocytosis 210/nl, neutrophilia, basophilia, 13% blasts.\nFISH: BCR-ABL pending\nSecondary diagnoses:\nNone\nTreatment and course:\n12/25 Bosutinib 400mg/d\n01/26 Switch to Dasatinib 100mg/d with intolerance\nPD\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nSwitch Dasatinib on Asciminib; alternatively Ponatinib, Recommendation for resistance\ntesting. Allo-SCT to be planned."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_6",
+  "age": 59,
+  "ecog": 1,
+  "primary_diagnosis": "Multiple myeloma, light chain type Kappa, ID 07/2021\nISS-Stage: III; R2-ISS: III\nTreatment indication: Renal insufficiency, Osteolytic lesions",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Indication for CAR- Therapy. Referral to Cell Therapy Board",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 59\nECOG: 1\nPrimary diagnosis:\nMultiple myeloma, light chain type Kappa, ID 07/2021\nISS-Stage: III; R2-ISS: III\nTreatment indication: Renal insufficiency, Osteolytic lesions\nSecondary diagnoses / Comorbidities:\nDrug allergies: Metamizol\nChemotherapy-associated PNP\nChronic hemodialysis for end-stage renal disease\nSecondary anemia\nArterial hypertension\nPrognostic factors:\nInitial with MM:\nss2MG 42,3 mg/l, Albumin 28g/l, LDH 295U/l, ISS III, R2 ISS III\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nIndication for CAR- Therapy. Referral to Cell Therapy Board"
+}

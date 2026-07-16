@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_15",
+  "age": 31,
+  "ecog": 1,
+  "primary_diagnosis": "TLBL ID 01/25\nCT H/T/A: extensive mediastinal mass\nHistology: T-cell precursor neoplasm in the sense of of a TLBL\nFACS: CD4/CD8; CD7+",
+  "question": "Recommended management?",
+  "tumor_board_decision": "indication for allogeneic stem cell transplant conference. Bridging therapy with\nNelarabin +/- Cyclo.",
+  "entity_slug": "all",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 31\nECOG: 1\nPrimary diagnosis:\nTLBL ID 01/25\nCT H/T/A: extensive mediastinal mass\nHistology: T-cell precursor neoplasm in the sense of of a TLBL\nFACS: CD4/CD8; CD7+\nTreatment and course:\n01/25 Treatment initiation GMALL\n06/25 Consolidation IV\nCurrently: PD\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nindication for allogeneic stem cell transplant conference. Bridging therapy with\nNelarabin +/- Cyclo."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_14",
+  "age": 52,
+  "ecog": 1,
+  "primary_diagnosis": "POEMS syndrome ID 01/2025, confirmed by sclerotic bone lesions, Polyneuropathy,\nmonoclonal IgA lambda, elevated VEGF",
+  "question": "Recommended management for isolated local progression BWK 2 with otherwise stable VEGF\nand systemic remission?",
+  "tumor_board_decision": "Recommendation: Given imaging and clinically largely stable findings and a single\nmoderately progressive lesion in BWK2, local therapy via radiation can be administered\nin this area. Further follow-up assessments should be performed via PET/CT.",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 52\nECOG: 1\nPrimary diagnosis:\nPOEMS syndrome ID 01/2025, confirmed by sclerotic bone lesions, Polyneuropathy,\nmonoclonal IgA lambda, elevated VEGF\nSecondary diagnoses / Comorbidities:\nAllergies: none known\nActivity parameters:\nDate VEGF (pg/ml) M-Protein (g/l) Other\n01/2025 1850 3,2 ID, multiple sclerotic lesions BWS\n04/2025 620 1,8 post 4x VCD\n07/2025 580 1,5 stable, PET/CT: regression of most lesions\nTreatment and course:\n01/2025 ID POEMS syndrome\n02-05/2025 4 cycles VCD (Bortezomib, Cyclophosphamid, Dexamethason)\n06/2025 Remission assessment: partial remission (PR), VEGF-decrease >50%\n07-09/2025 Treatment break, follow-up monitoring\n10/2025 PET/CT: isolated progression BWK 2 with otherwise stable findings, VEGF still\nstable at 610 pg/ml\nQuestion for the tumor board:\nRecommended management for isolated local progression BWK 2 with otherwise stable VEGF\nand systemic remission?\nTumor board decision:\nRecommendation: Given imaging and clinically largely stable findings and a single\nmoderately progressive lesion in BWK2, local therapy via radiation can be administered\nin this area. Further follow-up assessments should be performed via PET/CT."
+}

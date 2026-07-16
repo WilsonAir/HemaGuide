@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_07",
+  "age": 62,
+  "ecog": 1,
+  "primary_diagnosis": "Diffuse large B-cell lymphoma (DLBCL) arising from follicular lymphoma (Follicular\nlarge B-cell lymphoma (FLBL) per updated WHO classification), ID 12/2020 stage IVA",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Recommendation for Glofitamab.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 62\nECOG: 1\nPrimary diagnosis:\nDiffuse large B-cell lymphoma (DLBCL) arising from follicular lymphoma (Follicular\nlarge B-cell lymphoma (FLBL) per updated WHO classification), ID 12/2020 stage IVA\nSecondary diagnoses / Comorbidities:\nArterial hypertension\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nRecommendation for Glofitamab."
+}

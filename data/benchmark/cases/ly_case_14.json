@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_14",
+  "age": 61,
+  "ecog": 1,
+  "primary_diagnosis": "MALT lymphoma of the stomach ID 01/25\nStage IEA\nBiopsy stomach: ID MZL: H. pylori negative\nCT head/thorax/abdomen: No further manifestation",
+  "question": "Recommended management?",
+  "tumor_board_decision": "W&W. Repeat EGD in 3 months. R-Benda in case of persistence.",
+  "entity_slug": "malt",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 61\nECOG: 1\nPrimary diagnosis:\nMALT lymphoma of the stomach ID 01/25\nStage IEA\nBiopsy stomach: ID MZL: H. pylori negative\nCT head/thorax/abdomen: No further manifestation\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\n01/2025: H. pylori eradication\n12/2025: EGD with biopsy: MALT lymphoma confirmed\n12/2025: Radiation therapy (low-dose) stomach with 30 Gy\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nW&W. Repeat EGD in 3 months. R-Benda in case of persistence."
+}

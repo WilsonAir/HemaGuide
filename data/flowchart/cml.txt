@@ -1,0 +1,35 @@
+# =============================================================================
+# CML Flowchart
+# Entity: cml
+# Source: Onkopedia chronische myeloische Leukämie
+# Stand: 2025-11
+# Language: de
+# =============================================================================
+
+[CML-GATE-1] Erstdiagnose – Phase und ELTS
+  -> Phase: chronisch / akzeleriert / Blastenkrise; ELTS-Score; BCR::ABL1; Resistenzmutationen bei Versagen
+  IF Blastenkrise / lymphatische Blast Phase:
+    -> ALL-/AML-artige Induktion + TKI + allo-SZT planen
+  IF chronische Phase:
+    -> [CML-1L]
+
+[CML-1L] Erstlinie chronische Phase
+  IF ELTS low:
+    -> Imatinib ODER Zweitgeneration-TKI (Dasatinib, Nilotinib, Bosutinib) nach Komorbidität
+  IF ELTS intermediate/high:
+    -> bevorzugt Zweitgeneration-TKI
+  -> Asciminib linien-agnostisch als Option nach Zulassung/Indikation
+  -> molekulares Monitoring (MR) nach ELN; Therapieziel MMR/DMR
+
+[CML-FAIL] Warnzeichen / Versagen / Resistenz
+  IF Warning / Failure nach ELN:
+    -> Resistenzmutationstestung (ABL1 KD)
+    -> TKI-Wechsel: Asciminib oder Ponatinib (besonders T315I / Compound)
+    -> Alternativen: Dasatinib/Nilotinib/Bosutinib je nach Vortherapie und Mutation
+  IF Multiversagen / Hochrisiko:
+    -> allo-SZT evaluieren und planen
+  IF Intoleranz ohne Resistenz:
+    -> Wechsel auf anderen TKI inkl. Asciminib
+
+[CML-TFR] Treatment-free remission
+  -> nur bei nachhaltiger DMR und Erfüllung der TFR-Kriterien; engmaschiges PCR-Monitoring

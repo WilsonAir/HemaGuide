@@ -1,0 +1,33 @@
+# =============================================================================
+# MDS Flowchart
+# Entity: mds
+# Source: Onkopedia MDS
+# Stand: 2026-03
+# Language: de
+# =============================================================================
+
+[MDS-GATE-1] Verdacht / Diagnose
+  IF Verdacht ohne gesicherte MDS-Diagnose:
+    -> Diagnostik vervollständigen (KM-Zytologie/Histologie, Zytogenetik, NGS)
+    -> Anämie-Abklärung; engmaschige Kontrolle
+    -> bei symptomatischer Anämie oder Hb <10 g/dl: ESA erwägen (auch vor finaler Bestätigung, supportiv)
+  IF MDS gesichert:
+    -> Risiko nach IPSS-R und IPSS-M stratifizieren → [MDS-LR] oder [MDS-HR]
+
+[MDS-LR] Niedrigrisiko (IPSS-R very low/low/int; IPSS-M very-low/low/moderate-low)
+  IF symptomatische Anämie / Hb <10 g/dl:
+    -> ESA (Erythropoese-stimulierende Agentien) first-line bei geeigneten EPO-Spiegeln
+  IF SF3B1+ / ringsideroblastisch, ESA-Versagen:
+    -> Luspatercept
+  IF del(5q):
+    -> Lenalidomid
+  IF transfusionsabhängig nach ESA:
+    -> Luspatercept / Imetelstat nach Zulassung und lokalem SOP
+  -> Supportive Care, Eisen-Chelation bei hoher Transfusionslast
+
+[MDS-HR] Hochrisiko (IPSS-R high/very-high; IPSS-M moderate-high/high/very-high)
+  IF transplantfähig:
+    -> allo-SZT als einzig potenziell kurativ; Bridging mit HMA (± Venetoclax nach SOP)
+  IF nicht transplantfähig:
+    -> Azacitidin (HMA) Standard
+  -> klinische Studie bevorzugen

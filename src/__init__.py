@@ -13,6 +13,7 @@ from .extraction import (
     read_document,
     extract_document,
     extract_document_cached,
+    extract_from_text,
     build_extraction_prompt,
     generate_document_id
 )
@@ -153,6 +154,7 @@ __all__ = [
     'read_document',
     'extract_document',
     'extract_document_cached',
+    'extract_from_text',
     'build_extraction_prompt',
     'generate_document_id',
     # Vector DB (SA-RAG)

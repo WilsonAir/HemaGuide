@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from './components/layout/Header';
 import { GlassCard } from './components/layout/GlassCard';
 import { DropZone } from './components/upload/DropZone';
+import { CaseTextInput } from './components/upload/CaseTextInput';
 import { ConfigPanel } from './components/config/ConfigPanel';
 import { StatusIndicator } from './components/status/StatusIndicator';
 import { LogViewer } from './components/status/LogViewer';
@@ -29,6 +30,7 @@ export default function App() {
   const [result, setResult] = useState<AgentResult | null>(null);
   const [jobId, setJobId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [inputMode, setInputMode] = useState<'upload' | 'paste'>('upload');
 
   // WebSocket for real-time updates
   useWebSocket(jobId, {
@@ -121,10 +123,58 @@ export default function App() {
     }
   }, []);
 
+  const handleTextAdd = useCallback(async (text: string, filename?: string) => {
+    setError(null);
+    setStatus('uploading');
+    setStatusMessage('Saving case text...');
+    try {
+      await api.uploadText(text, filename);
+      const updatedFiles = await api.listFiles();
+      setUploadedFiles(updatedFiles);
+      setStatus('idle');
+      setStatusMessage('');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to save case text');
+      setStatus('error');
+      throw err instanceof Error ? err : new Error('Failed to save case text');
+    }
+  }, []);
+
+  const handleTextParse = useCallback(async (text: string, filename?: string) => {
+    setError(null);
+    setStatus('extracting');
+    setStatusMessage('Parsing case text...');
+    setProgress(15);
+    try {
+      const response = await api.parseText(text, {
+        filename,
+        llmMode: config.llmMode,
+        forceExtract: true,
+      });
+      const updatedFiles = await api.listFiles();
+      setUploadedFiles(updatedFiles);
+      setStatus('idle');
+      setStatusMessage('');
+      setProgress(0);
+      return {
+        filename: response.filename,
+        entity_slug: response.extracted?.entity_slug,
+        sections: response.extracted?.sections,
+        document_id: response.extracted?.document_id,
+      };
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Parsing failed';
+      setError(message);
+      setStatus('error');
+      setProgress(0);
+      throw err instanceof Error ? err : new Error(message);
+    }
+  }, [config.llmMode]);
+
   // Handle process start
   const handleProcess = useCallback(async () => {
     if (uploadedFiles.length === 0) {
-      setError('Please upload documents first');
+      setError('Please upload or paste a case first');
       return;
     }
 
@@ -156,14 +206,79 @@ export default function App() {
         <Header />
 
         <div className="grid gap-6">
-          {/* Upload Section */}
-          <section>
-            <DropZone
-              onFilesAccepted={handleFilesAccepted}
-              uploadedFiles={uploadedFiles}
-              onRemoveFile={handleRemoveFile}
-              isProcessing={isProcessing}
-            />
+          {/* Case input: upload .docx/.txt or paste plain text */}
+          <section className="space-y-4">
+            <div className="inline-flex rounded-lg border border-slate-200 bg-white p-1 shadow-sm">
+              <button
+                type="button"
+                onClick={() => setInputMode('upload')}
+                disabled={isProcessing}
+                className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
+                  inputMode === 'upload'
+                    ? 'bg-hemaguide-500 text-white'
+                    : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Upload file
+              </button>
+              <button
+                type="button"
+                onClick={() => setInputMode('paste')}
+                disabled={isProcessing}
+                className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
+                  inputMode === 'paste'
+                    ? 'bg-hemaguide-500 text-white'
+                    : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Paste text
+              </button>
+            </div>
+
+            {inputMode === 'upload' ? (
+              <DropZone
+                onFilesAccepted={handleFilesAccepted}
+                uploadedFiles={uploadedFiles}
+                onRemoveFile={handleRemoveFile}
+                isProcessing={isProcessing}
+              />
+            ) : (
+              <>
+                <CaseTextInput
+                  disabled={isProcessing}
+                  onAdd={handleTextAdd}
+                  onParse={handleTextParse}
+                />
+                {uploadedFiles.length > 0 && (
+                  <div className="glass-panel p-4">
+                    <h4 className="text-sm font-medium text-slate-600 mb-3">
+                      Queued cases ({uploadedFiles.length})
+                    </h4>
+                    <div className="space-y-2">
+                      {uploadedFiles.map((filename) => (
+                        <div
+                          key={filename}
+                          className="flex items-center justify-between py-2 px-3 rounded-lg bg-slate-50 border border-slate-200"
+                        >
+                          <span className="text-sm text-slate-700 font-medium">{filename}</span>
+                          {!isProcessing && (
+                            <button
+                              type="button"
+                              onClick={() => handleRemoveFile(filename)}
+                              className="p-1.5 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50"
+                            >
+                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
           </section>
 
           {/* Config & Actions */}
@@ -190,8 +305,8 @@ export default function App() {
               <div className="flex-1 flex flex-col justify-between">
                 <p className="text-sm text-slate-500 mb-4">
                   {uploadedFiles.length === 0
-                    ? 'Upload documents to continue'
-                    : `${uploadedFiles.length} document${uploadedFiles.length !== 1 ? 's' : ''} ready for processing`
+                    ? 'Upload a file or paste case text to continue'
+                    : `${uploadedFiles.length} case${uploadedFiles.length !== 1 ? 's' : ''} ready for processing`
                   }
                 </p>
 

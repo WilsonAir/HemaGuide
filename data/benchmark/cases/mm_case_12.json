@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_12",
+  "age": 60,
+  "ecog": 0,
+  "primary_diagnosis": "Multiple myeloma, type IgG Kappa ID 01/26\nISS-Stage: III. R2-ISS: III\nTreatment indication: Anemia, multiple osteolytic lesions, Hypercalcemia",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Switch to D-VRD, HD Melphalan and ASCT.",
+  "entity_slug": "myeloma",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 60\nECOG: 0\nPrimary diagnosis:\nMultiple myeloma, type IgG Kappa ID 01/26\nISS-Stage: III. R2-ISS: III\nTreatment indication: Anemia, multiple osteolytic lesions, Hypercalcemia\nSecondary diagnoses / Comorbidities:\nDrug allergies: none known\nHypothyroidism\nCKD Stage III\nPrognostic factors:\nInitial with MM:\nss2MG 9,2 mg/l, Albumin 24 g/l, LDH 165 U/l, ISS III, R2 ISS III\nCytogenetics: no evidence of High-risk aberrations\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nSwitch to D-VRD, HD Melphalan and ASCT."
+}

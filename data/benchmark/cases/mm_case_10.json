@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_10",
+  "age": 64,
+  "ecog": 1,
+  "primary_diagnosis": "Plasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012",
+  "question": "Pathogenic variant? Targeted Therapy?",
+  "tumor_board_decision": "No variant on NGS. t(11;14) in current FISH findings. Therefore, Venetoclax-based\ntherapy recommended.",
+  "entity_slug": "myeloma",
+  "routing_hint": "molecular",
+  "raw_vignette": "Age: 64\nECOG: 1\nPrimary diagnoses:\nPlasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012\nSecondary diagnoses / Comorbidities:\nHistory of Appendectomy\nAllergies: Hay fever\nPrognostic factors:\nInitial: 2,6 mg/l; Albumin 33,1 g/l; ISS II\nCytogenetics (09/12): No High-risk genetics.\nTreatment and course:\nMolecular genetic findings\nFISH findings:\nDeletion 1q21 (22%) and 13q14 (20%), Gain 11q22.3 (34%, three copies),\nIgH-Rearrangement (33%) as Translocation t(11;14) (36%) Incidentally Deletion 14q32\n(35%).\nQuestion for the tumor board:\nPathogenic variant? Targeted Therapy?\nTumor board decision:\nNo variant on NGS. t(11;14) in current FISH findings. Therefore, Venetoclax-based\ntherapy recommended."
+}

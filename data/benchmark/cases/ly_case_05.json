@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_05",
+  "age": 56,
+  "ecog": 1,
+  "primary_diagnosis": "Diffuse large B-cell lymphoma(DLBCL) (Activated B-cell type),\nStage II BE, ID 03/2024\n- Nodal involvement: cervical, supraclavicular; Extralymphatic involvement: Mass in\nparanasal sinuses\n- B symptoms: Night sweats, Fever\n- Risk factors: extranodal involvement",
+  "question": "Indication for CAR-T cell therapy in early relapse?",
+  "tumor_board_decision": "Evaluate re-biopsy. If DLBCL confirmed, CAR-T indication 2nd line (Axicel). Bridging\nwith radiation therapy. Molecular tumor board indication.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 56\nECOG: 1\nPrimary diagnosis:\nDiffuse large B-cell lymphoma(DLBCL) (Activated B-cell type),\nStage II BE, ID 03/2024\n- Nodal involvement: cervical, supraclavicular; Extralymphatic involvement: Mass in\nparanasal sinuses\n- B symptoms: Night sweats, Fever\n- Risk factors: extranodal involvement\nSecondary diagnoses / Comorbidities:\nArterial hypertension\nType 2 diabetes mellitus\nTreatment and course:\nQuestion for the tumor board:\nIndication for CAR-T cell therapy in early relapse?\nTumor board decision:\nEvaluate re-biopsy. If DLBCL confirmed, CAR-T indication 2nd line (Axicel). Bridging\nwith radiation therapy. Molecular tumor board indication."
+}

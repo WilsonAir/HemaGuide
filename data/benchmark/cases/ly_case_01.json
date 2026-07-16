@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_01",
+  "age": 62,
+  "ecog": 1,
+  "primary_diagnosis": "Primary testicular DLBCL ID 01/26",
+  "question": "Treatment initiation?",
+  "tumor_board_decision": "Orchiectomy of the right testis. 6 cycles of R-CHOP and 2 cycles of HD-MTX with\nadjuvant radiation therapy of the left testis / if applicable bilateral orchiectomy.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 62\nECOG: 1\nPrimary diagnosis:\nPrimary testicular DLBCL ID 01/26\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nQuestion for the tumor board:\nTreatment initiation?\nTumor board decision:\nOrchiectomy of the right testis. 6 cycles of R-CHOP and 2 cycles of HD-MTX with\nadjuvant radiation therapy of the left testis / if applicable bilateral orchiectomy."
+}

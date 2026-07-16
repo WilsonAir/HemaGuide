@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_11",
+  "age": 71,
+  "ecog": 0,
+  "primary_diagnosis": "Suspected MDS, ID 01/2026\nInitial manifestation with anemia\nIPSS-M low, IPSS-R low\nBone marrow histologically and cytomorphologically mildly hypocellular with Dysplasia\nof the\nerythropoiesis, granulopoiesis and megakaryopoiesis as well as prominent\nerythropoiesis.\nNo blast excess, blast percentage 4%\nNone ring sideroblasts detectable.\nImmunocytologically no definite evidence of a myeloid neoplasm.\nMolecular genetic unremarkable findings\nCytogenetically normal male karyotype (46,XY)",
+  "question": "Recommended management?",
+  "tumor_board_decision": "The suspicion of MDS can neither be confirmed nor excluded. Regular follow-up and\nfurther workup the anemia. With symptomatic anemia or Hb <10g/dl Therapy with ESA.",
+  "entity_slug": "mds",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 71\nECOG: 0\nPrimary diagnosis:\nSuspected MDS, ID 01/2026\nInitial manifestation with anemia\nIPSS-M low, IPSS-R low\nBone marrow histologically and cytomorphologically mildly hypocellular with Dysplasia\nof the\nerythropoiesis, granulopoiesis and megakaryopoiesis as well as prominent\nerythropoiesis.\nNo blast excess, blast percentage 4%\nNone ring sideroblasts detectable.\nImmunocytologically no definite evidence of a myeloid neoplasm.\nMolecular genetic unremarkable findings\nCytogenetically normal male karyotype (46,XY)\nSecondary diagnoses:\nNone\nTreatment and course:\nNone\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nThe suspicion of MDS can neither be confirmed nor excluded. Regular follow-up and\nfurther workup the anemia. With symptomatic anemia or Hb <10g/dl Therapy with ESA."
+}

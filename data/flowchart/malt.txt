@@ -1,0 +1,47 @@
+# =============================================================================
+# MALT / Marginalzonen-Lymphom Flowchart
+# Entity: malt
+# Source: Onkopedia extranodales Marginalzonen-Lymphom (MALT)
+# Stand: 2023-10
+# Language: de
+# =============================================================================
+
+[MALT-GATE-1] Erstdiagnose – Lokalisation und Stadium
+  -> Staging: EGD (+ Biopsie, H. pylori), CT/PET nach Bedarf, Knochenmark wenn systemisch
+  IF gastrisches MALT:
+    -> [MALT-GASTRIC]
+  IF extragastrisches lokalisiertes MALT (Stadium I/II):
+    -> [MALT-LOCAL]
+  IF fortgeschritten / symptomatisch / therapiepflichtig:
+    -> [MALT-SYSTEMIC]
+  ELSE:
+    -> [MALT-WW]
+
+[MALT-GASTRIC] Gastrisches MALT-Lymphom
+  -> IMMER H.-pylori-Eradikation (auch bei HP-negativ histologisch – Standard-Eradikation)
+  -> Kontrolle EGD in ca. 3 Monaten (makroskopisch + histologisch)
+  IF komplette Remission / Regression:
+    -> [MALT-WW] Watch-and-Wait, weitere endoskopische Kontrollen
+  IF Persistenz nach Eradikation, Stadium I/II:
+    -> bevorzugt Involved-Site-Radiotherapie (bis ca. 24 Gy)
+    -> Alternativ: systemische Therapie [MALT-SYSTEMIC] oder W&W bei minimaler Restkrankheit asymptomatisch
+  IF t(11;18) positiv:
+    -> geringeres Ansprechen auf alleinige Eradikation erwarten → früh RT/systemisch planen
+
+[MALT-LOCAL] Extragastrisch lokalisiert (Stadium I/II)
+  -> kurative Lokaltherapie: ISRT (bevorzugt) oder Operation wenn organbezogen sinnvoll
+  -> anti-CD20 (Rituximab) ± RT nach lokalem SOP
+
+[MALT-SYSTEMIC] Systemische Therapie (fortgeschritten / therapiepflichtig)
+  IF CD20+ und behandlungsbedürftig:
+    -> Rituximab + Bendamustin (R-Benda) als Standardoption
+    -> Alternativ: R-CHOP-ähnlich bei aggressiverem Verlauf / Transformation
+  IF nach anti-CD20 vorbehandelt:
+    -> Zanubrutinib (BTK-Inhibitor, MAGNOLIA) als Option
+  IF Transformation zu DLBCL:
+    -> nach DLBCL-Flowchart behandeln
+
+[MALT-WW] Watch-and-Wait
+  -> asymptomatisch, niedrige Last, Stadium I nach Eradikation/RT-Remission
+  -> regelmäßige klinische + endoskopische/bildgebende Kontrolle
+  -> bei Progression → [MALT-LOCAL] oder [MALT-SYSTEMIC]

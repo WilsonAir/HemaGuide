@@ -1,0 +1,56 @@
+# =============================================================================
+# ALL / LBL Flowchart
+# Entity: all
+# Source: Onkopedia ALL (GMALL-orientiert)
+# Stand: 2026-03
+# Language: de
+# =============================================================================
+
+[ALL-GATE-1] Erstdiagnose – Subtyp
+  -> Immunphänotyp (B-Vorläufer / T-ALL/LBL), Ph/BCR::ABL1, molekulare Subgruppen, ZNS-Status
+  IF Ph-positiv (BCR::ABL1+):
+    -> [ALL-PH]
+  IF T-ALL / T-LBL:
+    -> [ALL-T]
+  ELSE:
+    -> [ALL-B]
+
+[ALL-B] Ph-negative B-Vorläufer-ALL (18–55 J., GMALL)
+  -> Induktion I/II nach GMALL + Konsolidation I
+  -> nach Konsolidation I: 1 Zyklus Blinatumomab (Ph-neg B-ALL)
+  IF Standardrisiko + gutes MRD-Ansprechen:
+    -> Chemotherapie-Konsolidation ~1 Jahr (alternierende Zyklen)
+  IF Hochrisiko ODER molekulares Therapieversagen:
+    -> zielgerichtete Bridging-Therapie (Blinatumomab) → allo-SZT
+  IF Alter >55 / unfit:
+    -> altersadaptierte / immuntherapie-betonte Konzepte; Studie
+
+[ALL-PH] Ph-positive ALL
+  -> Chemotherapie/Immuntherapie + TKI (Imatinib/Dasatinib o.ä.) ab Diagnose
+  -> Konsolidation → allo-SZT bei geeigneten Pat. (Standard bei jüngeren)
+  IF Patient lehnt allo-SZT ab / nicht transplantfähig:
+    -> fortgesetzte TKI-basierte Therapie + engmaschiges MRD-Monitoring
+    -> Blinatumomab ± TKI bei MRD-Persistenz / molekularer Last
+  IF TKI-Versagen / Resistenzmutation:
+    -> TKI-Wechsel (inkl. Ponatinib bei T315I) ± Immuntherapie; allo-SZT planen
+
+[ALL-T] T-ALL / T-LBL
+  -> GMALL T-Linien-Protokoll (Induktion/Konsolidation)
+  IF thymische T-ALL mit Hochrisiko / schlechtem Ansprechen:
+    -> Nelarabin als Salvage/Bridging vor allo-SZT
+  IF early/mature T-ALL refraktär:
+    -> Studie / Expertenboard; Nelarabin allein oft unzureichend
+  IF T-LBL mit großem Mediastinaltumor und Indikation zur Konsolidierung:
+    -> allo-SZT-Konferenz; Bridging Nelarabin ± Cyclophosphamid nach SOP
+  -> ZNS-Prophylaxe obligat
+
+[ALL-REL] Rezidiv / refraktär
+  IF B-ALL:
+    -> Inotuzumab ozogamicin und/oder Blinatumomab; anschließend allo-SZT wenn möglich
+    -> CAR-T (bei Zulassung/Zugang), dann allo-SZT
+  IF ZNS-Befall / meningeale Manifestation:
+    -> intrathekale Triple-Therapie parallel; systemisch ZNS-gängig (HD-MTX ± Ara-C) nach Fitness
+  IF T-ALL/LBL:
+    -> Nelarabin-basiert, Studie, allo-SZT
+  IF molekulares Target (z.B. KRAS G12D, IDH):
+    -> molekulares Tumorboard / Studie (z.B. MEK-Inhibitor / Trametinib bei KRAS G12D) — nicht reine Guideline-Chemotherapie

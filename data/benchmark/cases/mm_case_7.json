@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_7",
+  "age": 68,
+  "ecog": 1,
+  "primary_diagnosis": "Multiple myeloma, type IgG Kappa, ID 01/2021\nCRAB criteria: Anemia; Osteolytic lesions\nRevised ISS: Stage II\nStage per Durie-Salmon: II",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Currently, there was rapid progression under Lenalidomid maintenance. Planning CAR-T\ntherapy with Cilta-Cel.",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 68\nECOG: 1\nPrimary diagnosis:\nMultiple myeloma, type IgG Kappa, ID 01/2021\nCRAB criteria: Anemia; Osteolytic lesions\nRevised ISS: Stage II\nStage per Durie-Salmon: II\nSecondary diagnoses / Comorbidities:\nAllergies: Pollen\nOral anticoagulation with Apixaban\nTAA after autologous SCT and D-VTD\nSuccessful pulmonary vein isolation 01/2023\nArterial hypertension\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nCurrently, there was rapid progression under Lenalidomid maintenance. Planning CAR-T\ntherapy with Cilta-Cel."
+}

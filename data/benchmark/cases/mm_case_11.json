@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_11",
+  "age": 68,
+  "ecog": 1,
+  "primary_diagnosis": "Multiple myeloma, type IgG kappa, ID 01/2026\nStage: R-ISS II\nTreatment indication: Anemia, Osteolytic lesions, Hypercalcemia",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Continuation of bridging therapy with IsaKd. Referral to CAR-T outpatient clinic for\nBCMA-directed CAR-T cell therapy in the further course.",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 68\nECOG: 1\nPrimary diagnosis:\nMultiple myeloma, type IgG kappa, ID 01/2026\nStage: R-ISS II\nTreatment indication: Anemia, Osteolytic lesions, Hypercalcemia\nSecondary diagnoses / Comorbidities:\nAllergies: none\nGraves' disease\nCVI grade III\nPrognostic factors:\nInitial with MM: no evidence of del(17p), t(4;14) or t(14;16)\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nContinuation of bridging therapy with IsaKd. Referral to CAR-T outpatient clinic for\nBCMA-directed CAR-T cell therapy in the further course."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_4",
+  "age": 71,
+  "ecog": 0,
+  "primary_diagnosis": "Monoclonal gammopathy of undetermined significance type IgG Lambda, ID 09/2024",
+  "question": "Treatment indication?",
+  "tumor_board_decision": "In summary of the findings, there is currently a monoclonal gammopathy of undetermined\nsignificance IgG type Lambda. In monoclonal gammopathy, there is no treatment\nindication",
+  "entity_slug": "myeloma",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 71\nECOG: 0\nPrimary diagnosis:\nMonoclonal gammopathy of undetermined significance type IgG Lambda, ID 09/2024\nSecondary diagnoses / Comorbidities:\nDrug allergies: none\nType 2 diabetes mellitus\nArterial hypertension\nPrognostic factors:\nInitial with MGUS:\nPrognostic score (Mayo Clinic criteria): 0\n(one point each: M-Protein > 15g/l, Non-IgG, Serum free light chain ratio < 0.26 or >\n1.65; 0 points: low; 1 point: intermediate; 2 points: intermediate-high; 3 points:\nhigh)\nTreatment and course:\nQuestion for the tumor board:\nTreatment indication?\nTumor board decision:\nIn summary of the findings, there is currently a monoclonal gammopathy of undetermined\nsignificance IgG type Lambda. In monoclonal gammopathy, there is no treatment\nindication"
+}

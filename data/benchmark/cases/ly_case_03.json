@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_03",
+  "age": 48,
+  "ecog": 0,
+  "primary_diagnosis": "Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue (MALT\nlymphoma), Stage I AE, ID 06/2025\n- Nodal involvement: none;\n-Extralymphatic involvement: stomach (H. pylori positive)\n- B symptoms: none\n- Risk factors: extranodal involvement, elevated LDH",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Initially H. pylori eradication. EGD follow-up in 3 months. Depending on response\n(macroscopic, histologic, and clinical) evaluation Radiation therapy versus W&W.",
+  "entity_slug": "malt",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 48\nECOG: 0\nPrimary diagnosis:\nExtranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue (MALT\nlymphoma), Stage I AE, ID 06/2025\n- Nodal involvement: none;\n-Extralymphatic involvement: stomach (H. pylori positive)\n- B symptoms: none\n- Risk factors: extranodal involvement, elevated LDH\nSecondary diagnoses / Comorbidities:\n- Type 2 diabetes mellitus\n- Hypothyroidism\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nInitially H. pylori eradication. EGD follow-up in 3 months. Depending on response\n(macroscopic, histologic, and clinical) evaluation Radiation therapy versus W&W."
+}

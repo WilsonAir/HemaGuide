@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_3",
+  "age": 74,
+  "ecog": 0,
+  "primary_diagnosis": "Multiple myeloma, type IgA lambda, ID 08/2023\nTreatment indication: Progressive focal lesions",
+  "question": "Recommended management?",
+  "tumor_board_decision": "KCD Therapy",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 74\nECOG: 0\nPrimary diagnosis:\nMultiple myeloma, type IgA lambda, ID 08/2023\nTreatment indication: Progressive focal lesions\nSecondary diagnoses / Comorbidities:\nCIPN grade II\nAllergies: none known\nPrognostic factors:\nss2MG 3,0 mg/l, Albumin 42 g/l, LDH 198'\nISS 1; R-ISS 1\nCytogenetics: Translocation t(11;14), one deletion 13q and one 1q gain\nPrognostic score (Mayo Clinic criteria): 1\n* M-Protein > 15g/l, Non-IgG, Serum free light chain ratio < 0.26 or > 1.65\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nKCD Therapy"
+}

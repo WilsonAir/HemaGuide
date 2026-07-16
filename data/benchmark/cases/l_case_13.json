@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_13",
+  "age": 60,
+  "ecog": 0,
+  "primary_diagnosis": "Acute myeloid leukemia ID 01/26\nBM 01.01.2026: 80% blasts,\nFACS 01.01.2026: CD33+, CD34+, CD13+, HLA DR+, CD117+, no Detection lymphoid markers\nGenetics: NPM1 WT, FLT3 TKD neg., remaining results pending\nFISH: no evidence of a MECOM, KMT2A or CBFB Rearrangement\nELN: final assessment pending",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Start 7+3+GO. Referral Allo-SCT to be planned.",
+  "entity_slug": "aml",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 60\nECOG: 0\nPrimary diagnosis:\nAcute myeloid leukemia ID 01/26\nBM 01.01.2026: 80% blasts,\nFACS 01.01.2026: CD33+, CD34+, CD13+, HLA DR+, CD117+, no Detection lymphoid markers\nGenetics: NPM1 WT, FLT3 TKD neg., remaining results pending\nFISH: no evidence of a MECOM, KMT2A or CBFB Rearrangement\nELN: final assessment pending\nSecondary diagnoses:\nNone\nTreatment and course:\nCytoreductive therapy with Hydroxyurea since 01.01.2026\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nStart 7+3+GO. Referral Allo-SCT to be planned."
+}

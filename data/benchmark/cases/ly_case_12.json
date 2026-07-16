@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_12",
+  "age": 65,
+  "ecog": 1,
+  "primary_diagnosis": "Marginal zone lymphoma ID 06/2025\nStage: Ann-Arbor III",
+  "question": "Recommended management?",
+  "tumor_board_decision": "In case of progression and CD20 loss, recommendation to switch therapy to\nZanubrutinib.",
+  "entity_slug": "malt",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 65\nECOG: 1\nPrimary diagnosis:\nMarginal zone lymphoma ID 06/2025\nStage: Ann-Arbor III\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nSince 06/25 Z1-Z4 Rituximab mono\nCurrently: PD. Plasma cell differentiation with complete loss of CD20\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nIn case of progression and CD20 loss, recommendation to switch therapy to\nZanubrutinib."
+}

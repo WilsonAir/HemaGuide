@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_09",
+  "age": 70,
+  "ecog": 2,
+  "primary_diagnosis": "Secondary diagnoses / Comorbidities:\nArterial hypertension\nType 2 diabetes mellitus",
+  "question": "Pathogenic variant? Targeted therapy?",
+  "tumor_board_decision": "Pathogenic variant: has been described in studies of Mosunetuzumab + Polatuzumab\ntherapy as effective. Alternatively, enrollment in CD79B-ADC trial.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "molecular",
+  "raw_vignette": "Age: 70\nECOG: 2\nPrimary diagnosis:\nSecondary diagnoses / Comorbidities:\nArterial hypertension\nType 2 diabetes mellitus\nTreatment and course:\nMolecular genetic findings\nQuestion for the tumor board:\nPathogenic variant? Targeted therapy?\nTumor board decision:\nPathogenic variant: has been described in studies of Mosunetuzumab + Polatuzumab\ntherapy as effective. Alternatively, enrollment in CD79B-ADC trial."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_10",
+  "age": 50,
+  "ecog": 2,
+  "primary_diagnosis": "Diffuse large B-cell (non-Hodgkin) lymphoma, ID 04/2023\nEBV-positive\nStage: IVBE+S\nManifestations: bipulmonary, mediastinal/hilar, pleural, bilateral renal, splenic,\nretroperitoneal, inguinal, osseous, bone marrow\nIPI: 2 (stage, extranodal manifestations)\nCNS-IPI: 3 (stage, extranodal manifestation, renal involvement)",
+  "question": "Pathogenic variant? Targeted therapy?",
+  "tumor_board_decision": "Venetoclax-based therapy (e.g. ViPOR).",
+  "entity_slug": "dlbcl",
+  "routing_hint": "molecular",
+  "raw_vignette": "Age: 50\nECOG: 2\nPrimary diagnosis:\nDiffuse large B-cell (non-Hodgkin) lymphoma, ID 04/2023\nEBV-positive\nStage: IVBE+S\nManifestations: bipulmonary, mediastinal/hilar, pleural, bilateral renal, splenic,\nretroperitoneal, inguinal, osseous, bone marrow\nIPI: 2 (stage, extranodal manifestations)\nCNS-IPI: 3 (stage, extranodal manifestation, renal involvement)\nSecondary diagnoses / Comorbidities:\nHashimoto thyroiditis\nTreatment and course:\nMolecular genetic findings\nQuestion for the tumor board:\nPathogenic variant? Targeted therapy?\nTumor board decision:\nVenetoclax-based therapy (e.g. ViPOR)."
+}

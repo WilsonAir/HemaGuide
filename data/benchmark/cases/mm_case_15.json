@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_15",
+  "age": 56,
+  "ecog": 1,
+  "primary_diagnosis": "Multiple myeloma, IgG lambda type, ID 06/2025, from solitary plasmacytoma BWK 10\n(01/2024), R-ISS II, standard-risk cytogenetics\nSLiM-CRAB: disseminated Osteolytic lesions",
+  "question": "Treatment initiation for initial diagnosis of MM from solitary plasmacytoma",
+  "tumor_board_decision": "Treatment initiation with Dara-VRd with continuation of anticoagulation. Reduction of\nLenalidomid dosage due to the recent PE in the first cycle. Principally eligible for\nhigh-dose therapy, consolidation and maintenance therapy in the further course.",
+  "entity_slug": "myeloma",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 56\nECOG: 1\nPrimary diagnosis:\nMultiple myeloma, IgG lambda type, ID 06/2025, from solitary plasmacytoma BWK 10\n(01/2024), R-ISS II, standard-risk cytogenetics\nSLiM-CRAB: disseminated Osteolytic lesions\nSecondary diagnoses / Comorbidities:\nHistory of Pulmonary embolism 12/2025\nAllergies: none known\nPrognostic factors:\nCytogenetics (01/2026): Standard risk\nTreatment and course:\n01/2024 ID solitary plasmacytoma BWK 10\n01/2024 Laminectomy BWK 10\n04-05/2024 Radiation therapy BWK 9-11, GD 36 Gy\n01/2026 Whole-body MRI: Progression to MM\nQuestion for the tumor board:\nTreatment initiation for initial diagnosis of MM from solitary plasmacytoma\nTumor board decision:\nTreatment initiation with Dara-VRd with continuation of anticoagulation. Reduction of\nLenalidomid dosage due to the recent PE in the first cycle. Principally eligible for\nhigh-dose therapy, consolidation and maintenance therapy in the further course."
+}

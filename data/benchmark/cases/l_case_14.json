@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_14",
+  "age": 62,
+  "ecog": 1,
+  "primary_diagnosis": "c-ALL, BCR-ABL positive ID 01/2025\nPB 01/25: CD19+, CD10+, CD34+, TdT+, CD79a+, CD22+\nFISH: BCR-ABL-Rearrangement t(9;22),",
+  "question": "Treatment proposal? Allo-SCT is declined by the patient.",
+  "tumor_board_decision": "Allo-SCT currently not feasible. TKI (Ponatinib) to continue. If applicable, addition\nof Blinatumomab.",
+  "entity_slug": "all",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 62\nECOG: 1\nPrimary diagnosis:\nc-ALL, BCR-ABL positive ID 01/2025\nPB 01/25: CD19+, CD10+, CD34+, TdT+, CD79a+, CD22+\nFISH: BCR-ABL-Rearrangement t(9;22),\nSecondary diagnoses:\nType 2 diabetes mellitus\nTreatment and course:\n01/25 GMALL-EVOLVE study: Pre-phase (Cyclophosphamid + Dexamethason + Ponatinib)\n01/25 Induction I (Vincristin + Dexamethason + Ponatinib)\n03/25 Consolidation I (Vindesin, HD-MTX, AraC, Dexamethason, Ponatinib)\nCurrently: MRD-negative CR\nQuestion for the tumor board:\nTreatment proposal? Allo-SCT is declined by the patient.\nTumor board decision:\nAllo-SCT currently not feasible. TKI (Ponatinib) to continue. If applicable, addition\nof Blinatumomab."
+}

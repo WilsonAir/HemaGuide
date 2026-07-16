@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_04",
+  "age": 28,
+  "ecog": 0,
+  "primary_diagnosis": "Aggressive B-cell lymphoma, (Primary mediastinal B-cell lymphoma (PMBCL) (ID 05/2022)\nstage IVBS\naaIPI high: Stage, PS, LDH",
+  "question": "Further treatment?",
+  "tumor_board_decision": "Nivo / Brentuximab vedotin, with potential subsequent alloSCT. Alternatively,\nGlofitamab +/- GemOx.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 28\nECOG: 0\nPrimary diagnosis:\nAggressive B-cell lymphoma, (Primary mediastinal B-cell lymphoma (PMBCL) (ID 05/2022)\nstage IVBS\naaIPI high: Stage, PS, LDH\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nQuestion for the tumor board:\nFurther treatment?\nTumor board decision:\nNivo / Brentuximab vedotin, with potential subsequent alloSCT. Alternatively,\nGlofitamab +/- GemOx."
+}

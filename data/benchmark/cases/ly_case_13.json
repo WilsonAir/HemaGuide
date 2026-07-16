@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_13",
+  "age": 30,
+  "ecog": 1,
+  "primary_diagnosis": "Hodgkin lymphoma ID 01/2026\nPathology: classical Hodgkin lymphoma\nStage: Ann Arbor IIBE\nCT head/thorax/abdomen: Mediastinal mass",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Initial diagnosis of classical Hodgkin lymphoma. For stage IIBE, recommendation for\nBrECADD. In case of PET positivity, radiation therapy to follow.",
+  "entity_slug": "chl",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 30\nECOG: 1\nPrimary diagnosis:\nHodgkin lymphoma ID 01/2026\nPathology: classical Hodgkin lymphoma\nStage: Ann Arbor IIBE\nCT head/thorax/abdomen: Mediastinal mass\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nNone\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nInitial diagnosis of classical Hodgkin lymphoma. For stage IIBE, recommendation for\nBrECADD. In case of PET positivity, radiation therapy to follow."
+}

@@ -7,7 +7,7 @@
   "all": {
     "name": "Acute Lymphoblastic Leukemia (ALL)",
     "onkopedia_slug": "akute-lymphatische-leukaemie-all",
-    "local_stand": "2026-01"
+    "local_stand": "2026-03"
   },
   "aml": {
     "name": "Acute Myeloid Leukemia (AML)",
@@ -92,7 +92,7 @@
   "mds": {
     "name": "MDS",
     "onkopedia_slug": "myelodysplastische-neoplasien-myelodysplastische-syndrome-mds",
-    "local_stand": "2024-02"
+    "local_stand": "2026-03"
   },
   "mgus": {
     "name": "MGUS",

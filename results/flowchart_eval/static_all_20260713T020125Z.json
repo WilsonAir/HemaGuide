@@ -1,0 +1,852 @@
+{
+  "generated_at": "20260713T020125Z",
+  "route_filter": "all",
+  "routing_overrides": [],
+  "summary": {
+    "n": 45,
+    "by_status": {
+      "pass": 31,
+      "likely_advanced": 2,
+      "partial": 1,
+      "no_tokens": 9,
+      "fail": 2
+    },
+    "by_slug": {
+      "all": {
+        "likely_advanced": 1,
+        "pass": 3,
+        "partial": 1,
+        "no_tokens": 1
+      },
+      "aml": {
+        "pass": 4,
+        "no_tokens": 3
+      },
+      "chl": {
+        "fail": 1,
+        "pass": 1
+      },
+      "cml": {
+        "pass": 1
+      },
+      "dlbcl": {
+        "pass": 5,
+        "no_tokens": 1
+      },
+      "fl": {
+        "pass": 1,
+        "no_tokens": 1
+      },
+      "hcl": {
+        "no_tokens": 1
+      },
+      "malt": {
+        "pass": 2,
+        "likely_advanced": 1,
+        "no_tokens": 1
+      },
+      "mds": {
+        "pass": 1
+      },
+      "myeloma": {
+        "pass": 12,
+        "fail": 1,
+        "no_tokens": 1
+      },
+      "waldenstrom": {
+        "pass": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "case_id": "l_case_1",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Treatment initiation with Daunorubicin/Cytarabin (7+3 regimen). With Detection of a\nIn-Frame-Mutation in the bZIP-domain of CEBPA, additional administration of GO. In\ncase of response no indication for consolidating allogeneic stem cell transplantation.",
+      "gold_tokens": [
+        "7+3",
+        "GO"
+      ],
+      "flowchart_tokens_hit": [
+        "7+3",
+        "GO"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_10",
+      "entity_slug": "all",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted Therapy?",
+      "gold": "Pathogenic variant. Study option with KRAS-G12D- / MEK-Inhibitor (Trametinib)\nrecommended.",
+      "gold_tokens": [
+        "MEK"
+      ],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [
+        "MEK"
+      ],
+      "coverage": 0.0,
+      "status": "likely_advanced",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "l_case_11",
+      "entity_slug": "mds",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "The suspicion of MDS can neither be confirmed nor excluded. Regular follow-up and\nfurther workup the anemia. With symptomatic anemia or Hb <10g/dl Therapy with ESA.",
+      "gold_tokens": [
+        "ESA"
+      ],
+      "flowchart_tokens_hit": [
+        "ESA"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_12",
+      "entity_slug": "cml",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Switch Dasatinib on Asciminib; alternatively Ponatinib, Recommendation for resistance\ntesting. Allo-SCT to be planned.",
+      "gold_tokens": [
+        "Asciminib",
+        "Dasatinib",
+        "Ponatinib",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "Asciminib",
+        "Dasatinib",
+        "Ponatinib",
+        "allo-SCT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "l_case_13",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Start 7+3+GO. Referral Allo-SCT to be planned.",
+      "gold_tokens": [
+        "7+3",
+        "GO",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "7+3",
+        "GO",
+        "allo-SCT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_14",
+      "entity_slug": "all",
+      "routing_hint": "advanced",
+      "question": "Treatment proposal? Allo-SCT is declined by the patient.",
+      "gold": "Allo-SCT currently not feasible. TKI (Ponatinib) to continue. If applicable, addition\nof Blinatumomab.",
+      "gold_tokens": [
+        "Blinatumomab",
+        "Ponatinib",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "Blinatumomab",
+        "Ponatinib",
+        "allo-SCT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_15",
+      "entity_slug": "all",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "indication for allogeneic stem cell transplant conference. Bridging therapy with\nNelarabin +/- Cyclo.",
+      "gold_tokens": [
+        "Nelarabine"
+      ],
+      "flowchart_tokens_hit": [
+        "Nelarabine"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "l_case_2",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation",
+      "gold": "Continuation of therapy with ATO/ATRA with high-risk APL under addition of HU 2g 2x\ndaily. No leukapheresis.",
+      "gold_tokens": [
+        "ATO",
+        "ATRA",
+        "HU",
+        "leukapheresis"
+      ],
+      "flowchart_tokens_hit": [
+        "ATO",
+        "ATRA",
+        "HU",
+        "leukapheresis"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_3",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Induction with Vyxeos, prospectively allogeneic stem cell transplantation",
+      "gold_tokens": [
+        "CPX-351"
+      ],
+      "flowchart_tokens_hit": [
+        "CPX-351"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_4",
+      "entity_slug": "all",
+      "routing_hint": "advanced",
+      "question": "Treatment recommendation?",
+      "gold": "Relapse therapy with Inotuzumab ozogamicin; parallel intrathecal triple therapy for\ntreatment of the ZNS-Manifestation, after of a Cycle Inotuzumab systemic CNS-active\ntherapy (HD-MTX i.v. depending on general condition and blood count with or without\nHD-Cytarabin); subsequently Continuation of therapy with Inotuzumab. CD19-CAR /\nAllo-SCT to be considered.",
+      "gold_tokens": [
+        "GO",
+        "HD-MTX",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "allo-SCT"
+      ],
+      "missing_tokens": [
+        "GO",
+        "HD-MTX"
+      ],
+      "coverage": 0.3333333333333333,
+      "status": "partial",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_5",
+      "entity_slug": "all",
+      "routing_hint": "advanced",
+      "question": "Treatment indication?",
+      "gold": "With rising MRD positivity initially Treatment initiation with Blinatumomab. CAR-T /\nAllo-SCT to be considered.",
+      "gold_tokens": [
+        "Blinatumomab",
+        "CAR-T",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "Blinatumomab",
+        "CAR-T",
+        "allo-SCT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "l_case_6",
+      "entity_slug": "aml",
+      "routing_hint": "advanced",
+      "question": "Further Therapy?",
+      "gold": "Enrollment in Menin-Inhibitor-study.",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_7",
+      "entity_slug": "aml",
+      "routing_hint": "advanced",
+      "question": "Relapse therapy?",
+      "gold": "Salvage therapy with FLAG-IDA VEN (as per cardiology consult if applicable, VEN+HAM)\nand upon achieving a new remission 2. allogeneic stem cell transplantation.",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_8",
+      "entity_slug": "all",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted Therapy?",
+      "gold": "Targeted Therapy with Ivosidenib (+Azacitidin).",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_9",
+      "entity_slug": "aml",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted Therapy?",
+      "gold": "Pathogenic variant. Enrollment in KIT-Inhibitor study.",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_01",
+      "entity_slug": "dlbcl",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Orchiectomy of the right testis. 6 cycles of R-CHOP and 2 cycles of HD-MTX with\nadjuvant radiation therapy of the left testis / if applicable bilateral orchiectomy.",
+      "gold_tokens": [
+        "HD-MTX",
+        "R-CHOP",
+        "RT",
+        "orchiectomy"
+      ],
+      "flowchart_tokens_hit": [
+        "HD-MTX",
+        "R-CHOP",
+        "RT",
+        "orchiectomy"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_02",
+      "entity_slug": "dlbcl",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Treatment initiation with 6x Pola-R-CHP with an IPI of 4.",
+      "gold_tokens": [
+        "Pola-R-CHP"
+      ],
+      "flowchart_tokens_hit": [
+        "Pola-R-CHP"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_03",
+      "entity_slug": "malt",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Initially H. pylori eradication. EGD follow-up in 3 months. Depending on response\n(macroscopic, histologic, and clinical) evaluation Radiation therapy versus W&W.",
+      "gold_tokens": [
+        "H.pylori",
+        "RT",
+        "W&W"
+      ],
+      "flowchart_tokens_hit": [
+        "H.pylori",
+        "RT",
+        "W&W"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_04",
+      "entity_slug": "dlbcl",
+      "routing_hint": "advanced",
+      "question": "Further treatment?",
+      "gold": "Nivo / Brentuximab vedotin, with potential subsequent alloSCT. Alternatively,\nGlofitamab +/- GemOx.",
+      "gold_tokens": [
+        "BiTE",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "BiTE"
+      ],
+      "missing_tokens": [
+        "allo-SCT"
+      ],
+      "coverage": 0.5,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "ly_case_05",
+      "entity_slug": "dlbcl",
+      "routing_hint": "advanced",
+      "question": "Indication for CAR-T cell therapy in early relapse?",
+      "gold": "Evaluate re-biopsy. If DLBCL confirmed, CAR-T indication 2nd line (Axicel). Bridging\nwith radiation therapy. Molecular tumor board indication.",
+      "gold_tokens": [
+        "CAR-T",
+        "RT"
+      ],
+      "flowchart_tokens_hit": [
+        "CAR-T",
+        "RT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "ly_case_06",
+      "entity_slug": "malt",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Recommendation for BiTE (Glofitamab versus Epcoritamab). Re-biopsy (persistent CD20\nexpression?) to be pursued. Molecular tumor board indication.",
+      "gold_tokens": [
+        "BiTE"
+      ],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [
+        "BiTE"
+      ],
+      "coverage": 0.0,
+      "status": "likely_advanced",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "ly_case_07",
+      "entity_slug": "fl",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Recommendation for Glofitamab.",
+      "gold_tokens": [
+        "BiTE"
+      ],
+      "flowchart_tokens_hit": [
+        "BiTE"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "ly_case_08",
+      "entity_slug": "fl",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted therapy?",
+      "gold": "Recommendation for EZH2 inhibitor therapy (Tazemetostat).",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_09",
+      "entity_slug": "dlbcl",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted therapy?",
+      "gold": "Pathogenic variant: has been described in studies of Mosunetuzumab + Polatuzumab\ntherapy as effective. Alternatively, enrollment in CD79B-ADC trial.",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_10",
+      "entity_slug": "chl",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted therapy?",
+      "gold": "Venetoclax-based therapy (e.g. ViPOR).",
+      "gold_tokens": [
+        "HMA+Ven"
+      ],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [
+        "HMA+Ven"
+      ],
+      "coverage": 0.0,
+      "status": "fail",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_11",
+      "entity_slug": "hcl",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Humerus biopsy confirming HCL. No further evidence in bone marrow biopsy. Currently no\nfurther treatment indication. Recommendation for regular follow-up.",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_12",
+      "entity_slug": "malt",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "In case of progression and CD20 loss, recommendation to switch therapy to\nZanubrutinib.",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_13",
+      "entity_slug": "chl",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Initial diagnosis of classical Hodgkin lymphoma. For stage IIBE, recommendation for\nBrECADD. In case of PET positivity, radiation therapy to follow.",
+      "gold_tokens": [
+        "BrECADD",
+        "RT"
+      ],
+      "flowchart_tokens_hit": [
+        "BrECADD",
+        "RT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_14",
+      "entity_slug": "malt",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "W&W. Repeat EGD in 3 months. R-Benda in case of persistence.",
+      "gold_tokens": [
+        "R-Benda",
+        "W&W"
+      ],
+      "flowchart_tokens_hit": [
+        "R-Benda",
+        "W&W"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_15",
+      "entity_slug": "dlbcl",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Early relapse of DLBCL. Recommendation for CAR-T cell therapy. R-DHAP initially to\ncontinue.",
+      "gold_tokens": [
+        "CAR-T"
+      ],
+      "flowchart_tokens_hit": [
+        "CAR-T"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "mm_case_1",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation",
+      "gold": "Dara VCD",
+      "gold_tokens": [
+        "Dara-VCD"
+      ],
+      "flowchart_tokens_hit": [
+        "Dara-VCD"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_10",
+      "entity_slug": "myeloma",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted Therapy?",
+      "gold": "No variant on NGS. t(11;14) in current FISH findings. Therefore, Venetoclax-based\ntherapy recommended.",
+      "gold_tokens": [
+        "HMA+Ven"
+      ],
+      "flowchart_tokens_hit": [
+        "HMA+Ven"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_11",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Continuation of bridging therapy with IsaKd. Referral to CAR-T outpatient clinic for\nBCMA-directed CAR-T cell therapy in the further course.",
+      "gold_tokens": [
+        "CAR-T"
+      ],
+      "flowchart_tokens_hit": [
+        "CAR-T"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "mm_case_12",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Switch to D-VRD, HD Melphalan and ASCT.",
+      "gold_tokens": [
+        "ASCT",
+        "VRd"
+      ],
+      "flowchart_tokens_hit": [
+        "ASCT",
+        "VRd"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_13",
+      "entity_slug": "waldenstrom",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Complete diagnostics. Evaluation of therapy with Rituximab in case of persistent\nhemolysis / R-Bendamustin upon diagnosis of Waldenstrom macroglobulinemia.",
+      "gold_tokens": [
+        "R-Benda",
+        "Rituximab"
+      ],
+      "flowchart_tokens_hit": [
+        "R-Benda",
+        "Rituximab"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_14",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Recommended management for isolated local progression BWK 2 with otherwise stable VEGF\nand systemic remission?",
+      "gold": "Recommendation: Given imaging and clinically largely stable findings and a single\nmoderately progressive lesion in BWK2, local therapy via radiation can be administered\nin this area. Further follow-up assessments should be performed via PET/CT.",
+      "gold_tokens": [
+        "RT"
+      ],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [
+        "RT"
+      ],
+      "coverage": 0.0,
+      "status": "fail",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_15",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation for initial diagnosis of MM from solitary plasmacytoma",
+      "gold": "Treatment initiation with Dara-VRd with continuation of anticoagulation. Reduction of\nLenalidomid dosage due to the recent PE in the first cycle. Principally eligible for\nhigh-dose therapy, consolidation and maintenance therapy in the further course.",
+      "gold_tokens": [
+        "ASCT",
+        "Dara-VRd",
+        "VRd"
+      ],
+      "flowchart_tokens_hit": [
+        "ASCT",
+        "Dara-VRd",
+        "VRd"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_2",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Presentation per SOP. Recommended management?",
+      "gold": "We recommend a repeat high-dose chemotherapy and autologous blood stem cell\ntransplantation as a tandem transplantation.",
+      "gold_tokens": [
+        "ASCT",
+        "tandem"
+      ],
+      "flowchart_tokens_hit": [
+        "ASCT",
+        "tandem"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_3",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "KCD Therapy",
+      "gold_tokens": [
+        "KCd"
+      ],
+      "flowchart_tokens_hit": [
+        "KCd"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_4",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Treatment indication?",
+      "gold": "In summary of the findings, there is currently a monoclonal gammopathy of undetermined\nsignificance IgG type Lambda. In monoclonal gammopathy, there is no treatment\nindication",
+      "gold_tokens": [
+        "MGUS-no-tx"
+      ],
+      "flowchart_tokens_hit": [
+        "MGUS-no-tx"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_5",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "MEK Inhibitor Therapy",
+      "gold_tokens": [
+        "MEK"
+      ],
+      "flowchart_tokens_hit": [
+        "MEK"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "mm_case_6",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Indication for CAR- Therapy. Referral to Cell Therapy Board",
+      "gold_tokens": [],
+      "flowchart_tokens_hit": [],
+      "missing_tokens": [],
+      "coverage": null,
+      "status": "no_tokens",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "mm_case_7",
+      "entity_slug": "myeloma",
+      "routing_hint": "advanced",
+      "question": "Recommended management?",
+      "gold": "Currently, there was rapid progression under Lenalidomid maintenance. Planning CAR-T\ntherapy with Cilta-Cel.",
+      "gold_tokens": [
+        "CAR-T"
+      ],
+      "flowchart_tokens_hit": [
+        "CAR-T"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "mm_case_8",
+      "entity_slug": "myeloma",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted Therapy?",
+      "gold": "The variant is pathogenic. We recommend MEK inhibitor-based therapy.",
+      "gold_tokens": [
+        "MEK"
+      ],
+      "flowchart_tokens_hit": [
+        "MEK"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    },
+    {
+      "case_id": "mm_case_9",
+      "entity_slug": "myeloma",
+      "routing_hint": "molecular",
+      "question": "Pathogenic variant? Targeted Therapy?",
+      "gold": "The NRAS variant is pathogenic. We recommend MEK inhibitor-based therapy.",
+      "gold_tokens": [
+        "MEK"
+      ],
+      "flowchart_tokens_hit": [
+        "MEK"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": true
+    }
+  ]
+}

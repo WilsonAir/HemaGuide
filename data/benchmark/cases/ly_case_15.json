@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_15",
+  "age": 40,
+  "ecog": 1,
+  "primary_diagnosis": "DLBCL ID 01/2025\nStage IIB, mediastinal bulk\nIPI: 2",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Early relapse of DLBCL. Recommendation for CAR-T cell therapy. R-DHAP initially to\ncontinue.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 40\nECOG: 1\nPrimary diagnosis:\nDLBCL ID 01/2025\nStage IIB, mediastinal bulk\nIPI: 2\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nEarly relapse of DLBCL. Recommendation for CAR-T cell therapy. R-DHAP initially to\ncontinue."
+}

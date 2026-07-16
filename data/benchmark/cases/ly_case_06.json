@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_06",
+  "age": 61,
+  "ecog": 2,
+  "primary_diagnosis": "Diffuse large B-cell lymphoma (DLBCL-NOS, GCB type), ID 12/2021 stage IV A (pulmonary\ninvolvement); IPI high (LDH 500, age, stage, performance status, extranodal sites),\ntransformed from a\nSplenic marginal zone lymphoma, ID 12/2021 stage IVAE\nNodal involvement: Spleen; Extralymphatic involvement: Liver\nRisk factors: extranodal involvement",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Recommendation for BiTE (Glofitamab versus Epcoritamab). Re-biopsy (persistent CD20\nexpression?) to be pursued. Molecular tumor board indication.",
+  "entity_slug": "dlbcl",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 61\nECOG: 2\nPrimary diagnosis:\nDiffuse large B-cell lymphoma (DLBCL-NOS, GCB type), ID 12/2021 stage IV A (pulmonary\ninvolvement); IPI high (LDH 500, age, stage, performance status, extranodal sites),\ntransformed from a\nSplenic marginal zone lymphoma, ID 12/2021 stage IVAE\nNodal involvement: Spleen; Extralymphatic involvement: Liver\nRisk factors: extranodal involvement\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nRecommendation for BiTE (Glofitamab versus Epcoritamab). Re-biopsy (persistent CD20\nexpression?) to be pursued. Molecular tumor board indication."
+}

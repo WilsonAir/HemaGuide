@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_13",
+  "age": 70,
+  "ecog": 0,
+  "primary_diagnosis": "Suspected Waldenstrom macroglobulinemia with IgM gammopathy 01/26\nMYD88 negative\nWhole-body CT and bone marrow biopsy unremarkable\nNo light chain restriction",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Complete diagnostics. Evaluation of therapy with Rituximab in case of persistent\nhemolysis / R-Bendamustin upon diagnosis of Waldenstrom macroglobulinemia.",
+  "entity_slug": "waldenstrom",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 70\nECOG: 0\nPrimary diagnosis:\nSuspected Waldenstrom macroglobulinemia with IgM gammopathy 01/26\nMYD88 negative\nWhole-body CT and bone marrow biopsy unremarkable\nNo light chain restriction\nSecondary diagnoses / Comorbidities:\nAllergies: none known\nAIHA\nTreatment and course:\nSuspected Waldenstrom macroglobulinemia 01/26\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nComplete diagnostics. Evaluation of therapy with Rituximab in case of persistent\nhemolysis / R-Bendamustin upon diagnosis of Waldenstrom macroglobulinemia."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_08",
+  "age": 58,
+  "ecog": 1,
+  "primary_diagnosis": "Follicular lymphoma (C82.1-4), ID 11/2020\nNodal involvement: abdominal, cervical, axillary, mediastinal\nBone marrow infiltration\nRisk factors: Bulk > 10 cm\nFLIPI: 4 (advanced stage, elevated LDH, Anemia Hb <12 g/dl, >4 lymph node regions\ninvolved)",
+  "question": "Pathogenic variant? Targeted therapy?",
+  "tumor_board_decision": "Recommendation for EZH2 inhibitor therapy (Tazemetostat).",
+  "entity_slug": "fl",
+  "routing_hint": "molecular",
+  "raw_vignette": "Age: 58\nECOG: 1\nPrimary diagnosis:\nFollicular lymphoma (C82.1-4), ID 11/2020\nNodal involvement: abdominal, cervical, axillary, mediastinal\nBone marrow infiltration\nRisk factors: Bulk > 10 cm\nFLIPI: 4 (advanced stage, elevated LDH, Anemia Hb <12 g/dl, >4 lymph node regions\ninvolved)\nSecondary diagnoses / Comorbidities:\nArterial hypertension\nHypothyroidism\nTreatment and course:\nMolecular genetic findings\nQuestion for the tumor board:\nPathogenic variant? Targeted therapy?\nTumor board decision:\nRecommendation for EZH2 inhibitor therapy (Tazemetostat)."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_8",
+  "age": 68,
+  "ecog": 2,
+  "primary_diagnosis": "Plasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012",
+  "question": "Pathogenic variant? Targeted Therapy?",
+  "tumor_board_decision": "The variant is pathogenic. We recommend MEK inhibitor-based therapy.",
+  "entity_slug": "myeloma",
+  "routing_hint": "molecular",
+  "raw_vignette": "Age: 68\nECOG: 2\nPrimary diagnoses:\nPlasma cell leukemia with multiple myeloma IgG Kappa, stage III A per Salmon and\nDurie, ID 01/2012\nSecondary diagnoses / Comorbidities:\nHistory of Appendectomy\nAllergies: Hay fever\nPrognostic factors:\nInitial: 2,6 mg/l; Albumin 33,1 g/l; ISS II\nCytogenetics (09/12): No High-risk genetics.\nTreatment and course:\nMolecular genetic findings\nQuestion for the tumor board:\nPathogenic variant? Targeted Therapy?\nTumor board decision:\nThe variant is pathogenic. We recommend MEK inhibitor-based therapy."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "l_case_3",
+  "age": 58,
+  "ecog": 0,
+  "primary_diagnosis": "Acute myeloid leukemia, ID 01/2026\nICC 2022: AML with MDS-associated gene mutations (SF3B1)\nWHO 2022: AML, therapy-related (t-AML)\nL 1,6/nl, Hb 8,2 g/dl, Plt 68/nl, blasts 2%, LDH 195 U/l\nBM histology: hypercellular, signs of dysplasia\nBM cytology: 35% myeloblasts, trilineage dysplasia\nFACS: 15% blasts, LAIP: CD45 low' SSC low, CD34+' CD117+' HLA-DR+' CD38+/-, CD33+'\nCD13-, CD56+/-\nMolecular genetics: NPM1 WT, FLT3-ITD/TKD neg., IDH1 neg., IDH2 neg., TP53 WT\nFISH: unremarkable\nNGS: SF3B1 Mutation positive (38,7%)\nKaryotype: 46,XY,del(7)(q31q36)[6]/46,XY,del(20)(q11.2)[2]/46,XY[12]\nRisk profile: adverse",
+  "question": "Treatment initiation?",
+  "tumor_board_decision": "Induction with Vyxeos, prospectively allogeneic stem cell transplantation",
+  "entity_slug": "aml",
+  "routing_hint": "guideline",
+  "raw_vignette": "Age: 58\nECOG: 0\nPrimary diagnosis:\nAcute myeloid leukemia, ID 01/2026\nICC 2022: AML with MDS-associated gene mutations (SF3B1)\nWHO 2022: AML, therapy-related (t-AML)\nL 1,6/nl, Hb 8,2 g/dl, Plt 68/nl, blasts 2%, LDH 195 U/l\nBM histology: hypercellular, signs of dysplasia\nBM cytology: 35% myeloblasts, trilineage dysplasia\nFACS: 15% blasts, LAIP: CD45 low' SSC low, CD34+' CD117+' HLA-DR+' CD38+/-, CD33+'\nCD13-, CD56+/-\nMolecular genetics: NPM1 WT, FLT3-ITD/TKD neg., IDH1 neg., IDH2 neg., TP53 WT\nFISH: unremarkable\nNGS: SF3B1 Mutation positive (38,7%)\nKaryotype: 46,XY,del(7)(q31q36)[6]/46,XY,del(20)(q11.2)[2]/46,XY[12]\nRisk profile: adverse\nSecondary diagnoses:\nBreast carcinoma, right, ID 05/2019\nStage: pT1c, pN0 (0/3 sn), L0, G2, R0, cM0, History of adjuvant chemotherapy and\nradiation\nTreatment and course:\nED AML 05.01.2026\nQuestion for the tumor board:\nTreatment initiation?\nTumor board decision:\nInduction with Vyxeos, prospectively allogeneic stem cell transplantation"
+}

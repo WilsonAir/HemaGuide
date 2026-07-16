@@ -1,0 +1,366 @@
+{
+  "generated_at": "20260713T020125Z",
+  "route_filter": "guideline",
+  "routing_overrides": [
+    {
+      "case_id": "l_case_12",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "l_case_15",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "ly_case_06",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "ly_case_07",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "mm_case_2",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "mm_case_3",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "mm_case_5",
+      "from": "guideline",
+      "to": "advanced"
+    },
+    {
+      "case_id": "mm_case_6",
+      "from": "guideline",
+      "to": "advanced"
+    }
+  ],
+  "summary": {
+    "n": 15,
+    "by_status": {
+      "pass": 15
+    },
+    "by_slug": {
+      "aml": {
+        "pass": 4
+      },
+      "chl": {
+        "pass": 1
+      },
+      "dlbcl": {
+        "pass": 2
+      },
+      "malt": {
+        "pass": 2
+      },
+      "mds": {
+        "pass": 1
+      },
+      "myeloma": {
+        "pass": 4
+      },
+      "waldenstrom": {
+        "pass": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "case_id": "l_case_1",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Treatment initiation with Daunorubicin/Cytarabin (7+3 regimen). With Detection of a\nIn-Frame-Mutation in the bZIP-domain of CEBPA, additional administration of GO. In\ncase of response no indication for consolidating allogeneic stem cell transplantation.",
+      "gold_tokens": [
+        "7+3",
+        "GO"
+      ],
+      "flowchart_tokens_hit": [
+        "7+3",
+        "GO"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_11",
+      "entity_slug": "mds",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "The suspicion of MDS can neither be confirmed nor excluded. Regular follow-up and\nfurther workup the anemia. With symptomatic anemia or Hb <10g/dl Therapy with ESA.",
+      "gold_tokens": [
+        "ESA"
+      ],
+      "flowchart_tokens_hit": [
+        "ESA"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_13",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Start 7+3+GO. Referral Allo-SCT to be planned.",
+      "gold_tokens": [
+        "7+3",
+        "GO",
+        "allo-SCT"
+      ],
+      "flowchart_tokens_hit": [
+        "7+3",
+        "GO",
+        "allo-SCT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_2",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation",
+      "gold": "Continuation of therapy with ATO/ATRA with high-risk APL under addition of HU 2g 2x\ndaily. No leukapheresis.",
+      "gold_tokens": [
+        "ATO",
+        "ATRA",
+        "HU",
+        "leukapheresis"
+      ],
+      "flowchart_tokens_hit": [
+        "ATO",
+        "ATRA",
+        "HU",
+        "leukapheresis"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "l_case_3",
+      "entity_slug": "aml",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Induction with Vyxeos, prospectively allogeneic stem cell transplantation",
+      "gold_tokens": [
+        "CPX-351"
+      ],
+      "flowchart_tokens_hit": [
+        "CPX-351"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_01",
+      "entity_slug": "dlbcl",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Orchiectomy of the right testis. 6 cycles of R-CHOP and 2 cycles of HD-MTX with\nadjuvant radiation therapy of the left testis / if applicable bilateral orchiectomy.",
+      "gold_tokens": [
+        "HD-MTX",
+        "R-CHOP",
+        "RT",
+        "orchiectomy"
+      ],
+      "flowchart_tokens_hit": [
+        "HD-MTX",
+        "R-CHOP",
+        "RT",
+        "orchiectomy"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_02",
+      "entity_slug": "dlbcl",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation?",
+      "gold": "Treatment initiation with 6x Pola-R-CHP with an IPI of 4.",
+      "gold_tokens": [
+        "Pola-R-CHP"
+      ],
+      "flowchart_tokens_hit": [
+        "Pola-R-CHP"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_03",
+      "entity_slug": "malt",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Initially H. pylori eradication. EGD follow-up in 3 months. Depending on response\n(macroscopic, histologic, and clinical) evaluation Radiation therapy versus W&W.",
+      "gold_tokens": [
+        "H.pylori",
+        "RT",
+        "W&W"
+      ],
+      "flowchart_tokens_hit": [
+        "H.pylori",
+        "RT",
+        "W&W"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_13",
+      "entity_slug": "chl",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Initial diagnosis of classical Hodgkin lymphoma. For stage IIBE, recommendation for\nBrECADD. In case of PET positivity, radiation therapy to follow.",
+      "gold_tokens": [
+        "BrECADD",
+        "RT"
+      ],
+      "flowchart_tokens_hit": [
+        "BrECADD",
+        "RT"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "ly_case_14",
+      "entity_slug": "malt",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "W&W. Repeat EGD in 3 months. R-Benda in case of persistence.",
+      "gold_tokens": [
+        "R-Benda",
+        "W&W"
+      ],
+      "flowchart_tokens_hit": [
+        "R-Benda",
+        "W&W"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_1",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation",
+      "gold": "Dara VCD",
+      "gold_tokens": [
+        "Dara-VCD"
+      ],
+      "flowchart_tokens_hit": [
+        "Dara-VCD"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_12",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Switch to D-VRD, HD Melphalan and ASCT.",
+      "gold_tokens": [
+        "ASCT",
+        "VRd"
+      ],
+      "flowchart_tokens_hit": [
+        "ASCT",
+        "VRd"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_13",
+      "entity_slug": "waldenstrom",
+      "routing_hint": "guideline",
+      "question": "Recommended management?",
+      "gold": "Complete diagnostics. Evaluation of therapy with Rituximab in case of persistent\nhemolysis / R-Bendamustin upon diagnosis of Waldenstrom macroglobulinemia.",
+      "gold_tokens": [
+        "R-Benda",
+        "Rituximab"
+      ],
+      "flowchart_tokens_hit": [
+        "R-Benda",
+        "Rituximab"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_15",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Treatment initiation for initial diagnosis of MM from solitary plasmacytoma",
+      "gold": "Treatment initiation with Dara-VRd with continuation of anticoagulation. Reduction of\nLenalidomid dosage due to the recent PE in the first cycle. Principally eligible for\nhigh-dose therapy, consolidation and maintenance therapy in the further course.",
+      "gold_tokens": [
+        "ASCT",
+        "Dara-VRd",
+        "VRd"
+      ],
+      "flowchart_tokens_hit": [
+        "ASCT",
+        "Dara-VRd",
+        "VRd"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    },
+    {
+      "case_id": "mm_case_4",
+      "entity_slug": "myeloma",
+      "routing_hint": "guideline",
+      "question": "Treatment indication?",
+      "gold": "In summary of the findings, there is currently a monoclonal gammopathy of undetermined\nsignificance IgG type Lambda. In monoclonal gammopathy, there is no treatment\nindication",
+      "gold_tokens": [
+        "MGUS-no-tx"
+      ],
+      "flowchart_tokens_hit": [
+        "MGUS-no-tx"
+      ],
+      "missing_tokens": [],
+      "coverage": 1.0,
+      "status": "pass",
+      "advanced_marker_in_gold": false
+    }
+  ]
+}

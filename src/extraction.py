@@ -43,6 +43,7 @@ logger = logging.getLogger(__name__)
 __all__ = [
     'extract_document',
     'extract_document_cached',
+    'extract_from_text',
     'extract_prior_treatments',
     'read_document',
     'read_docx',
@@ -85,59 +86,58 @@ Antworten Sie NUR mit dem exakten Entitätsnamen, nichts anderes."""
 # PUBLIC API
 # ============================================================================
 
-def extract_document(
-    file_path: Path,
+def extract_from_text(
+    text: str,
+    source_name: str = "pasted_case.txt",
     model: str = DEFAULT_MODEL,
     llm_mode: str | None = None,
-    api_key: str | None = None
+    api_key: str | None = None,
 ) -> dict[str, Any]:
     """
-    Extract structured data from document using two-step extraction.
+    Extract structured data from raw case text (no file conversion).
 
     Args:
-        file_path: Path to .docx file
+        text: Case vignette as plain text
+        source_name: Logical source label used for document_id / patient_id
         model: LLM model to use
-        llm_mode: LLM mode (openai, ollama-local, ollama-cloud)
+        llm_mode: LLM mode (openai, ollama-local, ollama-cloud, vllm)
         api_key: API key
 
     Returns:
         Dict with document_id, source_file, sections, enriched flag
     """
-    # Step 1: Read document
-    logger.info(f"Extraction {file_path.name}: reading document")
-    text = read_document(file_path)
+    cleaned = (text or "").strip()
+    if not cleaned:
+        raise ValueError("Case text is empty")
 
-    # Step 2: Split document at molecular header (optimizes context window)
-    clinical_text, molecular_text, is_mol_tb = split_document_at_molecular(text)
+    source_name = Path(source_name).name or "pasted_case.txt"
+    logger.info(f"Extraction {source_name}: from text ({len(cleaned)} chars)")
+
+    clinical_text, molecular_text, is_mol_tb = split_document_at_molecular(cleaned)
     if is_mol_tb:
-        logger.info(f"Extraction {file_path.name}: molTB detected, document split")
+        logger.info(f"Extraction {source_name}: molTB detected, document split")
     else:
-        logger.info(f"Extraction {file_path.name}: non-molTB, full document extraction")
+        logger.info(f"Extraction {source_name}: non-molTB, full document extraction")
 
-    # Step 3: Extract header for entity classification (from clinical part)
     header = extract_header(clinical_text, max_lines=30)
 
-    # Step 4: Classify entity FIRST (before loading any config)
     entities = load_entities()
     entity = classify_entity_from_header(
         header_text=header,
         entities=entities,
         model=model,
         llm_mode=llm_mode,
-        api_key=api_key
+        api_key=api_key,
     )
-    logger.info(f"Extraction {file_path.name}: entity={entity}")
+    logger.info(f"Extraction {source_name}: entity={entity}")
 
-    # Step 5: Get entity_slug for routing
     entity_slugs = load_entity_slugs()
     entity_slug = get_entity_slug(entity, entity_slugs)
 
-    # Step 6: Load shared base config (same for all entities)
     base_config_path = get_base_config_path()
     with open(base_config_path, 'r', encoding='utf-8') as f:
         base_config = yaml.safe_load(f)
 
-    # Step 7: Extract base sections using shared base config
     if is_mol_tb:
         user_prompt = build_extraction_prompt(base_config, clinical_text)
         sections = extract_sections(
@@ -147,35 +147,33 @@ def extract_document(
             json_schema=base_config['json_schema'],
             model=model,
             llm_mode=llm_mode,
-            api_key=api_key
+            api_key=api_key,
         )
     else:
-        user_prompt = build_extraction_prompt(base_config, text)
+        user_prompt = build_extraction_prompt(base_config, cleaned)
         sections = extract_sections(
-            text=text,
+            text=cleaned,
             system_prompt=base_config['system_prompt'],
             user_prompt=user_prompt,
             json_schema=base_config['json_schema'],
             model=model,
             llm_mode=llm_mode,
-            api_key=api_key
+            api_key=api_key,
         )
 
-    # Step 7b: Extract prior_treatments from history (additional LLM call)
     history_text = sections.get('history', 'nicht vorhanden')
     if history_text and history_text.strip().lower() != 'nicht vorhanden':
         prior_treatments = extract_prior_treatments(
             history=history_text,
             model=model,
             llm_mode=llm_mode,
-            api_key=api_key
+            api_key=api_key,
         )
     else:
         prior_treatments = []
 
     sections['prior_treatments'] = json.dumps(prior_treatments, ensure_ascii=False)
 
-    # Step 8: Extract molecular data (if molTB) using entity-specific config
     if is_mol_tb:
         molecular_config_path = get_molecular_config_path(entity_slug)
         with open(molecular_config_path, 'r', encoding='utf-8') as f:
@@ -187,7 +185,7 @@ def extract_document(
             model=model,
             llm_mode=llm_mode,
             api_key=api_key,
-            entity_slug=entity_slug
+            entity_slug=entity_slug,
         )
 
         sections['mol_info'] = molecular['mol_info']
@@ -202,23 +200,52 @@ def extract_document(
 
     sections['entity'] = entity
 
+    source_path = Path(source_name)
     output = {
-        "document_id": generate_document_id(file_path),
-        "source_file": file_path.name,
-        "patient_id": extract_patient_id(file_path.name),
+        "document_id": generate_document_id(source_path),
+        "source_file": source_path.name,
+        "patient_id": extract_patient_id(source_path.name),
         "entity_slug": entity_slug,
         "extraction_timestamp": datetime.now().isoformat(),
         "sections": sections,
-        "enriched": False
+        "enriched": False,
     }
 
-    is_mol = sections.get('is_mol_tb', False)
-    log_result(logger, True, f"Extraction {file_path.name}", {
+    log_result(logger, True, f"Extraction {source_path.name}", {
         "entity": entity_slug,
-        "is_mol_tb": is_mol
+        "is_mol_tb": sections.get('is_mol_tb', False),
     })
 
     return output
+
+
+def extract_document(
+    file_path: Path,
+    model: str = DEFAULT_MODEL,
+    llm_mode: str | None = None,
+    api_key: str | None = None
+) -> dict[str, Any]:
+    """
+    Extract structured data from a document file (.docx or .txt).
+
+    Args:
+        file_path: Path to case file
+        model: LLM model to use
+        llm_mode: LLM mode (openai, ollama-local, ollama-cloud, vllm)
+        api_key: API key
+
+    Returns:
+        Dict with document_id, source_file, sections, enriched flag
+    """
+    logger.info(f"Extraction {file_path.name}: reading document")
+    text = read_document(file_path)
+    return extract_from_text(
+        text=text,
+        source_name=file_path.name,
+        model=model,
+        llm_mode=llm_mode,
+        api_key=api_key,
+    )
 
 
 def extract_document_cached(
@@ -519,12 +546,13 @@ def extract_prior_treatments(
 # ============================================================================
 
 def read_document(file_path: Path) -> str:
-    """Read document text based on file extension."""
+    """Read document text based on file extension (.docx or .txt)."""
     suffix = file_path.suffix.lower()
     if suffix == '.docx':
         return read_docx(file_path)
-    else:
-        raise ValueError(f"Unsupported file type: {suffix}. Only .docx files are supported.")
+    if suffix == '.txt':
+        return file_path.read_text(encoding='utf-8')
+    raise ValueError(f"Unsupported file type: {suffix}. Supported: .docx, .txt")
 
 
 def read_docx(file_path: Path) -> str:

@@ -185,11 +185,19 @@ Examples:
         sys.exit(1)
 
     # Find query files first (for count in header)
-    query_files = src.find_files(QUERY_INPUT_DIR, "*.docx")
+    query_files = (
+        src.find_files(QUERY_INPUT_DIR, "*.docx")
+        + src.find_files(QUERY_INPUT_DIR, "*.txt")
+    )
     query_files = [f for f in query_files if not f.name.startswith('~')]
+    # Stable order; prefer unique stems (docx wins over txt of same stem)
+    by_stem: dict[str, Path] = {}
+    for f in sorted(query_files, key=lambda p: (p.stem, p.suffix)):
+        by_stem[f.stem] = f
+    query_files = list(by_stem.values())
 
     if not query_files:
-        logger.warning(f"No .docx files found in {QUERY_INPUT_DIR}")
+        logger.warning(f"No .docx/.txt files found in {QUERY_INPUT_DIR}")
         logger.info("Add query documents to query_input/ directory")
         sys.exit(0)
 

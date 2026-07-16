@@ -1,0 +1,11 @@
+{
+  "case_id": "mm_case_5",
+  "age": 55,
+  "ecog": 1,
+  "primary_diagnosis": "Multiple myeloma, type IgG type Lambda, ID 11/17\nStage IIA after Salmon and Durie\nTreatment indication: Osteolytic lesions",
+  "question": "Recommended management?",
+  "tumor_board_decision": "MEK Inhibitor Therapy",
+  "entity_slug": "myeloma",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 55\nECOG: 1\nPrimary diagnosis:\nMultiple myeloma, type IgG type Lambda, ID 11/17\nStage IIA after Salmon and Durie\nTreatment indication: Osteolytic lesions\nSecondary diagnoses / Comorbidities:\nDrug allergies: none\nHistory of Tobacco use 15py\nTreatment and course:\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nMEK Inhibitor Therapy"
+}

@@ -1,0 +1,41 @@
+# =============================================================================
+# Follicular Lymphoma Flowchart
+# Entity: fl
+# Source: Onkopedia follikuläres Lymphom
+# Stand: 2025-07
+# Language: de
+# =============================================================================
+
+[FL-GATE-1] Erstdiagnose – Stadium und FLIPI
+  -> Staging inkl. PET-CT bei geplanter alleiniger Radiotherapie
+  -> Grad 1–3A vs. 3B / Transformation zu DLBCL prüfen
+  IF Grad 3B oder histologische Transformation (DLBCL/FLBL):
+    -> nach DLBCL-Algorithmus behandeln (aggressiv)
+  IF Stadium I (ggf. begrenztes II):
+    -> [FL-LOCAL]
+  IF Stadium III/IV asymptomatisch, geringe Tumorlast (GELF-negativ):
+    -> [FL-WW]
+  IF therapiepflichtig (GELF-positiv / symptomatisch):
+    -> [FL-1L]
+
+[FL-LOCAL] Lokalisiertes FL
+  -> Involved-Site-Radiotherapie (± Rituximab) mit kurativer Intention
+  -> PET zur Felddefinition empfohlen
+
+[FL-WW] Watch-and-Wait
+  -> engmaschige Kontrolle; Therapie erst bei GELF-Kriterien / Symptomen
+
+[FL-1L] Erstlinie fortgeschritten, therapiepflichtig
+  IF FLIPI 0–1, fit:
+    -> R-Bendamustin oder R-CHOP; Rituximab-Erhaltung optional
+  IF FLIPI 2–5, fit:
+    -> Obinutuzumab + Chemo (CHOP oder Bendamustin) → Obinutuzumab-Erhaltung bevorzugt
+    -> Alternativ: R-Chemo + Rituximab-Erhaltung
+  IF geringe Last / frail:
+    -> Rituximab-Monotherapie oder R-Lenalidomid
+  -> Erhaltung anti-CD20 2 Jahre bei Ansprechen nach Immunchemotherapie
+
+[FL-REL] Rezidiv / refraktär
+  -> POD24 = ungünstig → intensivere Optionen / Studie
+  -> Tafasitamab/Lenalidomid/Rituximab, Zanubrutinib+Obinutuzumab, BiTE, CAR-T nach Zulassung/SOP
+  -> bei Transformation: DLBCL-Salvage / CAR-T / BiTE (z.B. Glofitamab)

@@ -1,0 +1,11 @@
+{
+  "case_id": "ly_case_11",
+  "age": 55,
+  "ecog": 0,
+  "primary_diagnosis": "Hairy cell leukemia ID 01/2026\nCore needle biopsy left humerus: Extranodal manifestation proximal left humerus\nBRAFV600E positive\nBM biopsy 01.01.2026: no evidence of infiltration\nPB 01.01.2026: Hb: 15 g/dl; L: 4,8 G/l; Thr. 280 G/l; LDH 150 U/l",
+  "question": "Recommended management?",
+  "tumor_board_decision": "Humerus biopsy confirming HCL. No further evidence in bone marrow biopsy. Currently no\nfurther treatment indication. Recommendation for regular follow-up.",
+  "entity_slug": "hcl",
+  "routing_hint": "advanced",
+  "raw_vignette": "Age: 55\nECOG: 0\nPrimary diagnosis:\nHairy cell leukemia ID 01/2026\nCore needle biopsy left humerus: Extranodal manifestation proximal left humerus\nBRAFV600E positive\nBM biopsy 01.01.2026: no evidence of infiltration\nPB 01.01.2026: Hb: 15 g/dl; L: 4,8 G/l; Thr. 280 G/l; LDH 150 U/l\nSecondary diagnoses / Comorbidities:\nNone\nTreatment and course:\nNone\nQuestion for the tumor board:\nRecommended management?\nTumor board decision:\nHumerus biopsy confirming HCL. No further evidence in bone marrow biopsy. Currently no\nfurther treatment indication. Recommendation for regular follow-up."
+}

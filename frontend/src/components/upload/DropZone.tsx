@@ -18,11 +18,13 @@ export function DropZone({
   const [isDragActive, setIsDragActive] = useState(false);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
-    const docxFiles = acceptedFiles.filter(
-      f => f.name.endsWith('.docx') && !f.name.startsWith('~')
+    const caseFiles = acceptedFiles.filter(
+      f =>
+        (f.name.endsWith('.docx') || f.name.endsWith('.txt')) &&
+        !f.name.startsWith('~')
     );
-    if (docxFiles.length > 0) {
-      onFilesAccepted(docxFiles);
+    if (caseFiles.length > 0) {
+      onFilesAccepted(caseFiles);
     }
     setIsDragActive(false);
   }, [onFilesAccepted]);
@@ -30,7 +32,8 @@ export function DropZone({
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
     accept: {
-      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx']
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'],
+      'text/plain': ['.txt'],
     },
     disabled: isProcessing,
     onDragEnter: () => setIsDragActive(true),
@@ -85,7 +88,7 @@ export function DropZone({
             {isDragActive ? 'Drop document here' : 'Upload Tumor Board Document'}
           </h3>
           <p className="text-sm text-slate-500">
-            .docx files via Drag & Drop or Click
+            .docx or .txt via Drag & Drop or Click
           </p>
 
           {isProcessing && (
