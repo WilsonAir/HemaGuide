@@ -1,0 +1,23 @@
+# =============================================================================
+# Peripheral T/NK-Cell Lymphoma Diagnosis Tree
+# Entity: tnk_lymphoma
+# Source: Onkopedia PTCL §Diagnose
+# Stand: 2025-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF aggressive Lymphadenopathie OR extranodaler Befall OR Hämophagozytose:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> ausreichende Gewebebiopsie + umfangreiche IHC (T-Zell-Panel, CD30, ALK, EBER)
+  -> Klonalität (TCR) bei Bedarf; Staging PET-CT; KM
+  -> Entitätsspezifisch: ENKTL (Nase/EBER), ALCL (ALK), AITL/TFH-Marker
+
+[DX-CRITERIA] Diagnose / Subtyp
+  -> PTCL-NOS, AITL/TFH, ALCL ALK±, ENKTL, andere nach WHO/ICC
+  -> IPI / PIT / PINK (ENKTL) dokumentieren
+
+[DX-DDX] Differentialdiagnose
+  -> reaktive T-Zell-Infiltrate, cHL, DLBCL T-zellreich, Infekt

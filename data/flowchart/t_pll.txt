@@ -1,0 +1,22 @@
+# =============================================================================
+# T-PLL Flowchart
+# Entity: t_pll
+# Source: Onkopedia T-Zell-Prolymphozytenleukämie (DE)
+# Stand: 2022-07
+# Language: de
+# =============================================================================
+
+[TPLL-GATE-1] Therapieindikation
+  -> Diagnose T-PLL (Morphologie, Immunphänotyp, TCL1, Karyotyp/Molekular)
+  -> bei symptomatischer / progressiver Erkrankung Therapie einleiten
+  -> asymptomatisch selten: engmaschige Kontrolle, früh therapieren bei Progress
+
+[TPLL-1L] Erstlinie
+  -> Standard: Alemtuzumab i.v. (anti-CD52) — höchste Remissionsraten
+  -> Alternativen bei Unverträglichkeit/fehlendem Zugang: FMC (Fludarabin/Mitoxantron/Cyclophosphamid), Pentostatin, Bendamustin
+  IF Remission und transplantfähig:
+    -> konsolidierende allo-SZT in CR1 anstreben (Remissionen nach Alemtuzumab oft nur 1–2 Jahre)
+
+[TPLL-REL] Rezidiv / refraktär
+  -> Reexposition Alemtuzumab wenn zuvor Ansprechen; Chemotherapie-Salvage
+  -> allo-SZT wenn noch möglich; Studie

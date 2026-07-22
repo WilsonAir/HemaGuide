@@ -1,0 +1,24 @@
+# =============================================================================
+# MALT / MZL Diagnosis Tree
+# Entity: malt
+# Source: Onkopedia MALT §Diagnose
+# Stand: 2023-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF gastrische Ulzera/MALT-Verdacht OR extranodale indolente Manifestation:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Gewebebiopsie + Immunphänotyp (CD20+ CD5- CD10- CyclinD1-)
+  -> bei Magen: multiple Biopsien, H.-pylori-Status (Histo/URE/Serologie)
+  -> t(11;18) bei gastrischem MALT wenn verfügbar (Ansprechen auf Eradikation)
+  -> Staging: EGD, CT/PET nach Bedarf, KM bei systemischem Verdacht
+
+[DX-CRITERIA] Diagnose
+  IF extranodales Marginalzonen-Lymphom vom MALT-Typ histologisch:
+    -> MALT gesichert → Lokalisation und Stadium (I/II vs fortgeschritten)
+
+[DX-DDX] Differentialdiagnose
+  -> chronische Gastritis, andere indolente B-NHL, DLBCL-Transformation

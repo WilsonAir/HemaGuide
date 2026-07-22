@@ -1,0 +1,27 @@
+# =============================================================================
+# Polycythemia Vera Flowchart
+# Entity: pv
+# Source: Onkopedia Polycythaemia vera (DE)
+# Stand: 2023-09
+# Language: de
+# =============================================================================
+
+[PV-GATE-1] Risiko & Indikation
+  -> JAK2 V617F/Exon 12; Hämatokrit-Ziel <45%; kardiovaskuläre Risikofaktoren
+  IF niedriges Risiko:
+    -> [PV-LOW]
+  IF Hochrisiko (Alter ≥60 und/oder Thrombose) ODER symptomatisch / schlechte HCT-Kontrolle:
+    -> [PV-HIGH]
+
+[PV-LOW] Niedrigrisiko
+  -> Aderlass (Phlebotomie) bis HCT <45%
+  -> ASS niedrigdosiert (wenn kein Blutungs-/vWS-Risiko)
+  -> Risikofaktoren behandeln
+
+[PV-HIGH] Hochrisiko / zytoreduktionsbedürftig
+  -> Hydroxyurea first-line Zytoreduktion
+  -> Interferon-α (besonders jüngere) Alternative
+  -> bei Hydroxyurea-Resistenz/-Intoleranz: Ruxolitinib
+  -> Aderlass + ASS fortsetzen nach Bedarf
+  IF Post-PV-Myelofibrose:
+    -> nach PMF-Flowchart (JAK-Inhibitor / allo-SZT)

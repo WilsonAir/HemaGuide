@@ -1,0 +1,28 @@
+# =============================================================================
+# CEL / Clonal Eosinophilia Diagnosis Tree
+# Entity: cel
+# Source: Onkopedia Eosinophilie §Diagnose
+# Stand: 2023-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF persistierende Eosinophilie ± Organbefall:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild, Parasitologie/Allergie/Medikamente (reaktiv!)
+  -> KM + Zytogenetik/FISH FIP1L1::PDGFRA, PDGFRB, FGFR1, JAK2
+  -> Molekularpanel; Trypase/Kit bei Mastzellverdacht
+  -> Organstaging (Herz, Lunge, Nerven)
+
+[DX-CRITERIA] Klassifikation
+  IF reaktive Ursache gefunden:
+    -> sekundäre Eosinophilie
+  IF PDGFRA/B oder andere Treiber:
+    -> myeloide/lymphoide Neoplasie mit Eosinophilie (TKI-sensitiv?)
+  IF klonal ohne klassisches Fusionsgen:
+    -> CEL, NOS / idiopathisches HES nach Kriterien
+
+[DX-DDX] Differentialdiagnose
+  -> Parasitose, Vaskulitis, ALL mit Eosinophilie, Mastzytose

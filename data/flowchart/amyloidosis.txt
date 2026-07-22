@@ -1,0 +1,30 @@
+# =============================================================================
+# AL Amyloidosis Flowchart
+# Entity: amyloidosis
+# Source: Onkopedia AL-Amyloidose (DE)
+# Stand: 2025-07
+# Language: de
+# =============================================================================
+
+[AL-GATE-1] Diagnose & Risiko
+  -> systemische AL-Amyloidose sichern (Organbefall, Leichtketten, Biopsie/Massenspektrometrie)
+  -> Mayo-/Risikostaging; Kardiale Beteiligung kritisch
+  -> transplantfähig? (Alter, Organfunktion, ECOG)
+  IF transplantfähig und geeignet:
+    -> [AL-TE]
+  ELSE:
+    -> [AL-NTE]
+
+[AL-TE] Transplant-eligible
+  -> Induktion bevorzugt: Dara-CyBorD (Daratumumab + Cyclophosphamid/Bortezomib/Dexamethason)
+  -> bei gutem Ansprechen: Hochdosis-Melphalan + ASCT evaluieren
+  -> Neuropathie: Bortezomib-Dosis/Route anpassen
+
+[AL-NTE] Nicht transplantfähig / hohes Risiko
+  -> Dara-CyBorD first-line (Standard nach Zulassung)
+  -> Alternativen: CyBorD, Melphalan/Dex, Bortezomib-basiert nach Organstatus
+  -> engmaschiges Organ- und hämatologisches Ansprechen
+
+[AL-REL] Progress / refraktär / Rezidiv
+  -> Wechsel: Lenalidomid-/Pomalidomid-haltig, Bendamustin, erneutes Anti-CD38, Studie
+  -> Supportive Care (Herzinsuffizienz, Nephropathie, Antikoagulation nach Risiko)

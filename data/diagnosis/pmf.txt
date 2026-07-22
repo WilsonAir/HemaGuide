@@ -1,0 +1,29 @@
+# =============================================================================
+# Primary Myelofibrosis Diagnosis Tree
+# Entity: pmf
+# Source: Onkopedia Myelofibrose §Diagnose
+# Stand: 2025-09
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Splenomegalie OR leukoerythroblastisches Blutbild OR Anämie + Fibrosezeichen:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutausstrich (Tränentropfen), Blutbild
+  -> KM-Histologie mit Fibrosegrad; oft dry tap
+  -> JAK2/CALR/MPL; erweiterte Molekularpanel für MIPSS
+  -> Abgrenzung Post-PV/Post-ET-MF (Vorgeschichte)
+
+[DX-CRITERIA] Diagnose
+  IF WHO/ICC-Kriterien PMF (Megakaryozytenatypie + Fibrose + Klon + Ausschluss):
+    -> PMF (prefibrotisch vs overt)
+  IF Vorgeschichte PV/ET + Fibrosekriterien:
+    -> Post-PV/ET-MF
+
+[DX-RISK] Prognose
+  -> DIPSS / MIPSS70+ v2.0
+
+[DX-DDX] Differentialdiagnose
+  -> andere MPN, MDS mit Fibrose, sekundäre Fibrose, CML

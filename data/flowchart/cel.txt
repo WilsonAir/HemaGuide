@@ -1,0 +1,33 @@
+# =============================================================================
+# CEL / klonale Eosinophilie Flowchart
+# Entity: cel
+# Source: Onkopedia Eosinophilie (DE)
+# Stand: 2023-10
+# Language: de
+# =============================================================================
+
+[CEL-GATE-1] Klassifikation
+  -> reaktive vs. klonale Eosinophilie; Fusionsgene (PDGFRA/B, FGFR1, JAK2, FLT3, etc.)
+  -> Organbeteiligung / Endorganschaden prüfen
+  IF PDGFRA- oder PDGFRB-Rearrangement:
+    -> [CEL-TKI-IM]
+  IF JAK2-/verwandte Treiber mit TKI-Option:
+    -> [CEL-TKI-JAK]
+  IF keine TKI-sensitiven Fusionsgene, klonal:
+    -> [CEL-CYTO]
+  IF nicht klonal / reaktiv:
+    -> Grunderkrankung behandeln; Steroide bei Bedarf
+
+[CEL-TKI-IM] PDGFRA/B
+  -> Imatinib (oft 100 mg/Tag) first-line; exzellente Langzeitprognose
+  -> TFR nach nachhaltiger Remission möglich (engmaschiges Monitoring)
+  -> bei Blastenkrise / Hochrisiko: allo-SZT evaluieren
+
+[CEL-TKI-JAK] JAK2 / ausgewählte Treiber
+  -> Ruxolitinib oder entitätsspezifischer TKI nach Evidenz
+  -> Imatinib-Versuch nur bei passender Morphologie/Molekularbefund
+
+[CEL-CYTO] Klonale Eosinophilie ohne spezifische TKI
+  -> Hydroxyurea und/oder pegyliertes Interferon
+  -> Steroide bei Organbefall
+  -> allo-SZT bei Progress / Blasten / Hochrisiko und Fitness

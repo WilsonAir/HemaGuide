@@ -1,0 +1,28 @@
+# =============================================================================
+# ITP Diagnosis Tree
+# Entity: itp
+# Source: Onkopedia ITP §Diagnose
+# Stand: 2024-08
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF isolierte Thrombozytopenie ± Blutung:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild + Ausstrich (Ausschluss Pseudothrombozytopenie/EDTA)
+  -> HIV/HCV, H. pylori nach Bedarf; Medikamente; ANA bei Verdacht
+  -> KM nur bei atypischen Befunden / Alter / Therapieversagen
+
+[DX-CRITERIA] Diagnose
+  IF isolierte Thrombozytopenie ohne andere Ursache:
+    -> ITP (Ausschlussdiagnose)
+  IF weitere Zytopenien / Organomegalie / Atypien:
+    -> nicht primäre ITP – weiter abklären
+
+[DX-CLASS] Verlauf
+  -> neu diagnostiziert (<3 Mo) / persistent / chronisch (>12 Mo)
+
+[DX-DDX] Differentialdiagnose
+  -> Pseudothrombozytopenie, TTP/HUS, DIC, Hypersplenismus, MDS, Medikamente

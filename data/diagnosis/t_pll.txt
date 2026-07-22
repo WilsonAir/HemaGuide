@@ -1,0 +1,24 @@
+# =============================================================================
+# T-PLL Diagnosis Tree
+# Entity: t_pll
+# Source: Onkopedia T-PLL §Diagnose
+# Stand: 2022-07
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF rasche Lymphozytose + Splenomegalie ± Hautbefall bei älteren Erwachsenen:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutausstrich (Prolymphozyten), FACS: T-Zell-Marker, CD52 stark, TCL1 oft+
+  -> Zytogenetik (inv(14)/TCL1) und Molekular
+  -> KM/Staging nach Bedarf
+
+[DX-CRITERIA] Diagnose
+  IF typische Morphologie + Immunphänotyp T-PLL:
+    -> T-PLL
+  -> Abgrenzung T-LGL, Sézary, T-ALL, ATLL (HTLV-1)
+
+[DX-DDX] Differentialdiagnose
+  -> andere reife T-Zell-Leukämien/Lymphome

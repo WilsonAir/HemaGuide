@@ -1,0 +1,31 @@
+# =============================================================================
+# Mantle Cell Lymphoma Flowchart
+# Entity: mcl
+# Source: Onkopedia Mantelzell-Lymphom (DE)
+# Stand: 2026-06
+# Language: de
+# =============================================================================
+
+[MCL-GATE-1] Staging & Fitness
+  -> t(11;14)/IGH::CCND1, Ki-67, TP53; Lugano-Staging
+  IF lokalisiert Stadium I (selten):
+    -> ISRT ± systemisch nach SOP
+  IF asymptomatisch, indolenter Verlauf, ausgewählt:
+    -> Watch-and-Wait möglich
+  IF jung / transplantfähig:
+    -> [MCL-YOUNG]
+  IF älter / nicht intensivfähig:
+    -> [MCL-ELDERLY]
+
+[MCL-YOUNG] Junge / fitte Patienten
+  -> Induktion: alternierend cytarabinhaltig + R-CHOP ± Ibrutinib (moderne Protokolle)
+  -> Konsolidierung: Hochdosis + ASCT wenn geeignet
+  -> Erhaltung: Ibrutinib/Rituximab nach Protokoll
+
+[MCL-ELDERLY] Ältere Patienten
+  -> Bendamustin-Rituximab ± Acalabrutinib → Rituximab-Erhaltung
+  -> Alternativen: VR-CAP, R-CHOP; BTKi-haltige First-line nach Evidenz/Zugang
+
+[MCL-REL] Rezidiv
+  -> nach Chemoimmuntherapie: BTKi bevorzugt (Ibrutinib/Acalabrutinib/Zanubrutinib)
+  -> nach BTKi-Versagen: nicht-kovalente BTKi, CAR-T (Brexucabtagene), Studie, allo-SZT ausgewählt

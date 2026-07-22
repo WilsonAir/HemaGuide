@@ -1,0 +1,39 @@
+# =============================================================================
+# Castleman Disease Flowchart (Morbus Castleman)
+# Entity: castleman
+# Source: Onkopedia Morbus Castleman (DE)
+# Stand: 2022-06
+# Language: de
+# =============================================================================
+
+[CD-GATE-1] Subtypisierung
+  -> unizentrisch (UCD) vs. multizentrisch (MCD)
+  -> bei MCD: HHV-8+/HIV+ vs. POEMS-assoziiert vs. idiopathisch (iMCD)
+  -> Schweregrad des iMCD beurteilen
+  IF UCD:
+    -> [CD-UCD]
+  IF HHV-8+ / HIV+ MCD:
+    -> [CD-HHV8]
+  IF iMCD:
+    -> [CD-IMCD]
+
+[CD-UCD] Unizentrischer Castleman
+  -> Therapie der Wahl: vollständige Resektion des betroffenen Lymphknotens (kurativ)
+  -> wenn nicht resektabel: lokale Therapie / systemisch nach Symptomatik
+
+[CD-HHV8] HHV-8-assoziierter / HIV-positiver MCD
+  -> Rituximab-basiert (± antivirale Therapie / HIV-ART)
+  -> Chemotherapie bei aggressivem Verlauf
+  -> Supportive Care
+
+[CD-IMCD] Idiopathischer MCD
+  IF schwerer iMCD:
+    -> Siltuximab (Anti-IL-6) ± Steroide; ggf. Tocilizumab alternativ
+    -> bei Versagen: Rituximab, Chemotherapie, Studie
+  IF milder / moderater iMCD:
+    -> Siltuximab oder Rituximab; Steroide kurzfristig
+  -> engmaschige Kontrolle; Algorithmus nach Onkopedia Abbildung 1
+
+[CD-REL] Rezidiv
+  -> erneute Subtyp-/Schweregrad-Bewertung
+  -> Wechsel Biologika ↔ Chemo; Studie

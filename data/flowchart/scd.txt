@@ -1,0 +1,30 @@
+# =============================================================================
+# Sickle Cell Disease Flowchart
+# Entity: scd
+# Source: Onkopedia Sichelzellkrankheiten (DE)
+# Stand: 2024-10
+# Language: de
+# =============================================================================
+
+[SCD-GATE-1] Basisversorgung
+  -> Genotyp, Basis-Hb, Organstatus; Impfungen, Infektprophylaxe
+  -> Krankheitsmodifikation starten wenn indiziert → [SCD-HU]
+  IF schwere Komplikationen / kurative Option:
+    -> [SCD-CUR]
+  IF akute Krise / Organbedrohung:
+    -> [SCD-ACUTE]
+
+[SCD-HU] Hydroxycarbamid / Hydroxyurea
+  -> Standard-krankheitsmodifizierende Therapie bei geeigneten Pat.
+  -> Dosis-Titration nach Blutbild / HbF; engmaschiges Monitoring
+  -> ergänzend: neue Agentien (z.B. Voxelotor, Crizanlizumab) nach Zulassung/Zugang
+
+[SCD-ACUTE] Akuttherapie
+  -> Schmerzkrise: Analgesie, Hydrierung, Supportive Care
+  -> Transfusion / Austauschtransfusion bei Indikation (ACS, Schlaganfall, schwere Anämie, präoperativ etc.)
+  -> Priapismus: Standardprotokoll; Organversagen behandeln
+  -> Eisenüberladung im Verlauf: Chelation wenn transfusionsbedingt
+
+[SCD-CUR] Kurativ
+  -> allo-SZT bei geeigneten Hochrisiko-Pat. und Donor
+  -> Gentherapie / Exa-cel o.ä. nach Verfügbarkeit und Indikation

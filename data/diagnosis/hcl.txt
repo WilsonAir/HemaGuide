@@ -1,0 +1,26 @@
+# =============================================================================
+# Hairy Cell Leukemia Diagnosis Tree
+# Entity: hcl
+# Source: Onkopedia HZL §Diagnose
+# Stand: 2022-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Panzytopenie + Splenomegalie OR monozytopenie:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutausstrich (Haarzellen), FACS: CD20bright CD22 CD25 CD103 CD123 CD11c
+  -> BRAF V600E (typisch für klassische HCL)
+  -> KM-Histologie (oft „dry tap“; Fibrose)
+  -> Abgrenzung HCL-Variant (BRAF-wt, CD25-)
+
+[DX-CRITERIA] Diagnose
+  IF Immunphänotyp + Morphologie (± BRAF V600E):
+    -> klassische HCL
+  IF HCL-v Kriterien:
+    -> Variante – andere Therapieerwartung
+
+[DX-DDX] Differentialdiagnose
+  -> Splenic MZL, SDRPL, CLL, aplastische Anämie

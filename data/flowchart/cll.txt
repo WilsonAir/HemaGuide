@@ -1,0 +1,33 @@
+# =============================================================================
+# CLL Flowchart
+# Entity: cll
+# Source: Onkopedia CLL (DE)
+# Stand: 2025-09
+# Language: de
+# =============================================================================
+
+[CLL-GATE-1] Therapieindikation
+  -> Staging Binet/Rai; IGHV, TP53/del(17p), Komorbidität
+  IF keine IWCLL-Therapieindikation:
+    -> [CLL-WW] Watch-and-Wait
+  ELSE:
+    -> [CLL-1L]
+
+[CLL-WW] Watch-and-Wait
+  -> Beobachtung bis Symptomatik / Progressionskriterien (Zytopenie, Bulk, B-Symptome, rascher Lymphozytenanstieg)
+
+[CLL-1L] Erstlinie (therapiepflichtig)
+  IF TP53-Aberration / del(17p):
+    -> BTKi (Ibrutinib / Acalabrutinib / Zanubrutinib) oder Venetoclax-basiert (± Anti-CD20)
+  IF IGHV-unmutiert, fit:
+    -> zeitlich begrenztes Venetoclax + Obinutuzumab ODER kontinuierlicher BTKi
+  IF IGHV-mutiert, fit:
+    -> Venetoclax + Obinutuzumab bevorzugt; BTKi Alternative
+  IF frail / Komorbidität:
+    -> Venetoclax + Obinutuzumab (dosisadaptiert) oder BTKi nach Toxizitätsprofil
+  -> klassische Chemoimmuntherapie (FCR/BR) nur noch ausgewählte Mut-IGHV / Sonderfälle
+
+[CLL-REL] Rezidiv / refraktär
+  -> nach BTKi-Versagen: Venetoclax-basiert (± Resistenztestung)
+  -> nach Venetoclax: BTKi; Doppelrefraktär: Pirtobrutinib / CAR-T / Studie / allo-SZT bei jungen Hochrisiko
+  -> Autoimmunzytopenie: Steroide; bei refraktär Rituximab/TRAs nach SOP

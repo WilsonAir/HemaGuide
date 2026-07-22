@@ -1,0 +1,48 @@
+# =============================================================================
+# AML Diagnosis Tree
+# Entity: aml
+# Source: Onkopedia AML §Diagnose / Klassifikation
+# Stand: 2025-09
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Klinischer Verdacht
+  IF Blasten im Blut/Knochenmark OR akute Zytopenie OR Leukozytose mit Linksverschiebung:
+    -> [DX-WORKUP]
+  IF morphologischer Verdacht APL (Promyelozyten, Auer-Stäbchen, Koagulopathie):
+    -> sofort [DX-APL] parallel zur Sicherung; Therapie nicht verzögern
+
+[DX-WORKUP] Erstdiagnostik (obligat)
+  -> Blutbild + Differenzial, Gerinnung, LDH, Chemie
+  -> Knochenmark: Zytologie, Histologie, Durchflusszytometrie (FACS)
+  -> Zytogenetik (Bänder) + FISH (CBF, KMT2A, MECOM, PML::RARA etc. nach Befund)
+  -> Molekulargenetik: NPM1, FLT3-ITD/TKD, IDH1/2, TP53, CEBPA, DDX41, Myeloid-Panel
+  -> HLA-Typisierung früh bei potenzieller allo-SZT
+  -> weiter zu [DX-CRITERIA]
+
+[DX-CRITERIA] Diagnosesicherung AML
+  IF Blasten ≥20% im KM/PB (WHO) ODER genetisch definierte AML (auch bei <20% Blasten nach WHO/ICC):
+    -> AML gesichert → [DX-CLASS]
+  IF Blasten <20% ohne AML-definierende Genetik:
+    -> MDS / MDS/MPN erwägen; nicht als AML klassifizieren
+  IF isoliertes myeloisches Sarkom:
+    -> als AML-äquivalent werten und analog sichern
+
+[DX-CLASS] Klassifikation (WHO 2022 / ICC / ELN)
+  IF PML::RARA / t(15;17):
+    -> APL → [DX-APL]
+  IF CBF (RUNX1::RUNX1T1 / CBFB::MYH11) OR NPM1 OR CEBPA bZIP in-frame:
+    -> genetisch definierte Subgruppe; ELN favorable prüfen
+  IF MDS-assoziierte Genetik / Therapie-assoziiert / AML-MR:
+    -> AML-MR / tAML / pCT dokumentieren
+  -> ELN-Risiko (favorable / intermediate / adverse) zuweisen
+  -> CD33-Status für Therapieplanung dokumentieren
+
+[DX-APL] APL-Sicherung
+  -> Morphologie + PML::RARA (FISH/PCR) so schnell wie möglich
+  -> Sanz-Risiko: WBC und Plättchen bei Diagnose
+  -> Differenzial: andere AML mit Promyelozyten-ähnlich; DIC-Labor
+
+[DX-DDX] Differentialdiagnose
+  -> MDS mit Blastenexzess, MPAL, ALL, reaktive Linksverschiebung, BPDCN
+  -> bei Unklarheit: erweiterte Immunphänotypisierung + Molekularpanel

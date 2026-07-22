@@ -87,7 +87,7 @@
   "mcl": {
     "name": "Mantle Cell Lymphoma (MCL)",
     "onkopedia_slug": "mantelzell-lymphom",
-    "local_stand": "2023-06"
+    "local_stand": "2026-06"
   },
   "mds": {
     "name": "MDS",
@@ -137,16 +137,16 @@
   "t_pll": {
     "name": "T-PLL",
     "onkopedia_slug": "t-zell-prolymphozytenleukaemie",
-    "local_stand": "2026-03"
+    "local_stand": "2022-07"
   },
   "pv": {
     "name": "Polycythemia Vera (PV)",
     "onkopedia_slug": "polycythaemia-vera-pv",
-    "local_stand": "2026-03"
+    "local_stand": "2023-09"
   },
   "pcnsl": {
     "name": "Primary CNS Lymphoma (PCNSL)",
     "onkopedia_slug": "primaeres-lymphom-des-zentralnervensystems-pznsl",
-    "local_stand": "2026-03"
+    "local_stand": "2024-12"
   }
 }

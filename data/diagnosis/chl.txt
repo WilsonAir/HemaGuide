@@ -1,0 +1,28 @@
+# =============================================================================
+# Classical Hodgkin Lymphoma Diagnosis Tree
+# Entity: chl
+# Source: Onkopedia Hodgkin §Diagnose
+# Stand: 2023-12
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF schmerzloser LK OR Mediastinaltumor OR B-Symptome:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Exzisionsbiopsie: Reed-Sternberg/Hodgkin-Zellen; CD30+ CD15± CD20- PAX5 weak
+  -> Unterscheide cHL vs NLPHL (CD20+ CD30- CD15- Popcorn-Zellen)
+  -> Staging PET-CT; Blutsenkung, Blutbild; Risikofaktoren GHSG
+
+[DX-CRITERIA] Diagnose
+  IF typische Histologie/IHC:
+    -> cHL oder NLPHL
+  -> Ann Arbor / Lugano Stadium + E-Befall + B-Symptome
+
+[DX-STAGE] GHSG-Risikogruppe
+  -> early favorable / early unfavorable (RF) / intermediate / advanced
+  -> RF: großer Mediastinaltumor, Extranodal, hohe ESR, ≥3 Regionen
+
+[DX-DDX] Differentialdiagnose
+  -> DLBCL/PMBCL, anaplastisches Großzell-Lymphom, Infekt/reaktiv

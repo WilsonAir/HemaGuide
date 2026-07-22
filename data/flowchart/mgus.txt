@@ -1,0 +1,21 @@
+# =============================================================================
+# MGUS Flowchart
+# Entity: mgus
+# Source: Onkopedia MGUS (DE)
+# Stand: 2023-12
+# Language: de
+# =============================================================================
+
+[MGUS-GATE-1] Diagnose sichern
+  -> M-Protein / Leichtketten ohne CRAB/SLiM und ohne Lymphom-Kriterien
+  -> Abgrenzung zu SMM / aktivem Myelom / AL-Amyloidose / MGRS
+  IF Diagnose MGUS bestätigt:
+    -> [MGUS-OBS]
+  IF SMM oder aktives MM / behandlungsbedürftige Plasmazellneoplasie:
+    -> nach Myeloma-Flowchart (entity myeloma)
+
+[MGUS-OBS] Keine antineoplastische Therapie
+  -> MGUS hat per se keinen Therapiebedarf
+  -> Risikostratifizierung (M-Protein-Höhe, Isotyp, FLC-Ratio)
+  -> laborchemische Verlaufskontrollen (Intervall nach Risiko)
+  -> bei Progressionszeichen → Re-Staging und Umklassifikation

@@ -1,0 +1,26 @@
+# =============================================================================
+# Polycythemia Vera Diagnosis Tree
+# Entity: pv
+# Source: Onkopedia PV §Diagnose
+# Stand: 2023-09
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF erhöhter Hkt/Hb OR Erythromelalgie OR Thrombose bei hohem Hkt:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild, EPO-Spiegel
+  -> JAK2 V617F; wenn neg: Exon-12
+  -> KM-Histologie (panmyelose) nach WHO
+  -> Sekundäre Polyglobulie ausschließen (Hypoxie, EPO-Tumor, Rauchen)
+
+[DX-CRITERIA] Diagnose WHO
+  IF Haupkriterien (Hb/Hkt-Schwellen + KM + JAK2) erfüllt:
+    -> PV
+  IF JAK2+ und EPO niedrig mit grenzwertigem Blutbild:
+    -> PV möglich / frühe PV
+
+[DX-DDX] Differentialdiagnose
+  -> sekundäre Erythrozytose, ET, Prefibrotische MF, Scheinpolyglobulie

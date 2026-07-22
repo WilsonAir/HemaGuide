@@ -1,0 +1,28 @@
+# =============================================================================
+# Essential Thrombocythemia Diagnosis Tree
+# Entity: et
+# Source: Onkopedia ET §Diagnose
+# Stand: 2023-12
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF persistierende Thrombozytose:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild-Verlauf, Entzündung/Eisenmangel ausschließen
+  -> JAK2, CALR, MPL; BCR::ABL1 zum CML-Ausschluss
+  -> KM-Histologie (große reife Megakaryozyten, keine signifikante Fibrose)
+
+[DX-CRITERIA] Diagnose
+  IF WHO-Kriterien ET erfüllt (Thrombozytose + KM + Klonmarker/Ausschluss anderer MPN):
+    -> ET
+  IF Fibrose / leukoerythroblastisch:
+    -> Prefibrotische/PMF prüfen
+
+[DX-RISK] Risiko
+  -> Alter, Thromboseanamnese, kardiovaskuläre RF, Mutation
+
+[DX-DDX] Differentialdiagnose
+  -> reaktive Thrombozytose, PV, Prefibrotische MF, MDS/MPN-RS-T, CML

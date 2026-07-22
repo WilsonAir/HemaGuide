@@ -1,0 +1,34 @@
+# =============================================================================
+# CML Diagnosis Tree
+# Entity: cml
+# Source: Onkopedia CML §Diagnose
+# Stand: 2025-11
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Leukozytose + Linksverschiebung + Basophilie OR Splenomegalie:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild + Differenzial, KM-Zytologie
+  -> Nachweis BCR::ABL1 (FISH und/oder PCR) und t(9;22) Zytogenetik
+  -> bei Diagnose: zusätzliche Mutationen optional; Phase bestimmen
+  -> ELTS-Score bei chronischer Phase
+
+[DX-CRITERIA] Diagnose
+  IF BCR::ABL1 / Ph-Chromosom nachgewiesen:
+    -> CML gesichert → [DX-PHASE]
+  ELSE:
+    -> andere MPN / aCML / CNL prüfen
+
+[DX-PHASE] Phasenklassifikation
+  IF Blasten <15% (Blut/KM) und keine Akzelerationskriterien:
+    -> chronische Phase
+  IF Akzelerationskriterien (Blasten 15–29%, zusätzliche Aberrationen etc. nach ELN):
+    -> Akzelerierte Phase
+  IF Blasten ≥30% OR extramedulläre Blastensiedlung:
+    -> Blastenkrise (myeloisch vs. lymphatisch immunphänotypisch)
+
+[DX-DDX] Differentialdiagnose
+  -> Leukämoide Reaktion, andere MPN, Ph-negative CML-ähnlich, CMML

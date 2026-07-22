@@ -1,0 +1,24 @@
+# =============================================================================
+# Essential Thrombocythemia Flowchart
+# Entity: et
+# Source: Onkopedia ET (DE)
+# Stand: 2023-12
+# Language: de
+# =============================================================================
+
+[ET-GATE-1] Risikostratifizierung
+  -> Diagnose ET (WHO/ICC); JAK2/CALR/MPL; kardiovaskuläre Risikofaktoren
+  IF niedriges Risiko, asymptomatisch, Alter typ. <60, keine Thrombose/Blutung:
+    -> [ET-LOW]
+  IF Hochrisiko (Alter ≥60 und/oder Thromboseanamnese / Hochrisiko-Mutation nach SOP):
+    -> [ET-HIGH]
+
+[ET-LOW] Niedrigrisiko
+  -> ASS niedrigdosiert wenn kein Blutungsrisiko / erworbener vWS
+  -> Beobachtung; Zytoreduktion nur bei Symptomen / Progress
+
+[ET-HIGH] Hochrisiko / zytoreduktionsbedürftig
+  -> Erstlinie: Hydroxyurea (Hydroxycarbamid) ODER Anagrelid
+  -> Alternative / jung / Schwangerschaftswunsch: pegyliertes Interferon-α (off-label)
+  -> ASS nach Risiko; bei erworbenem vWS ASS pausieren
+  -> Transformation zu PV/MF/AML → jeweilige Leitlinie

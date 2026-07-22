@@ -1,0 +1,30 @@
+# =============================================================================
+# BPDCN Flowchart (Blastische plasmazytoide dendritische Zellneoplasie)
+# Entity: bpdcn
+# Source: Onkopedia BPDCN (DE)
+# Stand: 2022-01
+# Language: de
+# =============================================================================
+
+[BPDCN-GATE-1] Erstdiagnose
+  -> Histologie + Immunphänotyp (CD123, CD4, CD56, TCL1, etc.); Staging inkl. KM, Haut, ZNS
+  IF fit für intensive Therapie:
+    -> [BPDCN-INT]
+  ELSE:
+    -> [BPDCN-NONINT]
+
+[BPDCN-INT] Intensivfähig
+  -> bevorzugte Induktion: ALL-artige Protokolle (z.B. Hyper-CVAD-ähnlich) ODER AML-artige Induktion
+  -> Alternative / zielgerichtet: Tagraxofusp (CD123-gerichtet), wenn verfügbar und geeignet
+  -> bei Remission: konsolidierende allo-SZT anstreben (kurativ)
+  -> ZNS-Prophylaxe prüfen (ZNS-Befall im Verlauf häufig)
+
+[BPDCN-NONINT] Nicht intensivfähig
+  -> Tagraxofusp (wenn zugänglich) oder weniger intensive Lymphomprotokolle (z.B. CHOP)
+  -> bei ausreichendem Ansprechen ggf. später allo-SZT evaluieren
+  -> supportive / palliative Intention bei Unfitness
+
+[BPDCN-REL] Rezidiv / refraktär
+  -> klinische Studie / zielgerichtete Optionen
+  -> Wechsel ALL- ↔ AML- ↔ CHOP-artig ↔ Tagraxofusp je nach Vortherapie
+  -> allo-SZT bei erreichter Remission und Fitness

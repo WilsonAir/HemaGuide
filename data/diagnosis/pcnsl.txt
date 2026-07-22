@@ -1,0 +1,26 @@
+# =============================================================================
+# PCNSL Diagnosis Tree
+# Entity: pcnsl
+# Source: Onkopedia PZNSL §Diagnose
+# Stand: 2024-12
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF fokale neurologische Defizite OR kognitive Veränderung OR ringförmige ZNS-Läsion:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> MRT Schädel (± Wirbelsäule); Steroide wenn möglich vor Biopsie vermeiden/minimieren
+  -> stereotaktische Biopsie: meist DLBCL; CD20
+  -> Systemisches Staging (CT/PET, Hoden bei Männern, Spaltlampe, Liquor)
+  -> HIV-Status; IELSG-Score
+
+[DX-CRITERIA] Diagnose
+  IF histologisch Lymphom auf ZNS beschränkt (kein systemischer Befall):
+    -> PCNSL
+  IF systemischer Befall:
+    -> sekundäre ZNS-Beteiligung eines systemischen Lymphoms
+
+[DX-DDX] Differentialdiagnose
+  -> Glioblastom, Metastase, Toxoplasmose, Abszess, MS

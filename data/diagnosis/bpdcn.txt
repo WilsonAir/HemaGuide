@@ -1,0 +1,24 @@
+# =============================================================================
+# BPDCN Diagnosis Tree
+# Entity: bpdcn
+# Source: Onkopedia BPDCN §Diagnose
+# Stand: 2022-01
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF kutane Läsionen + Zytopenie OR Blasten mit ambigem Phänotyp:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Haut- und/oder KM-Biopsie
+  -> Immunphänotyp: CD123+, CD4+, CD56±, TCL1+, negativ für linientypische Myeloid/Lymphoid-Marker
+  -> Staging: Haut, KM, Blut, Lymphknoten, ZNS erwägen
+
+[DX-CRITERIA] Diagnose
+  IF typischer Immunphänotyp plasmazytoider dendritischer Blasten:
+    -> BPDCN
+  -> Abgrenzung AML, ALL, Cutaneous T-Zell-Lymphom, Leukemia cutis
+
+[DX-DDX] Differentialdiagnose
+  -> AML mit kutanem Befall, ALL, Blastic NK, Merkelzellkarzinom (selten)

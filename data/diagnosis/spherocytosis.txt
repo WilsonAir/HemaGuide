@@ -1,0 +1,24 @@
+# =============================================================================
+# Hereditary Spherocytosis Diagnosis Tree
+# Entity: spherocytosis
+# Source: Onkopedia Sphärozytose §Diagnose
+# Stand: 2024-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF hämolytische Anämie + Ikterus/Splenomegalie OR positive Familienanamnese:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutausstrich (Sphärozyten), Hämolyselabor, Osmotische Resistenz / EMA-Bindungstest
+  -> Familienuntersuchung; ggf. Membranprotein-Genetik
+  -> Abgrenzung immunhämolytische Anämie (DAT)
+
+[DX-CRITERIA] Diagnose
+  IF typische Klinik + Sphärozyten + EMA/osmotischer Test (± Genetik) und DAT-:
+    -> hereditäre Sphärozytose
+  -> Schweregrad nach Transfusionsbedarf / Hb
+
+[DX-DDX] Differentialdiagnose
+  -> AIHA, Verbrennungen, Lebererkrankung, andere Membrandefekte

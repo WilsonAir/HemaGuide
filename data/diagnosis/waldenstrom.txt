@@ -1,0 +1,28 @@
+# =============================================================================
+# Waldenström Diagnosis Tree
+# Entity: waldenstrom
+# Source: Onkopedia WM §Diagnose
+# Stand: 2024-11
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF IgM-Paraprotein ± Hyperviskosität ± Anämie ± Neuropathie:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> SPEP/IFE (IgM), FLC, Viskosität bei Symptomen
+  -> KM-Biopsie: lymphoplasmozytisches Lymphom
+  -> MYD88 L265P (± CXCR4)
+  -> CT zum Staging; Fundoskopie bei Hyperviskosität
+
+[DX-CRITERIA] Diagnose
+  IF IgM-Paraprotein + KM-Infiltration durch LPL:
+    -> WM gesichert
+  IF IgM-MGUS ohne Infiltration:
+    -> IgM-MGUS
+  IF MYD88-wt:
+    -> Diagnose nicht ausschließen; DD andere IgM-Lymphome
+
+[DX-DDX] Differentialdiagnose
+  -> IgM-MGUS, MZL, CLL, Myelom IgM (selten)

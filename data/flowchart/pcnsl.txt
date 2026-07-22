@@ -1,0 +1,31 @@
+# =============================================================================
+# PCNSL Flowchart (Primäres ZNS-Lymphom)
+# Entity: pcnsl
+# Source: Onkopedia PZNSL (DE)
+# Stand: 2024-12
+# Language: de
+# =============================================================================
+
+[PCNSL-GATE-1] Erstdiagnose
+  -> histologisch gesichertes primäres ZNS-Lymphom; Staging (Augen, systemisch ausschließen)
+  -> IELSG-Risikoscore; Nieren-/Leberfunktion für HD-MTX
+  IF kurativ intendiert und MTX-fähig (Clearance typ. ≥50–60 ml/min):
+    -> [PCNSL-1L]
+  ELSE:
+    -> [PCNSL-NONCUR]
+
+[PCNSL-1L] Erstlinie Induktion
+  -> HD-MTX-basiert + Rituximab + ZNS-gängige Partner (HD-Ara-C, Thiotepa, Alkylanzien)
+  -> intensive Protokolle (z.B. MATRix-artig) bei fitten Pat.
+  IF Remission und transplantfähig:
+    -> Konsolidierung: Hochdosischemotherapie + ASCT (bevorzugt gegenüber alleiniger WBRT)
+  IF nicht ASCT-fähig:
+    -> Chemokonsolidierung ± reduzierte WBRT nach lokalem SOP
+
+[PCNSL-NONCUR] Nicht kurativ / MTX-ungeeignet
+  -> HD-MTX-freie / dosisreduzierte Schemata; orale Alkylanzien; Supportive Care
+  -> Steroide symptomatisch (Diagnosesicherung vor Dauersteroid wenn möglich)
+
+[PCNSL-REL] Rezidiv / refraktär
+  -> Reinduktion (ggf. erneut HD-MTX wenn Ansprechen zuvor), ASCT wenn noch nicht erfolgt
+  -> WBRT, Bruton-TKI / Studie / CAR-T nach Zugang und Fitness

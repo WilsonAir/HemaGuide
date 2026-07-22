@@ -1,0 +1,29 @@
+# =============================================================================
+# AL Amyloidosis Diagnosis Tree
+# Entity: amyloidosis
+# Source: Onkopedia AL-Amyloidose §Diagnose
+# Stand: 2025-07
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Nephrotisches Syndrom OR restriktive Kardiomyopathie OR Neuropathie OR Makroglossie:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> FLC, SPEP/IFE; NT-proBNP, Troponin, Albumin/Kreatinin
+  -> Biopsie (Fettaspirat/Organ) + Kongorot + Typisierung (IHC/Massenspek: AL vs ATTR)
+  -> KM zur Plasmazellklon-Sicherung
+  -> Kardio-MRT / Echo; Mayo-Staging
+
+[DX-CRITERIA] Diagnose AL
+  IF Amyloidnachweis + Leichtketten-Typisierung AL + klonale Plasmazellerkrankung:
+    -> systemische AL-Amyloidose
+  IF ATTR/AA:
+    -> nicht AL – andere Leitlinie
+
+[DX-STAGE] Risiko
+  -> Mayo-Staging (kardial); Transplantationsfähigkeit prüfen
+
+[DX-DDX] Differentialdiagnose
+  -> ATTR-Amyloidose, Hypertrophie anderer Ursache, MGUS ohne Amyloid

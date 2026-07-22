@@ -1,0 +1,34 @@
+# =============================================================================
+# MDS Diagnosis Tree
+# Entity: mds
+# Source: Onkopedia MDS §Diagnose
+# Stand: 2026-03
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF persistierende Zytopenie(n) ohne klaren Mangel/Toxizität:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild, Retikulozyten, Hämolyse/Mangel (B12, Folat, Eisen, Kupfer), Viren
+  -> KM-Zytologie mit Blasten-% (exakt), Dysplasie, Ringsideroblasten (Eisenfärbung)
+  -> KM-Histologie (Zellularität, Fibrose)
+  -> Zytogenetik + NGS-Myeloidpanel (SF3B1, TP53, ASXL1, etc.)
+  -> weiter zu [DX-CRITERIA]
+
+[DX-CRITERIA] Diagnosesicherung
+  IF Dysplasie ≥10% in ≥1 Linie OR beweisende Zytogenetik/Molekular OR Blasten 5–19%:
+    -> MDS möglich/gesichert nach WHO/ICC → [DX-CLASS]
+  IF nur klonale Zytopenie ohne Dysplasie-Kriterien:
+    -> CCUS / CHIP erwägen; MDS nicht erzwingen
+  IF Blasten ≥20%:
+    -> AML prüfen
+
+[DX-CLASS] Klassifikation & Risiko
+  -> WHO/ICC-Subtyp (SF3B1, del(5q), TP53-multi-hit, etc.)
+  -> IPSS-R und IPSS-M berechnen
+  -> transfusionsbedarf und EPO-Spiegel für Therapieplanung
+
+[DX-DDX] Differentialdiagnose
+  -> Mangelanämie, Toxizität, aplastische Anämie, PNH, MDS/MPN, AML

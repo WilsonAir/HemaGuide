@@ -1,0 +1,36 @@
+# =============================================================================
+# Peripheral T/NK-Cell Lymphomas Flowchart
+# Entity: tnk_lymphoma
+# Source: Onkopedia Periphere T-Zell-Lymphome (DE)
+# Stand: 2025-10
+# Language: de
+# =============================================================================
+
+[PTCL-GATE-1] Histologie & Fitness
+  -> Entität (PTCL-NOS, AITL/TFH, ALCL ALK±, ENKTL, etc.); Staging; IPI/PIT/PINK
+  IF ENKTL (nasal type):
+    -> [PTCL-ENKTL]
+  IF ALCL ALK+ / ausgewählte günstige:
+    -> [PTCL-ALCL]
+  ELSE:
+    -> [PTCL-1L]
+
+[PTCL-1L] Erstlinie (häufige PTCL)
+  -> CHOP oder CHOP-ähnlich; bei <60 J. und fit oft CHOEP (CHOP+Etoposid)
+  -> bei CD30+ (v.a. ALCL): Brentuximab-Vedotin + CHP (BV-CHP) bevorzugen wenn verfügbar
+  IF Ansprechen und intermediär/Hochrisiko:
+    -> Konsolidierung mit Hochdosis + ASCT erwägen
+  -> primär refraktär häufig (~30%) → früh Salvage planen
+
+[PTCL-ALCL] ALCL
+  -> BV-CHP first-line bei CD30+; sonst CHOP/CHOEP
+  -> Konsolidierung nach Risiko
+
+[PTCL-ENKTL] Extranodales NK/T-Zell-Lymphom
+  -> asymptenische/lokal: Chemoradiotherapie-Sequenzen (nicht CHOP allein)
+  -> fortgeschritten: Asparaginase-haltige Protokolle; Studie
+
+[PTCL-REL] Rezidiv / refraktär
+  -> Salvage (ICE, IVAC, ESHAP, Gemcitabin-basiert) → ASCT wenn chemosensibel
+  -> allo-SZT klar empfohlen bei geeigneten Rezidiv-Pat.
+  -> zielgerichtet: Brentuximab (CD30+), Pralatrexat, Romidepsin, Belinostat, Studie

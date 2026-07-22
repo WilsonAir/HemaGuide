@@ -1,0 +1,33 @@
+# =============================================================================
+# CLL Diagnosis Tree
+# Entity: cll
+# Source: Onkopedia CLL §Diagnose
+# Stand: 2025-09
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Lymphozytose OR Lymphadenopathie OR autoimmune Zytopenie:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild, Blutausstrich (Gumprecht-Kernschatten)
+  -> Durchflusszytometrie peripheres Blut: CD5+ CD19+ CD20dim CD23+ sIg dim, Light-chain-Restriktion
+  -> KM nur bei unklaren Zytopenien / vor speziellen Therapien
+  -> IGHV-Mutationsstatus, TP53/del(17p), FISH-Panel vor Therapie
+  -> Staging klinisch (Binet); Bildgebung nicht für Binet nötig
+
+[DX-CRITERIA] Diagnose
+  IF typischer Immunphänotyp + monoklonale B-Lymphozytose ≥5×10⁹/L:
+    -> CLL
+  IF gleicher Phänotyp aber <5×10⁹/L und keine Organomegalie/Zytopenie:
+    -> MBL
+  IF Lymphom ohne Leukämie (Knoten dominant):
+    -> SLL
+
+[DX-STAGE] Staging
+  -> Binet A/B/C (Lymphknotenregionen, Hb, Plättchen)
+  -> vor gezielter Therapie: Resistenz-/TP53-Status aktuell
+
+[DX-DDX] Differentialdiagnose
+  -> Mantelzell-Lymphom (Cyclin D1/SOX11), andere CD5+ Lymphome, reaktive Lymphozytose

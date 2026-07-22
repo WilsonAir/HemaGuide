@@ -1,0 +1,31 @@
+# =============================================================================
+# MGUS Diagnosis Tree
+# Entity: mgus
+# Source: Onkopedia MGUS §Diagnose
+# Stand: 2023-12
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF asymptomatisches M-Protein / abnorme FLC:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> SPEP/IFE, FLC, quantitative Ig
+  -> Blutbild, Kreatinin, Ca; bei Unklarheit KM und Bildgebung
+  -> IgM: Lymphom/WM ausschließen (KM, CT)
+
+[DX-CRITERIA] Diagnose MGUS
+  IF M-Protein <30 g/L AND klonale KM-Plasmazellen <10% AND kein Myelom-definierendes Ereignis / kein Lymphom:
+    -> MGUS
+  IF höher / mit SLiM/CRAB:
+    -> SMM oder MM
+  IF IgM + LPL-Infiltrat:
+    -> WM prüfen
+
+[DX-RISK] Risikostratifizierung
+  -> M-Protein-Höhe, Isotyp non-IgG, abnorme FLC-Ratio → Progressionsrisiko
+  -> Kontrollintervall danach festlegen
+
+[DX-DDX] Differentialdiagnose
+  -> SMM, MM, WM, MGRS, reaktive Polyklonale Gammopathie

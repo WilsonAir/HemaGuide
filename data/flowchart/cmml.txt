@@ -1,0 +1,28 @@
+# =============================================================================
+# CMML Flowchart
+# Entity: cmml
+# Source: Onkopedia CMML (DE)
+# Stand: 2023-03
+# Language: de
+# =============================================================================
+
+[CMML-GATE-1] Risiko
+  -> CMML-dysplastisch vs. proliferativ (L ≥13 G/l); CPSS / CPSS-molecular
+  IF niedriges Risiko, asymptomatisch:
+    -> [CMML-WW]
+  IF Hochrisiko / Blasten hoch / transfusionsabhängig und nicht SZT-fähig:
+    -> [CMML-HMA]
+  IF transplantfähig und intermediär/Hochrisiko:
+    -> [CMML-ALLO]
+
+[CMML-WW] Watch-and-Wait / Supportiv
+  -> Beobachtung; Transfusionen, Infektmanagement
+  -> Hydroxyurea bei proliferativer CMML / Leukozytose / Organomegalie
+
+[CMML-HMA] Hypomethylierende Therapie
+  -> Azacitidin (zugelassen bei Hochrisiko-dysplastischer CMML, nicht SZT-fähig)
+  -> Supportive Care fortsetzen
+
+[CMML-ALLO] Allogene SZT
+  -> einzig potenziell kurativ; Bridging mit HMA / Hydroxyurea
+  -> bei Progress zu AML: nach AML-Algorithmus bridgen

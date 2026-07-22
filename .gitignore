@@ -32,3 +32,4 @@ coverage.xml
 frontend/node_modules/
 # Onkopedia fetch cache (large HTML)
 data/onkopedia_cache/
+data/diagnosis_cache/

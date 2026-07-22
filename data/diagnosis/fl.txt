@@ -1,0 +1,29 @@
+# =============================================================================
+# Follicular Lymphoma Diagnosis Tree
+# Entity: fl
+# Source: Onkopedia FL §Diagnose
+# Stand: 2025-07
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF indolente Lymphadenopathie OR Zufallsbefund:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Lymphknotenbiopsie: Grad 1–3A vs 3B; CD10/BCL6/BCL2, t(14;18)/IGH::BCL2
+  -> Staging PET-CT (besonders vor alleiniger RT); KM-Biopsie
+  -> FLIPI / FLIPI2; GELF-Lastkriterien
+
+[DX-CRITERIA] Diagnose
+  IF follikuläres B-Zell-Lymphom Grad 1–3A:
+    -> FL
+  IF Grad 3B OR Transformation zu großzellig:
+    -> aggressiv / DLBCL-Algorithmus
+
+[DX-STAGE] Staging
+  -> Lugano I–IV; lokalisiert vs fortgeschritten
+  -> Tumorlast (GELF) für Therapie vs W&W
+
+[DX-DDX] Differentialdiagnose
+  -> reaktive Follikelhyperplasie, MCL, MZL, DLBCL

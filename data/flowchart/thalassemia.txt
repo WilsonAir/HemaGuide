@@ -1,0 +1,29 @@
+# =============================================================================
+# Beta-Thalassemia Flowchart
+# Entity: thalassemia
+# Source: Onkopedia Beta-Thalassämie (DE)
+# Stand: 2025-07
+# Language: de
+# =============================================================================
+
+[THAL-GATE-1] Phänotyp
+  -> Trait / Intermedia (NTDT) / Major (TDT)
+  IF transfusionsabhängige β-Thalassaemia major (TDT):
+    -> [THAL-TDT]
+  IF nicht-transfusionsabhängige Intermedia (NTDT):
+    -> [THAL-NTDT]
+  IF Trait asymptomatisch:
+    -> genetische Beratung; keine krankheitsspezifische Therapie
+
+[THAL-TDT] Transfusionsabhängige Thalassämie
+  -> regelmäßige Erythrozytenkonzentrate nach Transfusionsprotokoll
+  -> Eisen-Chelation: Deferasirox (oder Deferoxamin/Deferipron nach SOP)
+  -> Hydroxycarbamid bei ausgewählten Pat.
+  -> kurativ: allo-SZT; Gentherapie / Exagamglogen autotemcel (Exa-cel) nach Indikation/Zugang
+  -> Folgeerkrankungen (Herz, Leber, Endokrinium) behandeln
+
+[THAL-NTDT] Nicht-transfusionsabhängige Intermedia
+  -> Transfusionen bei Bedarf / Komplikationen
+  -> Luspatercept bei geeigneter Indikation
+  -> Hydroxycarbamid; Chelation bei Eisenüberladung
+  -> Splenektomie nur bei klarer Indikation

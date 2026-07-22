@@ -1,0 +1,32 @@
+# =============================================================================
+# DLBCL Diagnosis Tree
+# Entity: dlbcl
+# Source: Onkopedia DLBCL §Diagnose
+# Stand: 2025-12
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF rasch wachsender Knoten OR extranodale Raumforderung OR B-Symptome:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Exzisions-/Stanzbiopsie (FNA unzureichend)
+  -> Histologie + Immunhistochemie (CD20, CD10, BCL6, MUM1, MYC, BCL2, Ki-67)
+  -> FISH MYC/BCL2/BCL6 bei Verdacht Double-/Triple-Hit
+  -> Staging: PET-CT (bevorzugt) oder CT; KM-Biopsie nach Risiko
+  -> IPI / aaIPI / CNS-IPI
+
+[DX-CRITERIA] Diagnose
+  IF großzelliges B-Zell-Lymphom nach WHO/ICC:
+    -> DLBCL-NOS / Subtypen dokumentieren → [DX-CLASS]
+  IF High-grade mit MYC+BCL2/BCL6-Rearrangement:
+    -> HGBL / Double-Hit separat klassifizieren
+
+[DX-CLASS] Subtypen / Sonderformen
+  -> GCB vs ABC (wenn bestimmt)
+  -> PMBCL, primär testikulär, EBV+, transformiert aus indolentem Lymphom
+  -> Lugano-Stadium I–IV
+
+[DX-DDX] Differentialdiagnose
+  -> Burkitt, primäres Mediastinal-B, FL Grad 3B, grauzone, Karzinom

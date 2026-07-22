@@ -1,0 +1,32 @@
+# =============================================================================
+# HLH Flowchart (Hämophagozytische Lymphohistiozytose)
+# Entity: hlh
+# Source: Onkopedia HLH (DE)
+# Stand: 2024-08
+# Language: de
+# =============================================================================
+
+[HLH-GATE-1] Diagnose & Typ
+  -> HLH-2004-Kriterien / erwachsenenspezifische Scores; Ferritin, sIL-2R, Triglyceride, Zytopenie
+  -> unterscheiden: hereditär/primär vs. sekundär (Infekt, Malignom, Autoimmun/MAS-HLH)
+  -> Trigger suchen und behandeln (Infekt, Lymphom, etc.)
+  IF MAS-HLH / autoimmun-dominant:
+    -> [HLH-MAS]
+  ELSE:
+    -> [HLH-STD]
+
+[HLH-STD] Standard-HLH-Therapie (HLH-94/2004-orientiert)
+  -> Induktion: hochdosiertes Dexamethason + Etoposid i.v.
+  -> bei ZNS-Befall: zusätzlich intrathekales Methotrexat
+  -> Erhaltung / Fortführung nach Ansprechen; Trigger-Therapie parallel
+  IF hereditär / refraktär / Hochrisiko und transplantfähig:
+    -> allo-SZT planen
+
+[HLH-MAS] MAS-HLH / autoinflammatorisch
+  -> hochdosierte Steroide; Anakinra / IL-1-Blockade erwägen
+  -> ggf. Ruxolitinib / andere Immunmodulation nach Expertenstandard
+  -> Etoposid bei fulminantem Verlauf / Überlappung mit klassischer HLH
+
+[HLH-REL] Refraktär / Rezidiv
+  -> Reinduktion, Salvage-Immunsuppression, Studie
+  -> allo-SZT wenn kurative Intention und Donor

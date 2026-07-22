@@ -1,0 +1,37 @@
+# =============================================================================
+# ALL / LBL Diagnosis Tree
+# Entity: all
+# Source: Onkopedia ALL §Diagnose
+# Stand: 2026-03
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Zytopenie + Blasten OR mediastinaler Tumor (T-LBL) OR meningeale Symptome:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild, KM-Zytologie/Histologie, FACS (B- vs T-Vorläufer, EGIL/GMALL-Subtyp)
+  -> Zytogenetik + FISH (BCR::ABL1, KMT2A, etc.)
+  -> Molekular: Ph/BCR::ABL1, Ph-like Panel wenn verfügbar, MRD-Marker anlegen
+  -> ZNS: Liquorzytologie bei Diagnose
+  -> Bildgebung bei LBL (Mediastinum)
+  -> HLA-Typisierung früh
+
+[DX-CRITERIA] Diagnose
+  IF lymphoblastäre Morphologie + Vorläufer-Immunphänotyp:
+    -> ALL/LBL gesichert → [DX-CLASS]
+  IF ≥25% KM-Blasten bei LBL-ähnlich:
+    -> eher ALL; sonst LBL nach Konvention
+
+[DX-CLASS] Subtypisierung
+  IF BCR::ABL1+:
+    -> Ph-positive ALL
+  IF B-Vorläufer:
+    -> common / pre-B / pro-B nach Immunphänotyp
+  IF T-Linie:
+    -> early / thymisch / mature (GMALL) dokumentieren
+  -> Risikofaktoren der Studiengruppe zuweisen (Alter, WBC, Zytogenetik, MRD später)
+
+[DX-DDX] Differentialdiagnose
+  -> AML, MPAL, reife T/B-Lymphome, BPDCN, reaktive Lymphozytose

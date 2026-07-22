@@ -1,0 +1,29 @@
+# =============================================================================
+# ITP Flowchart (Immunthrombozytopenie)
+# Entity: itp
+# Source: Onkopedia ITP (DE)
+# Stand: 2024-08
+# Language: de
+# =============================================================================
+
+[ITP-GATE-1] Diagnose & Dringlichkeit
+  -> isolierte Thrombozytopenie; Sekundärursachen ausschließen
+  IF Blutung / Plt kritisch niedrig:
+    -> [ITP-ACUTE]
+  ELSE:
+    -> [ITP-1L]
+
+[ITP-ACUTE] Notfall / schwere Blutung
+  -> Steroide + IVIG; ggf. Thrombozytenkonzentrate
+  -> bei Lebensgefahr: Kombinationstherapie / Notfall-Splenektomie selten
+
+[ITP-1L] Erstlinie
+  -> Kortikosteroide (Prednison / Dexamethason-Puls)
+  -> IVIG bei Bedarf (schneller Anstieg, Kontraindikation Steroid, vor Eingriff)
+  IF Ansprechen und stabil:
+    -> ausschleichen; Beobachtung
+
+[ITP-2L] Zweitlinie (Steroid-Versagen / Abhängigkeit)
+  -> bevorzugt TPO-RA: Romiplostim oder Eltrombopag (früh nach Erstlinienversagen empfohlen)
+  -> Alternativen: Rituximab (off-label), Fostamatinib (besonders bei erhöhtem Thromboserisiko / chronischer ITP)
+  -> Splenektomie nach Impfungen, wenn refraktär und geeignet

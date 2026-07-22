@@ -1,0 +1,32 @@
+# =============================================================================
+# Primary Myelofibrosis / Myelofibrose Flowchart
+# Entity: pmf
+# Source: Onkopedia Myelofibrose (DE)
+# Stand: 2025-09
+# Language: de
+# =============================================================================
+
+[PMF-GATE-1] Risiko & Therapieziel
+  -> Diagnose PMF / Post-PV/ET-MF; Risiko MIPSS70+ v2.0 (bzw. DIPSS wenn Molekular unvollständig)
+  -> Symptome (konstitutionell, Splenomegalie), Anämie, Blasten
+  IF intermediär-2 / high / very-high und transplantfähig:
+    -> [PMF-ALLO] früh allo-SZT evaluieren (einzige kurative Option)
+  IF niedriges Risiko, asymptomatisch:
+    -> [PMF-WW]
+  ELSE:
+    -> [PMF-JAK]
+
+[PMF-WW] Watch-and-Wait
+  -> Beobachtung; Therapie bei Symptomen / Progress / Risikoanstieg
+
+[PMF-JAK] Symptomatische / nicht-kurative Therapie
+  -> JAK-Inhibitor first-line: Ruxolitinib (Standard)
+  -> Alternativen: Fedratinib, Momelotinib (besonders bei Anämie / nach Ruxolitinib-Versagen)
+  IF Ruxolitinib-Versagen (klinisch / RR6):
+    -> Wechsel auf Fedratinib oder Momelotinib; allo-SZT erneut prüfen
+  -> Interferon-α bei ausgewählten (jüngeren) Pat. / Off-label nach SOP
+  -> Supportive Care (Transfusionen, Infektprophylaxe)
+
+[PMF-ALLO] Allogene SZT
+  -> Indikation bei hohem/sehr hohem MIPSS70+ v2.0 und geeignetem Donor
+  -> Bridging mit JAK-Inhibitor bis Transplantation

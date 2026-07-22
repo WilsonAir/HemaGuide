@@ -1,0 +1,29 @@
+# =============================================================================
+# Mantle Cell Lymphoma Diagnosis Tree
+# Entity: mcl
+# Source: Onkopedia MCL §Diagnose
+# Stand: 2026-06
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Lymphadenopathie ± Lymphozytose ± GI-Befall:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Biopsie: Cyclin D1+, SOX11; FISH t(11;14)/IGH::CCND1 obligat
+  -> Ki-67 (Prognose); TP53 empfohlen
+  -> Staging Lugano; KM; GI-Endoskopie bei Bedarf; Echo vor Anthrazyklin/BTKi
+
+[DX-CRITERIA] Diagnose
+  IF Cyclin D1+/t(11;14) mit Mantelzell-Morphologie:
+    -> MCL gesichert
+  IF Cyclin D1-negativ aber SOX11+ und passend:
+    -> seltene Cyclin-D1-negative MCL (CCND2/3 prüfen)
+
+[DX-CLASS] Varianten
+  -> klassisch vs blastoid/pleomorph (aggressiver)
+  -> indolente leukämische nicht-nodale Variante möglich → W&W prüfen
+
+[DX-DDX] Differentialdiagnose
+  -> CLL/SLL, MZL, FL, B-PLL

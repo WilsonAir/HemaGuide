@@ -1,0 +1,26 @@
+# =============================================================================
+# Hereditary Spherocytosis Flowchart
+# Entity: spherocytosis
+# Source: Onkopedia Sphärozytose (DE)
+# Stand: 2024-10
+# Language: de
+# =============================================================================
+
+[HS-GATE-1] Schweregrad
+  -> Membranproteine/EMA-Test; Transfusionsbedarf, Bilirubin, Gallensteine
+  IF mild / asymptomatisch:
+    -> [HS-MILD]
+  IF moderat / schwer:
+    -> [HS-MOD]
+
+[HS-MILD] Milder Verlauf
+  -> Beobachtung; Folsäure bei Bedarf
+  -> Transfusion selten (aplastische Krise bei Parvo B19)
+  -> Cholezystektomie bei symptomatischer Cholelithiasis
+
+[HS-MOD] Moderat / schwer
+  -> Transfusionen nach Bedarf; Folsäure
+  -> Splenektomie bei klarer Indikation (schwerer Verlauf, hohe Transfusionslast) — nach Impfungen
+  -> partielle Splenektomie bei Kindern nach lokalem SOP erwägen
+  -> Gallenstein-Management / Cholezystektomie bei Indikation
+  -> Eisenüberwachung bei wiederholten Transfusionen

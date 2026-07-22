@@ -1,0 +1,26 @@
+# =============================================================================
+# Sickle Cell Disease Diagnosis Tree
+# Entity: scd
+# Source: Onkopedia Sichelzellkrankheit §Diagnose
+# Stand: 2024-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF hämolytische Anämie OR vaso-okklusive Krisen OR familiäre/ethnische Prädisposition OR Neugeborenen-Screening:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild, Hämolyseparameter, Blutausstrich (Sichelzellen)
+  -> Hb-Elektrophorese / HPLC; Molekulargenetik HBB
+  -> Genotyp: HbSS, HbSC, HbS/β-Thal etc.
+  -> Organbaseline (Hirn Doppler bei Kindern, Retina, Niere, Herz nach Alter)
+
+[DX-CRITERIA] Diagnose
+  IF Sichel-Hb-Genotyp nachgewiesen:
+    -> Sichelzellkrankheit / Merkmalsträger unterscheiden
+  IF nur HbAS:
+    -> Trait – meist keine krankheitsspezifische Therapie
+
+[DX-DDX] Differentialdiagnose
+  -> andere Hämolysen, Thalassämie-Syndrome

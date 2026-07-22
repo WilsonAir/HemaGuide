@@ -1,0 +1,26 @@
+# =============================================================================
+# HLH Diagnosis Tree
+# Entity: hlh
+# Source: Onkopedia HLH §Diagnose
+# Stand: 2024-08
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Fieber + Zytopenie + Hyperferritinämie OR Multiorganversagen unklarer Entzündung:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Ferritin, Triglyceride, Fibrinogen, sIL-2R (sCD25), Blutbild, Leberwerte
+  -> KM auf Hämophagozytose (weder nötig noch ausreichend allein)
+  -> Trigger: Infekt, Malignom, Autoimmun/MAS; genetische HLH bei jung/familiär
+
+[DX-CRITERIA] Diagnose
+  IF HLH-2004-Kriterien erfüllt (≥5/8) ODER molekular gesichert:
+    -> HLH
+  IF rheumatologische Grunderkrankung dominant:
+    -> MAS-HLH
+  -> Hämophagozytose allein ≠ Diagnose
+
+[DX-DDX] Differentialdiagnose
+  -> Sepsis, hämatologische Neoplasie ohne HLH, Still-Syndrom, Leberversagen

@@ -1,0 +1,33 @@
+# =============================================================================
+# Multiple Myeloma Diagnosis Tree
+# Entity: myeloma
+# Source: Onkopedia Multiples Myelom §Diagnose
+# Stand: 2024-10
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF Anämie OR Osteolysen OR Niereninsuffizienz OR hohe EW OR Zufalls-Paraprotein:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> SPEP/IFE, FLC, Quantitative Ig; 24h-Urin bei Bedarf
+  -> KM-Zytologie/Histologie + Durchfluss; FISH-Hochrisiko-Panel
+  -> Ganzkörper-Low-dose-CT / PET-CT / MRT nach SOP
+  -> Kreatinin, Ca, Hb (CRAB); SLiM-Kriterien prüfen
+
+[DX-CRITERIA] Diagnose MM
+  IF klonale Plasmazellen ≥10% (oder Biopsie-bewiesenes Plasmozytom) AND ≥1 Myelom-definierendes Ereignis:
+    -> symptomatisches MM
+    MDE: CRAB ODER SLiM (FLC-Ratio ≥100, >1 fokale Läsion MRT, KM-Blasten ≥60%)
+  IF M-Protein/klonale Zellen ohne MDE:
+    -> MGUS oder SMM → siehe mgus / Beobachtung
+  IF solitäres Plasmozytom:
+    -> Staging zum Ausschluss systemischen MM
+
+[DX-STAGE] Staging / Risiko
+  -> ISS / R-ISS / R2-ISS
+  -> Hochrisiko-Zytogenetik dokumentieren (t(4;14), del(17p), 1q etc.)
+
+[DX-DDX] Differentialdiagnose
+  -> MGUS, SMM, WM, AL-Amyloidose, Metastasen, CLL mit Paraprotein

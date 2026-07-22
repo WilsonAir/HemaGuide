@@ -1,0 +1,26 @@
+# =============================================================================
+# Castleman Disease Diagnosis Tree
+# Entity: castleman
+# Source: Onkopedia Morbus Castleman §Diagnose
+# Stand: 2022-06
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF lokalisierter oder multilokulärer LK mit systemischen Symptomen:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Lymphknotenhistologie (hyalin-vaskulär / plasmazellreich / mixed)
+  -> HIV, HHV-8; IL-6/CRP; Ausschluss Lymphom/Myelom/POEMS
+  -> Bildgebung: uni- vs multizentrisch
+
+[DX-CRITERIA] Subtyp
+  IF ein Lymphknotenareal:
+    -> UCD
+  IF multipler Befall:
+    -> MCD → HHV-8+/HIV+ vs iMCD vs POEMS-assoziiert
+  -> iMCD-Schweregrad beurteilen
+
+[DX-DDX] Differentialdiagnose
+  -> Lymphom, IgG4-RD, Infekt, POEMS, Autoimmun

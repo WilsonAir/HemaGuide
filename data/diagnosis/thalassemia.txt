@@ -1,0 +1,28 @@
+# =============================================================================
+# Beta-Thalassemia Diagnosis Tree
+# Entity: thalassemia
+# Source: Onkopedia β-Thalassämie §Diagnose
+# Stand: 2025-07
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF mikrozytäre Anämie OR Transfusionsbedarf OR familiäre Belastung:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild (MCV/MCH niedrig), Eisenstatus
+  -> Hb-Elektrophorese/HPLC (HbA2↑ bei Trait; variable Muster)
+  -> HBB-Genotypisierung
+  -> bei Intermedia/Major: Organ-/Eisenstatus
+
+[DX-CRITERIA] Phänotyp
+  IF asymptomatisch / milde Anämie, heterozygot:
+    -> β-Thalassaemia minor (Trait)
+  IF mittelschwer, nicht dauerhaft transfusionsabhängig:
+    -> Intermedia (NTDT)
+  IF von Kindheit an transfusionsabhängig:
+    -> Major (TDT)
+
+[DX-DDX] Differentialdiagnose
+  -> Eisenmangel, α-Thalassämie, andere Hämoglobinopathien

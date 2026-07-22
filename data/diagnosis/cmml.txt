@@ -1,0 +1,25 @@
+# =============================================================================
+# CMML Diagnosis Tree
+# Entity: cmml
+# Source: Onkopedia CMML §Diagnose
+# Stand: 2023-03
+# Language: de
+# =============================================================================
+
+[DX-SUSPECT] Verdacht
+  IF persistierende Monozytose OR MDS-ähnlich mit Monozytose:
+    -> [DX-WORKUP]
+
+[DX-WORKUP] Diagnostik
+  -> Blutbild (Monozyten absolut und %), KM-Blasten inkl. Promonozyten
+  -> Zytogenetik + Molekular (TET2, SRSF2, ASXL1, RAS etc.)
+  -> BCR::ABL1 und PDGFRA/B-Rearrangements ausschließen
+  -> dysplastisch vs proliferativ (L ≥13 G/l)
+
+[DX-CRITERIA] Diagnose
+  IF WHO/ICC-CMML-Kriterien (Monozytose + KM-Befund + Ausschluss):
+    -> CMML-1/2 nach Blasten
+  -> CPSS / CPSS-M Risiko
+
+[DX-DDX] Differentialdiagnose
+  -> reaktive Monozytose, CML, aCML, MDS, AML
